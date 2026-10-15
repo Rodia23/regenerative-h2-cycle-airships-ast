@@ -22,3 +22,7 @@ Manuscript under submission to *Aerospace Science and Technology* (Elsevier). Th
 ## Code and data
 
 The code that generates every number, table and figure of the article, with its verification checks and the register of the sources used, will be added to this repository and archived in Zenodo.
+
+## License
+
+The manuscript and the supplementary material are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).

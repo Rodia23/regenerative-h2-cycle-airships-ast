@@ -1,0 +1,21 @@
+{
+  "title": "A regenerative hydrogen cycle for post-release buoyancy compensation in heavy-lift airships: real-time condensation limits and hold-down operation",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "<p>Submitted version (preprint) of a manuscript under submission to <em>Aerospace Science and Technology</em> (Elsevier). It has not been peer reviewed.</p><p>This record contains the manuscript and its supplementary material (credibility assessment with NASA-STD-7009B and details of the results). The code that generates every number, table and figure of the article, with its verification checks and the register of the sources used, will be added in a later version of this record.</p>",
+  "creators": [
+    {"name": "Espinoza Leon, Antony Elthon", "affiliation": "National University of Engineering (UNI), Lima, Peru", "orcid": "0009-0000-2039-5511"},
+    {"name": "Ortiz Porras, Jorge Enrique", "affiliation": "National University of San Marcos (UNMSM), Lima, Peru", "orcid": "0000-0002-9605-3670"},
+    {"name": "Ortiz Pinedo, Flor de María Laura", "affiliation": "National University of San Marcos (UNMSM), Lima, Peru", "orcid": "0009-0000-3539-1839"},
+    {"name": "Manrique Alva, Rosiand", "affiliation": "National University of San Marcos (UNMSM), Lima, Peru", "orcid": "0000-0002-2480-851X"},
+    {"name": "Wong Cabanillas, Francisco Javier", "affiliation": "National University of San Marcos (UNMSM), Lima, Peru", "orcid": "0000-0003-0715-6318"},
+    {"name": "Joo Aguayo, Alcides Guillermo", "affiliation": "National University of San Marcos (UNMSM), Lima, Peru", "orcid": "0000-0002-8459-8489"},
+    {"name": "Tejada Estrada, Gina Coral", "affiliation": "National University of San Marcos (UNMSM), Lima, Peru", "orcid": "0000-0002-0023-5147"},
+    {"name": "Zevallos Parave, Ysabel", "affiliation": "National University of San Marcos (UNMSM), Lima, Peru", "orcid": "0000-0001-5528-9196"},
+    {"name": "Soria Cuellar, Fidel Tadeo", "affiliation": "National University of Education Enrique Guzmán y Valle (UNE), Lima, Peru", "orcid": "0000-0002-8722-3316"}
+  ],
+  "keywords": ["airship", "buoyancy control", "hydrogen", "payload release", "water condensation", "requirements analysis"],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "language": "eng"
+}
