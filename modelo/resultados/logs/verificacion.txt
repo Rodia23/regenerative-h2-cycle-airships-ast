@@ -902,7 +902,7 @@
   ok    [Y] fila de D_lim: el flujo escala exactamente como D_lim^(-1/2) (ecuación 7): obtenido 0.447077 vs esperado 0.447077 (tol 1e-10 %)
   ok    [Y] fila de la carga: P_rej con 20 t = la de la tabla 5: obtenido 40612.6 vs esperado 40612.6 (tol 1e-10 %)
   ok    [Y] fila del volumen del casco: ṁ* con el volumen alternativo = elasticidad de la inercia integrada: obtenido 0.948596 vs esperado 0.948596 (tol 1e-07 %)
-  ok    [Y] niveles enteros de 0 a 4 en los 11 factores (5 de capacidad, 6 de resultados): 2, 3, 2, 1, 2, 1, 2, 2, 3, 1, 2
+  ok    [Y] niveles enteros de 0 a 4 en los 11 factores (5 de capacidad, 6 de resultados): 2, 3, 2, 1, 1, 1, 1, 2, 3, 1, 1
   ok    [Y] criticidad: la matriz del Apéndice D da la zona amarilla (consecuencia II-III, influencia 4): Y/Y
   ok    [Y] uso: nivel 1 por definición en el primer uso del M&S (tabla 15 de la norma): primer uso
   ok    [Y] fuentes del paper 1 contadas por pedigrí = registro: obtenido 60 vs esperado 60 (tol 0)

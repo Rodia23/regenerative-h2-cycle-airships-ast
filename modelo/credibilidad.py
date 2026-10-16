@@ -60,22 +60,24 @@ CAPACIDAD = [
      'favorable con el criterio de una cota superior; la masa vertical contra ensayos de vuelo de un blimp. No '
      'llega a 3: no hay mediciones del sistema real (un dirigible soltando carga).'),
     ('RevisionDes', 'Technical review', 1,
-     'Revisión interna informal de los coautores y auditorías internas del código y las fuentes. REVISAR '
-     '(autor): si las auditorías siguieron un procedimiento formal documentado y las hicieron personas, es 2.'),
-    ('GestionDes', 'Process/product management', 2,
+     'Revisión interna informal de coautores que no desarrollaron el modelo (el autor lo confirmó el '
+     '2026-10-16) y auditorías internas del código y las fuentes. No llega a 2: la revisión no fue formal, '
+     'sancionada y con reglas explícitas (E.3.5); las auditorías con IA no son revisión por pares.'),
+    ('GestionDes', 'Process/product management', 1,
      'Proceso documentado (LEEME, reglas del proyecto), parámetros en un solo archivo, cada cifra generada, '
      'control de versiones con git y una compuerta de verificación con sello de los datos (gestión de '
-     'configuración formal). No llega a 3: no hay un proceso aprobado con medición de su cumplimiento.'),
+     'configuración formal). Queda en 1 (2026-10-16, tabla 11 de la norma): el 2 '
+     'pide además un proceso con roles y requisitos formalmente documentados y aprobados, y aquí son informales.'),
 ]
 RESULTADOS = [
     ('Uso', 'Use assessment', 1,
      'Las corridas están dentro de los límites del M&S y de su dominio de verificación, pero es el PRIMER uso '
      'del modelo: la tabla 15 de la norma lo pone en 1 por definición.'),
-    ('PedigriEntrada', 'Input pedigree', 2,
+    ('PedigriEntrada', 'Input pedigree', 1,
      'Entradas de las naves de documentos formales (CAA 1938, NACA TM 286, TCDS de EASA, Goodyear 1975) salvo '
      'el LCA60T (sitio del fabricante, discrepancia 180 000 / 200 000 m3 declarada); incertidumbre estimada en '
-     'las que dimensionan (volumen del casco, inercia, agua retenida). No llega a 3: hay entradas solo del '
-     'fabricante y la incertidumbre de las naves históricas no está estimada.'),
+     'las que dimensionan (volumen del casco, inercia, agua retenida). Queda en 1 (2026-10-16, tabla 16 de la norma): el 2 '
+     'pide la incertidumbre de todas las entradas al menos estimada, y la de las naves históricas no lo está.'),
     ('Incertidumbre', 'Uncertainty characterization', 2,
      'Fuentes identificadas, cuantificadas y clasificadas (epistémica/aleatoria); propagación por cotas en los '
      'extremos medidos (las cantidades son monótonas en cada entrada). No llega a 3: no hay propagación '
@@ -88,9 +90,9 @@ RESULTADOS = [
      'f x potencia específica de la batería). No llega a 4: no se cuantificaron muchas combinaciones.'),
     ('RevisionUso', 'Technical review', 1,
      'Revisión interna informal de los coautores (ver la de desarrollo).'),
-    ('GestionUso', 'Process/product management', 2,
+    ('GestionUso', 'Process/product management', 1,
      'La misma gestión de configuración: cada corrida del artículo sale de correr_todo.py con su registro y su '
-     'versión.'),
+     'versión. Queda en 1, como la de desarrollo (tabla 20 de la norma).'),
 ]
 
 
