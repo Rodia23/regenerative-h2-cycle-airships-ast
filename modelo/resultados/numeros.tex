@@ -1,0 +1,1383 @@
+% =============================================================================
+% numeros.tex — ARCHIVO GENERADO por modelo/exportar_numeros.py. NO EDITAR A MANO.
+% Regenerar: python correr_todo.py   (desde la carpeta modelo/)
+% Uso: \input{.../modelo/resultados/numeros.tex} en el preámbulo; en el texto
+%      se escribe \valAlphaStar en vez de 0.497 (en modo texto: \valAlphaStar{}).
+% =============================================================================
+
+% --- Parámetros del modelo (parametros.py) — Tabla 1 ---
+\newcommand{\valZeta}{1.30}  % coef. de amortiguamiento del PD
+\newcommand{\valZetaReal}{1.30}  % amortiguamiento real del lazo (= zeta: K_d con la rigidez real)
+\newcommand{\valRigAlturaPct}{61}  % rigidez por altura del modelo / rigidez del lazo, caso base [%]
+\newcommand{\valKp}{15}  % ganancia proporcional [m3/m]
+\newcommand{\valKmEmergencia}{60}  % K_m fase emergencia [kg/s/m3]
+\newcommand{\valKmTrim}{0.5}  % K_m fase trim [kg/s/m3]
+\newcommand{\valDmMaxEstandar}{30}  % capacidad del esquema estándar [kg/s]
+\newcommand{\valDmProactivoEstandar}{10}  % pulso proactivo estándar [kg/s]
+\newcommand{\valTAnticipEstandar}{1.0}  % ventana del pulso estándar [s]
+\newcommand{\valDlim}{0.10}  % D_lim operacional [m]
+\newcommand{\valHmaxPrec}{1}  % umbral de precisión [m]
+\newcommand{\valHmaxSeg}{5}  % umbral de seguridad [m]
+\newcommand{\valHcero}{50}  % altitud inicial [m]
+\newcommand{\valCd}{0.5}  % coeficiente de arrastre
+\newcommand{\valEtaGen}{0.30}  % eficiencia del generador
+\newcommand{\valEElectrolisis}{53}  % energía de electrólisis [kWh/kg]
+\newcommand{\valEtaPanel}{0.20}  % eficiencia fotovoltaica
+\newcommand{\valFPaneles}{0.45}  % fracción de área con paneles
+\newcommand{\valTCondObjetivo}{10}  % ventana de condensación [min]
+\newcommand{\valIntervaloMultidrop}{30}  % tiempo entre entregas [s]
+\newcommand{\valTAireExterior}{30}  % aire exterior del caso de diseño del condensador [°C]
+\newcommand{\valTRefComb}{25}  % temperatura de referencia del PCI y de L_v [°C]
+\newcommand{\valFRadHoy}{0.20}  % potencia de ventilación por kW rechazado, radiador 2026 (FlyZero)
+\newcommand{\valFRadFuturo}{0.15}  % potencia de ventilación por kW rechazado, radiador 2035 (FlyZero)
+\newcommand{\valKWkgRad}{10--20}  % radiador de aire, kW rechazados por kg, 2026--2035 (FlyZero)
+\newcommand{\valKWkgTMS}{5--10}  % sistema de gestión térmica completo, kW rechazados por kg de sistema, 2026--2035 (FlyZero p. 4; caja negra)
+\newcommand{\valKWkgBat}{0.66--1.32}  % potencia específica del buffer a nivel paquete [kW/kg]
+\newcommand{\valKWkgBatCelda}{1--2}  % potencia específica de celda Li-ion [kW/kg]
+\newcommand{\valFCeldaPaquete}{66}  % masa de celda / masa de paquete, NASA X-57 [%]
+\newcommand{\valWhkgBatCelda}{200}  % energía específica de celda Li-ion [Wh/kg]
+\newcommand{\valDTBufferAgua}{50}  % calentamiento del agua si se guardara el calor en vez de rechazarlo [K]
+\newcommand{\valWhkgBat}{132}  % energía específica de la batería, a nivel de paquete [Wh/kg]
+
+% --- Quema limpia a D_lim operacional (dlim_flujo.json) ---
+\newcommand{\valAlphaStar}{0.5}  % alpha* de la ley general (s = 1): 1/2, igual para todas
+\newcommand{\valMStarHind}{2.84}  % ṁ* quema limpia [kg/s] — LZ 129 Hindenburg
+\newcommand{\valMTotalHind}{122{,}468}  % M_total con 1 t de carga [kg] — LZ 129 Hindenburg
+\newcommand{\valHundTotalHind}{0.20}  % bajada total (1+s) D_lim [m] — LZ 129 Hindenburg
+\newcommand{\valMCotaHind}{1.78}  % cota con reinyección (quema máxima hasta el pico, 1 m) [kg/s] — LZ 129 Hindenburg
+\newcommand{\valMStarFW}{3.17}  % ṁ* quema limpia [kg/s] — Flying Whales LCA60T
+\newcommand{\valMTotalFW}{108{,}555}  % M_total con 1 t de carga [kg] — Flying Whales LCA60T
+\newcommand{\valHundTotalFW}{0.20}  % bajada total (1+s) D_lim [m] — Flying Whales LCA60T
+\newcommand{\valMCotaFW}{1.98}  % cota con reinyección (quema máxima hasta el pico, 1 m) [kg/s] — Flying Whales LCA60T
+\newcommand{\valMStarZR}{4.68}  % ṁ* quema limpia [kg/s] — ZR-3 Los Angeles
+\newcommand{\valMTotalZR}{43{,}197}  % M_total con 1 t de carga [kg] — ZR-3 Los Angeles
+\newcommand{\valHundTotalZR}{0.20}  % bajada total (1+s) D_lim [m] — ZR-3 Los Angeles
+\newcommand{\valMCotaZR}{2.92}  % cota con reinyección (quema máxima hasta el pico, 1 m) [kg/s] — ZR-3 Los Angeles
+\newcommand{\valMStarZNT}{14.75}  % ṁ* quema limpia [kg/s] — Zeppelin NT
+\newcommand{\valMTotalZNT}{10{,}321}  % M_total con 1 t de carga [kg] — Zeppelin NT
+\newcommand{\valHundTotalZNT}{0.20}  % bajada total (1+s) D_lim [m] — Zeppelin NT
+\newcommand{\valMCotaZNT}{9.21}  % cota con reinyección (quema máxima hasta el pico, 1 m) [kg/s] — Zeppelin NT
+\newcommand{\valMStarBase}{3.17}  % = \valMStarFW (caso base)
+\newcommand{\valMTotalBase}{108{,}555}  % = \valMTotalFW (caso base)
+\newcommand{\valHundTotalBase}{0.20}  % = \valHundTotalFW (caso base)
+\newcommand{\valMCotaBase}{1.98}  % = \valMCotaFW (caso base)
+\newcommand{\valCotaBajaPct}{38}  % cuánto baja el flujo instalado la cota con reinyección, caso base [%]
+\newcommand{\valCotaSobrequema}{52}  % H2 quemado de más en la cota con reinyección, caso base [%]
+
+% --- Fuente de O2 y regeneración solar (fuente_O2.json) ---
+\newcommand{\valRhoAireHdos}{14.4}  % rho_aire / rho_H2
+\newcommand{\valLeff}{22.3}  % L_eff = rho_aire/rho_H2 + r_O2/H2 (O2 del aire que queda a bordo en el agua)
+\newcommand{\valHdosTanques}{69.6}  % H2 por entrega con O2 de tanques [kg]
+\newcommand{\valHdosDescenso}{44.8}  % H2 por entrega con O2 del aire [kg]
+\newcommand{\valReduccionOdos}{35.6}  % reducción de H2 aire vs tanques [%]
+\newcommand{\valAhorroHdos}{24.8}  % H2 ahorrado por entrega [kg]
+\newcommand{\valAguaTanques}{622}  % agua por entrega, O2 de tanques [kg]
+\newcommand{\valAguaDescenso}{401}  % agua por entrega, O2 del aire [kg]
+\newcommand{\valEgenTanques}{696}  % energía recuperable, O2 de tanques [kWh]
+\newcommand{\valEgenDescenso}{448}  % energía recuperable por entrega [kWh]
+\newcommand{\valRegenKgDiaHind}{146}  % regeneración solar [kg H2/día] — LZ 129 Hindenburg
+\newcommand{\valRegenDiasHind}{0.31}  % días para regenerar 1 entrega — LZ 129 Hindenburg
+\newcommand{\valRegenHorasHind}{7.4}  % horas para regenerar 1 entrega — LZ 129 Hindenburg
+\newcommand{\valRegenKgDiaFW}{145}  % regeneración solar [kg H2/día] — Flying Whales LCA60T
+\newcommand{\valRegenDiasFW}{0.31}  % días para regenerar 1 entrega — Flying Whales LCA60T
+\newcommand{\valRegenHorasFW}{7.4}  % horas para regenerar 1 entrega — Flying Whales LCA60T
+\newcommand{\valRegenKgDiaZR}{79}  % regeneración solar [kg H2/día] — ZR-3 Los Angeles
+\newcommand{\valRegenDiasZR}{0.57}  % días para regenerar 1 entrega — ZR-3 Los Angeles
+\newcommand{\valRegenHorasZR}{13.6}  % horas para regenerar 1 entrega — ZR-3 Los Angeles
+\newcommand{\valRegenKgDiaZNT}{15}  % regeneración solar [kg H2/día] — Zeppelin NT
+\newcommand{\valRegenDiasZNT}{2.93}  % días para regenerar 1 entrega — Zeppelin NT
+\newcommand{\valRegenHorasZNT}{70.3}  % horas para regenerar 1 entrega — Zeppelin NT
+
+% --- Condensación (condensacion.json) ---
+\newcommand{\valQcondMin}{1630}  % potencia mínima de condensación [kW]
+
+% --- Esquema estándar, pulso fijo (estandar.json) ---
+\newcommand{\valEgenEstandar}{456}  % energía, 1 entrega [kWh]
+\newcommand{\valDhEstandar}{0.12}  % |Δh| máx, 1 entrega [m]
+\newcommand{\valEgenEstandarMulti}{1823}  % energía, 4x1 t [kWh]
+\newcommand{\valDhEstandarMulti}{0.35}  % |Δh| máx, 4x1 t [m]
+
+% --- Quema limpia por plataforma, 1 entrega de 1 t (minimax_plataformas.json) — Tabla 3 ---
+\newcommand{\valAlphaStarExacto}{0.500--0.507}  % alpha* exacto, rango de las 4 plataformas
+\newcommand{\valExactoDifGrandes}{0.2}  % diferencia exacto vs ley general, naves grandes [%]
+\newcommand{\valExactoDifMax}{2}  % diferencia exacto vs ley general, peor caso (Zeppelin NT) [%]
+\newcommand{\valTAnticipHind}{7.89}  % t_anticip [s] — LZ 129 Hindenburg
+\newcommand{\valEgenHind}{447}  % energía generada [kWh] — LZ 129 Hindenburg
+\newcommand{\valDhPicoHind}{0.20}  % |Δh| pico [m] — LZ 129 Hindenburg
+\newcommand{\valHdosNetoHind}{44.9}  % H2 neto consumido [kg] — LZ 129 Hindenburg
+\newcommand{\valTAnticipFW}{7.08}  % t_anticip [s] — Flying Whales LCA60T
+\newcommand{\valEgenFW}{447}  % energía generada [kWh] — Flying Whales LCA60T
+\newcommand{\valDhPicoFW}{0.20}  % |Δh| pico [m] — Flying Whales LCA60T
+\newcommand{\valHdosNetoFW}{44.8}  % H2 neto consumido [kg] — Flying Whales LCA60T
+\newcommand{\valTAnticipZR}{4.79}  % t_anticip [s] — ZR-3 Los Angeles
+\newcommand{\valEgenZR}{447}  % energía generada [kWh] — ZR-3 Los Angeles
+\newcommand{\valDhPicoZR}{0.20}  % |Δh| pico [m] — ZR-3 Los Angeles
+\newcommand{\valHdosNetoZR}{44.8}  % H2 neto consumido [kg] — ZR-3 Los Angeles
+\newcommand{\valTAnticipZNT}{1.54}  % t_anticip [s] — Zeppelin NT
+\newcommand{\valEgenZNT}{446}  % energía generada [kWh] — Zeppelin NT
+\newcommand{\valDhPicoZNT}{0.20}  % |Δh| pico [m] — Zeppelin NT
+\newcommand{\valHdosNetoZNT}{44.8}  % H2 neto consumido [kg] — Zeppelin NT
+\newcommand{\valTAnticipBase}{7.08}  % = \valTAnticipFW (caso base)
+\newcommand{\valEgenBase}{447}  % = \valEgenFW (caso base)
+\newcommand{\valDhPicoBase}{0.20}  % = \valDhPicoFW (caso base)
+\newcommand{\valHdosNetoBase}{44.8}  % = \valHdosNetoFW (caso base)
+
+% --- Minimax multi-drop, 4 entregas (Zeppelin NT: 4 x 250 kg) ---
+\newcommand{\valEcumHind}{1791}  % energía acumulada [kWh] — LZ 129 Hindenburg
+\newcommand{\valHdosNetoMultiHind}{179.6}  % H2 neto [kg] — LZ 129 Hindenburg
+\newcommand{\valDhPicoMultiHind}{0.54}  % |Δh| pico [m] — LZ 129 Hindenburg
+\newcommand{\valEcumFW}{1790}  % energía acumulada [kWh] — Flying Whales LCA60T
+\newcommand{\valHdosNetoMultiFW}{179.5}  % H2 neto [kg] — Flying Whales LCA60T
+\newcommand{\valDhPicoMultiFW}{0.52}  % |Δh| pico [m] — Flying Whales LCA60T
+\newcommand{\valEcumZR}{1788}  % energía acumulada [kWh] — ZR-3 Los Angeles
+\newcommand{\valHdosNetoMultiZR}{179.4}  % H2 neto [kg] — ZR-3 Los Angeles
+\newcommand{\valDhPicoMultiZR}{0.49}  % |Δh| pico [m] — ZR-3 Los Angeles
+\newcommand{\valEcumZNT}{442}  % energía acumulada [kWh] — Zeppelin NT
+\newcommand{\valHdosNetoMultiZNT}{44.8}  % H2 neto [kg] — Zeppelin NT
+\newcommand{\valDhPicoMultiZNT}{0.29}  % |Δh| pico [m] — Zeppelin NT
+
+% --- Barrido reactivo puro (barrido_reactivo.json) — Tabla 3 ---
+\newcommand{\valMMinZR}{7}  % ṁ_min (|Δh| <= 5 m) [kg/s] — ZR-3 Los Angeles
+\newcommand{\valMFineZR}{24}  % ṁ_fine (|Δh| <= 1 m) [kg/s] — ZR-3 Los Angeles
+\newcommand{\valDhMinZR}{4.77}  % |Δh| a ṁ_min [m] — ZR-3 Los Angeles
+\newcommand{\valDhFineZR}{0.955}  % |Δh| a ṁ_fine [m] — ZR-3 Los Angeles
+\newcommand{\valTEstabFineZR}{9.1}  % t_estab a ṁ_fine [s] — ZR-3 Los Angeles
+\newcommand{\valMMinFW}{5}  % ṁ_min (|Δh| <= 5 m) [kg/s] — Flying Whales LCA60T
+\newcommand{\valMFineFW}{15}  % ṁ_fine (|Δh| <= 1 m) [kg/s] — Flying Whales LCA60T
+\newcommand{\valDhMinFW}{4.21}  % |Δh| a ṁ_min [m] — Flying Whales LCA60T
+\newcommand{\valDhFineFW}{1.000}  % |Δh| a ṁ_fine [m] — Flying Whales LCA60T
+\newcommand{\valTEstabFineFW}{8.4}  % t_estab a ṁ_fine [s] — Flying Whales LCA60T
+\newcommand{\valMMinZNT}{22}  % ṁ_min (|Δh| <= 5 m) [kg/s] — Zeppelin NT
+\newcommand{\valMFineZNT}{75}  % ṁ_fine (|Δh| <= 1 m) [kg/s] — Zeppelin NT
+\newcommand{\valDhMinZNT}{4.86}  % |Δh| a ṁ_min [m] — Zeppelin NT
+\newcommand{\valDhFineZNT}{0.993}  % |Δh| a ṁ_fine [m] — Zeppelin NT
+\newcommand{\valTEstabFineZNT}{4.6}  % t_estab a ṁ_fine [s] — Zeppelin NT
+\newcommand{\valMMinHind}{4}  % ṁ_min (|Δh| <= 5 m) [kg/s] — LZ 129 Hindenburg
+\newcommand{\valMFineHind}{14}  % ṁ_fine (|Δh| <= 1 m) [kg/s] — LZ 129 Hindenburg
+\newcommand{\valDhMinHind}{4.96}  % |Δh| a ṁ_min [m] — LZ 129 Hindenburg
+\newcommand{\valDhFineHind}{0.940}  % |Δh| a ṁ_fine [m] — LZ 129 Hindenburg
+\newcommand{\valTEstabFineHind}{6.1}  % t_estab a ṁ_fine [s] — LZ 129 Hindenburg
+
+% --- Mapa de requisitos verificado por simulación (mapa_requisitos.json), h_max = 5 m ---
+\newcommand{\valAirePorKgHdos}{34.3}  % kg de aire estequiométrico por kg de H2
+\newcommand{\valSobrepasoDlimHmaxMin}{1.8}  % excursión / h_max con D_lim = h_max (mín.)
+\newcommand{\valSobrepasoDlimHmaxMax}{41.8}  % excursión / h_max con D_lim = h_max (máx.)
+\newcommand{\valMapaConsInsuficiente}{0}  % casos en que la forma cerrada (D_lim 0.10 m) se queda corta
+\newcommand{\valMapaConsFactorMax}{0.99}  % ṁ verificado / forma cerrada, máx. (D_lim 0.10 m)
+\newcommand{\valMapaCargaHind}{19.0}  % carga evaluada (su capacidad, máx. 30 t) [t] — LZ 129 Hindenburg
+\newcommand{\valMapaMConsHind}{232.1}  % ṁ verificado, D_lim 0.10 m [kg/s] — LZ 129 Hindenburg
+\newcommand{\valMapaMMejorHind}{57.9}  % ṁ verificado, mejor D_lim [kg/s] — LZ 129 Hindenburg
+\newcommand{\valMapaDlimMejorHind}{1.67}  % mejor D_lim verificado [m] — LZ 129 Hindenburg
+\newcommand{\valMapaPthHind}{6950}  % potencia térmica, mejor caso [MW] — LZ 129 Hindenburg
+\newcommand{\valMapaAireHind}{1987}  % aire mínimo, mejor caso [kg/s] — LZ 129 Hindenburg
+\newcommand{\valMapaTEstabHind}{5}  % t_estab, mejor caso [s] — LZ 129 Hindenburg
+\newcommand{\valMapaCargaFW}{30}  % carga evaluada (su capacidad, máx. 30 t) [t] — Flying Whales LCA60T
+\newcommand{\valMapaMConsFW}{518.2}  % ṁ verificado, D_lim 0.10 m [kg/s] — Flying Whales LCA60T
+\newcommand{\valMapaMMejorFW}{129.4}  % ṁ verificado, mejor D_lim [kg/s] — Flying Whales LCA60T
+\newcommand{\valMapaDlimMejorFW}{1.67}  % mejor D_lim verificado [m] — Flying Whales LCA60T
+\newcommand{\valMapaPthFW}{15{,}518}  % potencia térmica, mejor caso [MW] — Flying Whales LCA60T
+\newcommand{\valMapaAireFW}{4437}  % aire mínimo, mejor caso [kg/s] — Flying Whales LCA60T
+\newcommand{\valMapaTEstabFW}{4}  % t_estab, mejor caso [s] — Flying Whales LCA60T
+\newcommand{\valMapaCargaZR}{5}  % carga evaluada (su capacidad, máx. 30 t) [t] — ZR-3 Los Angeles
+\newcommand{\valMapaMConsZR}{51.4}  % ṁ verificado, D_lim 0.10 m [kg/s] — ZR-3 Los Angeles
+\newcommand{\valMapaMMejorZR}{12.8}  % ṁ verificado, mejor D_lim [kg/s] — ZR-3 Los Angeles
+\newcommand{\valMapaDlimMejorZR}{1.67}  % mejor D_lim verificado [m] — ZR-3 Los Angeles
+\newcommand{\valMapaPthZR}{1541}  % potencia térmica, mejor caso [MW] — ZR-3 Los Angeles
+\newcommand{\valMapaAireZR}{440}  % aire mínimo, mejor caso [kg/s] — ZR-3 Los Angeles
+\newcommand{\valMapaTEstabZR}{6}  % t_estab, mejor caso [s] — ZR-3 Los Angeles
+\newcommand{\valMapaCargaZNT}{1}  % carga evaluada (su capacidad, máx. 30 t) [t] — Zeppelin NT
+\newcommand{\valMapaMConsZNT}{14.4}  % ṁ verificado, D_lim 0.10 m [kg/s] — Zeppelin NT
+\newcommand{\valMapaMMejorZNT}{6.4}  % ṁ verificado, mejor D_lim [kg/s] — Zeppelin NT
+\newcommand{\valMapaDlimMejorZNT}{0.50}  % mejor D_lim verificado [m] — Zeppelin NT
+\newcommand{\valMapaPthZNT}{771}  % potencia térmica, mejor caso [MW] — Zeppelin NT
+\newcommand{\valMapaAireZNT}{221}  % aire mínimo, mejor caso [kg/s] — Zeppelin NT
+\newcommand{\valMapaTEstabZNT}{2}  % t_estab, mejor caso [s] — Zeppelin NT
+
+% --- EXP-02: quema constante centrada, sin reinyección, de reposo a reposo (exp02_quema_centrada.json) ---
+\newcommand{\valKMasaAnadida}{0.86}  % k: masa añadida vertical / aire desplazado
+\newcommand{\valLeffEscape}{13.4}  % L si el escape sale con el vapor (phi = 0)
+\newcommand{\valFactorMasaAnadida}{0.73}  % factor del flujo con masa añadida, 1/sqrt(1+k)
+\newcommand{\valFactorEscape}{1.67}  % factor del flujo si el agua no queda a bordo
+\newcommand{\valCentradaBaseIdeal}{1.93}  % ṁ quema centrada, caso base 1 t, H = 1 m, ideal [kg/s]
+\newcommand{\valCentradaBaseMa}{1.42}  % ṁ quema centrada, caso base 1 t, H = 1 m, + masa añadida
+\newcommand{\valCentradaFWIdeal}{31.5}  % ṁ quema centrada, FW 20 t, H = 30 m, ideal [kg/s]
+\newcommand{\valCentradaFWMa}{23.1}  % ṁ quema centrada, FW 20 t, H = 30 m, + masa añadida
+\newcommand{\valCentradaFWEscape}{38.6}  % ṁ quema centrada, FW 20 t, H = 30 m, escape sale
+\newcommand{\valCentradaFWArrastre}{20.7}  % ṁ quema centrada, FW 20 t, H = 30 m, + masa añadida + arrastre
+\newcommand{\valCentradaFWKappa}{0.18}  % kappa = c H / M_e (validez del primer orden), FW 20 t, 30 m
+\newcommand{\valCentradaFWAlphaReposo}{0.513}  % alfa que termina en reposo con arrastre, FW 20 t, 30 m
+\newcommand{\valCentradaFWT}{39}  % duración de la quema, FW 20 t, H = 30 m [s]
+\newcommand{\valCentradaFWVmax}{2.3}  % v máx. de bajada, FW 20 t, H = 30 m [m/s]
+\newcommand{\valCentradaFWCincoIdeal}{77}  % ṁ quema centrada, FW 20 t, H = 5 m, ideal [kg/s]
+
+% --- EXP-05: condensación en tiempo real como brecha de diseño (exp05_condensacion_tiempo_real.json) ---
+\newcommand{\valTRocioEscape}{73}  % punto de rocío del escape estequiométrico [°C]
+\newcommand{\valXHdosOEscape}{35}  % fracción molar de H2O en el escape [%]
+\newcommand{\valTSalidaCond}{40}  % temperatura de salida del condensador [°C]
+\newcommand{\valPhiMaxSalida}{0.85}  % fracción de agua que condensa a T_salida
+\newcommand{\valPhiMaxTuno}{0.97}  % fracción de agua que condensa a 15 °C
+\newcommand{\valLeffPhiSalida}{21.0}  % L(phi) con phi = phi_max(T_salida)
+\newcommand{\valQRech}{138}  % calor a rechazar por kg H2, eta = 0 [MJ/kg]
+\newcommand{\valQRechGen}{102}  % calor a rechazar por kg H2 si rend_gen sale como trabajo [MJ/kg]
+\newcommand{\valQLatente}{21.8}  % solo latente por kg H2 (lo que cuenta el artículo) [MJ/kg]
+\newcommand{\valFactorVsLatente}{6.3}  % calor total / solo latente
+\newcommand{\valPrtArticuloBase}{437}  % potencia en tiempo real en el punto del artículo (caso base 1 t, ṁ*) [MW]
+\newcommand{\valQUnaTon}{6.6}  % calor de una liberación de 1 t [GJ]
+\newcommand{\valPDiezMinUnaTon}{11.0}  % potencia para rechazarlo en 10 min, 1 t [MW]
+\newcommand{\valPCascoMinBase}{3.2}  % casco caso base como intercambiador, aire en calma [MW]
+\newcommand{\valPCascoMaxBase}{15.8}  % casco caso base como intercambiador, aire forzado [MW]
+\newcommand{\valTMinCascoMaxBase}{7}  % tiempo mínimo para rechazar 1 t con el casco caso base (forzado) [min]
+\newcommand{\valTMinCascoMinBase}{35}  % idem, aire en calma [min]
+\newcommand{\valHUnaLibCascoBase}{172}  % bajada de una liberación de 1 t limitada por el casco caso base [m]
+\newcommand{\valPrtCincoBase}{91}  % potencia en tiempo real, caso base 1 t, H = 5 m [MW]
+\newcommand{\valQVeinteFW}{131}  % calor de una liberación de 20 t [GJ]
+\newcommand{\valPCascoMaxFW}{15.8}  % casco FW como intercambiador, aire forzado [MW]
+\newcommand{\valPrtTreintaFW}{3035}  % potencia en tiempo real, FW 20 t, H = 30 m [MW]
+\newcommand{\valPrtCincoFW}{8184}  % potencia en tiempo real, FW 20 t, H = 5 m [MW]
+\newcommand{\valTMinCascoMaxFW}{138}  % tiempo mínimo para rechazar 20 t con el casco FW (forzado) [min]
+\newcommand{\valPDiezMinFW}{219}  % potencia para rechazar 20 t en 10 min [MW]
+\newcommand{\valBrechaRtBase}{6}  % brecha: tiempo real (H = 5 m) / casco forzado, caso base 1 t
+\newcommand{\valBrechaRtFW}{517}  % brecha: tiempo real (H = 5 m) / casco forzado, FW 20 t
+\newcommand{\valBrechaDiezBase}{0.7}  % brecha: 10 min / casco forzado, caso base 1 t
+\newcommand{\valBrechaDiezFW}{14}  % brecha: 10 min / casco forzado, FW 20 t
+\newcommand{\valPasoFraccionado}{500}  % tamaño de paso de la liberación fraccionada [kg]
+\newcommand{\valNPasosFW}{40}  % pasos de 500 kg para 20 t
+\newcommand{\valPPasoFW}{207}  % potencia por paso de 500 kg, FW 20 t, H total 5 m [MW]
+\newcommand{\valDmPasoFW}{1.5}  % flujo por paso de 500 kg, FW 20 t, H total 5 m [kg/s]
+\newcommand{\valDuracionPasosFW}{11}  % duración total en pasos de 500 kg, FW 20 t [min]
+\newcommand{\valNMinCascoFW}{525}  % pasos mínimos para caber en el casco FW (forzado)
+\newcommand{\valPasoMinCascoFW}{38}  % tamaño de paso correspondiente [kg]
+\newcommand{\valHdosUnaTonPhi}{47.7}  % H2 total por t de carga con phi = phi_max(T_salida) [kg]
+\newcommand{\valTRocioTresAtm}{101}  % rocío del escape a 3 atm [°C]
+\newcommand{\valPhiTresAtm}{0.95}  % fracción condensada a 40 °C y 3 atm
+\newcommand{\valWIsoTresAtm}{4.1}  % trabajo isotérmico mínimo para comprimir el escape a 3 atm [MJ/kg H2]
+\newcommand{\valTRocioDiezAtm}{139}  % rocío del escape a 10 atm [°C]
+\newcommand{\valPhiDiezAtm}{0.99}  % fracción condensada a 40 °C y 10 atm
+\newcommand{\valWIsoDiezAtm}{8.6}  % trabajo isotérmico mínimo para comprimir el escape a 10 atm [MJ/kg H2]
+\newcommand{\valDTNdosLatente}{795}  % calentamiento del N2 si absorbiera todo el latente [K]
+
+% --- EXP-06: requisitos mínimos, minimax sin reinyección y condensando todo (exp06_requisitos_minimos.json) ---
+\newcommand{\valPhiObjetivo}{0.99}  % fracción de agua a condensar ("todo")
+\newcommand{\valLeffObjetivo}{22.2}  % L con phi_objetivo
+\newcommand{\valQTodo}{141}  % calor a rechazar por kg H2 condensando todo [MJ/kg]
+\newcommand{\valPReqAtm}{14}  % presión del escape para condensar phi_objetivo a T_salida [atm]
+\newcommand{\valTUnaAtm}{-2}  % temperatura para condensar phi_objetivo a 1 atm [°C]
+\newcommand{\valWComp}{6.6}  % trabajo mínimo (isotérmico) de compresión [MJ/kg H2]
+\newcommand{\valWCompPct}{5}  % trabajo de compresión como % del PCI
+\newcommand{\valCalorUnaAtmPct}{4}  % calor por tonelada a 1 atm (phi_max) frente al de phi objetivo [% más]
+\newcommand{\valReqDmUnaAtm}{3.37}  % ṁ* caso base con phi_max a 1 atm en la tasa [kg/s]
+\newcommand{\valReqPcondUnaAtm}{464}  % P_cond caso base coherente a 1 atm [MW]
+\newcommand{\valReqLUnaAtm}{20.98}  % L(phi_max) a 1 atm
+\newcommand{\valReqQUnaAtm}{137.9}  % q(0, phi_max) a 1 atm [MJ/kg]
+\newcommand{\valCompMinPotBase}{21}  % potencia mínima del compresor del escape a la presión de phi objetivo, caso base [MW]
+\newcommand{\valAireEnfr}{30}  % calentamiento del aire de enfriamiento [K]
+\newcommand{\valDTMediaCond}{40}  % diferencia media del condensador [K]
+\newcommand{\valReqDmBaseUno}{3.17}  % ṁ* minimax [kg/s] — base_1t_h1
+\newcommand{\valReqPthBaseUno}{380}  % potencia térmica [MW] — base_1t_h1
+\newcommand{\valReqAireBaseUno}{109}  % aire de combustión [kg/s] — base_1t_h1
+\newcommand{\valReqPcondBaseUno}{446}  % potencia de condensación en tiempo real [MW] — base_1t_h1
+\newcommand{\valReqEnfrBaseUno}{14.8}  % aire de enfriamiento [t/s] — base_1t_h1
+\newcommand{\valReqUABaseUno}{11.2}  % UA del condensador [MW/K] — base_1t_h1
+\newcommand{\valReqEspBaseUno}{446}  % potencia de condensación por kg de carga [kW/kg] — base_1t_h1
+\newcommand{\valReqDmDhBaseUno}{1.73}  % ṁ* con D_lim = h/3 [kg/s] — base_1t_h1
+\newcommand{\valReqPcondDhBaseUno}{244}  % P_cond con D_lim = h/3 [MW] — base_1t_h1
+\newcommand{\valReqDmBaseCinco}{3.17}  % ṁ* minimax [kg/s] — base_1t_h5
+\newcommand{\valReqPthBaseCinco}{380}  % potencia térmica [MW] — base_1t_h5
+\newcommand{\valReqAireBaseCinco}{109}  % aire de combustión [kg/s] — base_1t_h5
+\newcommand{\valReqPcondBaseCinco}{446}  % potencia de condensación en tiempo real [MW] — base_1t_h5
+\newcommand{\valReqEnfrBaseCinco}{14.8}  % aire de enfriamiento [t/s] — base_1t_h5
+\newcommand{\valReqUABaseCinco}{11.2}  % UA del condensador [MW/K] — base_1t_h5
+\newcommand{\valReqEspBaseCinco}{446}  % potencia de condensación por kg de carga [kW/kg] — base_1t_h5
+\newcommand{\valReqDmDhBaseCinco}{0.78}  % ṁ* con D_lim = h/3 [kg/s] — base_1t_h5
+\newcommand{\valReqPcondDhBaseCinco}{109}  % P_cond con D_lim = h/3 [MW] — base_1t_h5
+\newcommand{\valReqDmFWUno}{288.4}  % ṁ* minimax [kg/s] — FW_20t_h1
+\newcommand{\valReqPthFWUno}{34{,}592}  % potencia térmica [MW] — FW_20t_h1
+\newcommand{\valReqAireFWUno}{9890}  % aire de combustión [kg/s] — FW_20t_h1
+\newcommand{\valReqPcondFWUno}{40{,}613}  % potencia de condensación en tiempo real [MW] — FW_20t_h1
+\newcommand{\valReqEnfrFWUno}{1347.0}  % aire de enfriamiento [t/s] — FW_20t_h1
+\newcommand{\valReqUAFWUno}{1015.3}  % UA del condensador [MW/K] — FW_20t_h1
+\newcommand{\valReqEspFWUno}{2031}  % potencia de condensación por kg de carga [kW/kg] — FW_20t_h1
+\newcommand{\valReqDmDhFWUno}{157.9}  % ṁ* con D_lim = h/3 [kg/s] — FW_20t_h1
+\newcommand{\valReqPcondDhFWUno}{22{,}244}  % P_cond con D_lim = h/3 [MW] — FW_20t_h1
+\newcommand{\valReqDmFWCinco}{288.4}  % ṁ* minimax [kg/s] — FW_20t_h5
+\newcommand{\valReqPthFWCinco}{34{,}592}  % potencia térmica [MW] — FW_20t_h5
+\newcommand{\valReqAireFWCinco}{9890}  % aire de combustión [kg/s] — FW_20t_h5
+\newcommand{\valReqPcondFWCinco}{40{,}613}  % potencia de condensación en tiempo real [MW] — FW_20t_h5
+\newcommand{\valReqEnfrFWCinco}{1347.0}  % aire de enfriamiento [t/s] — FW_20t_h5
+\newcommand{\valReqUAFWCinco}{1015.3}  % UA del condensador [MW/K] — FW_20t_h5
+\newcommand{\valReqEspFWCinco}{2031}  % potencia de condensación por kg de carga [kW/kg] — FW_20t_h5
+\newcommand{\valReqDmDhFWCinco}{70.63}  % ṁ* con D_lim = h/3 [kg/s] — FW_20t_h5
+\newcommand{\valReqPcondDhFWCinco}{9948}  % P_cond con D_lim = h/3 [MW] — FW_20t_h5
+\newcommand{\valRatioEnfrComb}{136}  % aire de enfriamiento / aire de combustión
+\newcommand{\valFactorMaReq}{0.73}  % factor de masa añadida sobre ṁ* y P_cond
+\newcommand{\valPasoMaxGrandesDiez}{61--85}  % paso máximo con 10 MW, naves grandes (Hind, FW, ZR) [kg]
+\newcommand{\valPasoMaxBaseDiez}{80}  % paso máximo, h = 5 m, 10 MW instalados [kg] — Flying Whales LCA60T
+\newcommand{\valNPasosBaseDiez}{755}  % número de pasos para la capacidad, 10 MW — Flying Whales LCA60T
+\newcommand{\valTEntregaBaseDiez}{634}  % duración de la entrega completa, 10 MW [min] — Flying Whales LCA60T
+\newcommand{\valTEntregaHorasBaseDiez}{10.6}  % duración de la entrega completa, 10 MW [h] — Flying Whales LCA60T
+\newcommand{\valPasoMaxBaseCien}{369}  % paso máximo, h = 5 m, 100 MW instalados [kg] — Flying Whales LCA60T
+\newcommand{\valNPasosBaseCien}{163}  % número de pasos para la capacidad, 100 MW — Flying Whales LCA60T
+\newcommand{\valTEntregaBaseCien}{82}  % duración de la entrega completa, 100 MW [min] — Flying Whales LCA60T
+\newcommand{\valTEntregaHorasBaseCien}{1.4}  % duración de la entrega completa, 100 MW [h] — Flying Whales LCA60T
+\newcommand{\valPasoMaxFWDiez}{80}  % paso máximo, h = 5 m, 10 MW instalados [kg] — Flying Whales LCA60T
+\newcommand{\valNPasosFWDiez}{755}  % número de pasos para la capacidad, 10 MW — Flying Whales LCA60T
+\newcommand{\valTEntregaFWDiez}{634}  % duración de la entrega completa, 10 MW [min] — Flying Whales LCA60T
+\newcommand{\valTEntregaHorasFWDiez}{10.6}  % duración de la entrega completa, 10 MW [h] — Flying Whales LCA60T
+\newcommand{\valPasoMaxFWCien}{369}  % paso máximo, h = 5 m, 100 MW instalados [kg] — Flying Whales LCA60T
+\newcommand{\valNPasosFWCien}{163}  % número de pasos para la capacidad, 100 MW — Flying Whales LCA60T
+\newcommand{\valTEntregaFWCien}{82}  % duración de la entrega completa, 100 MW [min] — Flying Whales LCA60T
+\newcommand{\valTEntregaHorasFWCien}{1.4}  % duración de la entrega completa, 100 MW [h] — Flying Whales LCA60T
+\newcommand{\valCargaTotalBase}{60}  % carga total caso base (capacidad) [t]
+\newcommand{\valBufferAgua}{30}  % agua a bordo para absorber el calor de 1 t con +50 K [t]
+\newcommand{\valCargaTotalFW}{60}  % carga total FW evaluada [t]
+
+% --- VER-02: verificación numérica de la simulación del artículo (ver02_numerica.json) ---
+\newcommand{\valVerDosExactaZ}{0.003}  % error vs solución exacta, altura, tolerancia estricta [%]
+\newcommand{\valVerDosExactaAnt}{2.0}  % error vs solución exacta con la tolerancia anterior [%]
+\newcommand{\valVerDosUnum}{0.002}  % cota superior (1 cifra) de la incertidumbre numérica de la simulación adoptada (máx. excursión, H2, agua) [%]
+\newcommand{\valVerDosUnumAnt}{1.1}  % incertidumbre numérica con la tolerancia anterior [%]
+
+% --- VAL-03: cotas y sensibilidades de la PIRT (val03_cotas.json) ---
+\newcommand{\valTresTauFly}{5.8--6.3}  % tau = c_Al/k del radiador de FlyZero (2035-2026) [s]
+\newcommand{\valTresTauGhatos}{16--59}  % tau medido, intercambiador de laboratorio, aire forzado (Ghatos 2023) [s]
+\newcommand{\valTresCAl}{897}  % Cp del aluminio a 298 K (JANAF) [J/(kg K)]
+\newcommand{\valTresCdBase}{0.1}  % cambio máx. de la excursión con Cd 0-1, cota ideal [%]
+\newcommand{\valTresCdCond}{0.5}  % cambio máx. de la excursión con Cd 0-1, 100 MW y tau 5 s [%]
+\newcommand{\valTresHint}{5.5}  % convección natural interna del H2 (Churchill & Chu) [W/(m2 K)]
+\newcommand{\valTresTauTerm}{27}  % tiempo térmico del gas del caso base [min]
+\newcommand{\valTresTauTermRango}{13--54}  % tiempo térmico con h x2 a x0.5 [min]
+\newcommand{\valTresDurMinimax}{14}  % duración de la quema minimax (1-99 % del H2) [s]
+\newcommand{\valTresDurPasos}{10.6}  % duración de 1 t en escalones con 10 MW [min]
+\newcommand{\valTresDerivaMinimax}{16--65}  % deriva en la maniobra minimax, dT_eq 5-20 K [kg]
+\newcommand{\valTresDerivaPasos}{0.6--1.2}  % deriva en 1 t por escalones a 10 MW, dT_eq 5-10 K [t]
+\newcommand{\valTresDerivaEntrega}{3.0--6.0}  % deriva en toda la entrega de referencia (LCA60T cargado al salir, sueltas una tras otra), dT_eq 5-10 K [t]
+\newcommand{\valTresTauTermEntrega}{31}  % tiempo térmico del gas del LCA60T cargado al salir de la entrega [min]
+\newcommand{\valTresDTMinimax}{5--20}  % cambio de sobrecalentamiento solar supuesto, quema minimax [K]
+\newcommand{\valTresDTPasos}{5--10}  % cambio de sobrecalentamiento solar supuesto, escalones [K]
+\newcommand{\valTresCdRango}{0--1}  % rango de Cd de la sensibilidad
+\newcommand{\valTresTauCota}{30}  % cota alta del retardo del condensador [s]
+\newcommand{\valTresIncIdealDm}{2.89--3.61}  % incertidumbre ideal: dm_star mín.-máx. en los extremos medidos
+\newcommand{\valTresIncIdealP}{407--509}  % incertidumbre ideal: P_MW mín.-máx. en los extremos medidos
+\newcommand{\valTresIncIdealHdos}{44.8}  % incertidumbre ideal: H2_t mín.-máx. en los extremos medidos
+\newcommand{\valTresIncIdealQt}{6.31}  % incertidumbre ideal: Q_GJ_t mín.-máx. en los extremos medidos
+\newcommand{\valTresIncRealDm}{3.25--4.34}  % incertidumbre real: dm_star mín.-máx. en los extremos medidos
+\newcommand{\valTresIncRealP}{439--573}  % incertidumbre real: P_MW mín.-máx. en los extremos medidos
+\newcommand{\valTresIncRealHdos}{50.3--53.9}  % incertidumbre real: H2_t mín.-máx. en los extremos medidos
+\newcommand{\valTresIncRealQt}{6.80--7.12}  % incertidumbre real: Q_GJ_t mín.-máx. en los extremos medidos
+\newcommand{\valTresPhiMax}{0.85}  % phi_max a la salida del condensador (escenario real)
+
+% --- CRED-01: evaluación de credibilidad con los factores de NASA-STD-7009B (credibilidad.json) ---
+\newcommand{\valCredNivelDatosPedigri}{2}  % nivel Data pedigree (juicio de los autores, credibilidad.py)
+\newcommand{\valCredNivelVerificacion}{3}  % nivel Verification (juicio de los autores, credibilidad.py)
+\newcommand{\valCredNivelValidacion}{2}  % nivel Validation (juicio de los autores, credibilidad.py)
+\newcommand{\valCredNivelRevisionDes}{1}  % nivel Technical review (juicio de los autores, credibilidad.py)
+\newcommand{\valCredNivelGestionDes}{2}  % nivel Process/product management (juicio de los autores, credibilidad.py)
+\newcommand{\valCredNivelUso}{1}  % nivel Use assessment (juicio de los autores, credibilidad.py)
+\newcommand{\valCredNivelPedigriEntrada}{2}  % nivel Input pedigree (juicio de los autores, credibilidad.py)
+\newcommand{\valCredNivelIncertidumbre}{2}  % nivel Uncertainty characterization (juicio de los autores, credibilidad.py)
+\newcommand{\valCredNivelRobustez}{3}  % nivel Results robustness (juicio de los autores, credibilidad.py)
+\newcommand{\valCredNivelRevisionUso}{1}  % nivel Technical review (juicio de los autores, credibilidad.py)
+\newcommand{\valCredNivelGestionUso}{2}  % nivel Process/product management (juicio de los autores, credibilidad.py)
+\newcommand{\valCredUmbral}{2}  % umbral de nivel fijado por este estudio [M&S 43e]
+\newcommand{\valCredCumplenCap}{4}  % factores de capacidad que llegan al umbral
+\newcommand{\valCredCumplenRes}{4}  % factores de resultados que llegan al umbral
+\newcommand{\valCredCumplen}{8}  % factores que llegan al umbral, de 11
+\newcommand{\valCredElasCarga}{1.50}  % elasticidad de ṁ* respecto de la carga, caso base (ecuación 7)
+\newcommand{\valCredElasInercia}{0.50}  % elasticidad de ṁ* respecto de la inercia, caso base, EN VALOR ABSOLUTO (es negativa)
+\newcommand{\valCredElasCargaMax}{1.52}  % elasticidad respecto de la carga, máx. entre naves (Zeppelin NT)
+\newcommand{\valCredElasInerciaMax}{0.52}  % elasticidad respecto de la inercia, máx. |.| entre naves
+\newcommand{\valCredElasPhi}{0.40}  % |d ln ṁ*/d ln phi| = r phi/L en phi = 1 (también del H2 por tonelada)
+\newcommand{\valCredElasPhiAtm}{0.36}  % |d ln ṁ*/d ln phi| en phi_max a 1 atm
+\newcommand{\valCredPhiDmPct}{12--20}  % cuánto sube ṁ* con el agua retenida medida (phi_max x recolección de Zakhvatkin) [%]
+\newcommand{\valCredPhiRet}{0.58--0.73}  % fracción del agua retenida con la recolección medida
+\newcommand{\valCredRefDesvMax}{0.11}  % desvío máx. de los datos de entrada frente a su referencia, sin la densidad del aire (tabla S3) [%]
+\newcommand{\valCredFuentesTotal}{60}  % fuentes del paper 1 en el registro (fuentes.py)
+\newcommand{\valCredFuentesA}{10}  % fuentes del paper 1 con pedigrí A
+\newcommand{\valCredFuentesB}{28}  % fuentes del paper 1 con pedigrí B
+\newcommand{\valCredFuentesC}{22}  % fuentes del paper 1 con pedigrí C
+
+% --- Control reactivo puro frente a la quema limpia, mismo L (reactivo_vs_limpia.json) ---
+\newcommand{\valReacUnoBase}{9.0}  % reactivo, tasa para no subir más de 1 m, caso base [kg/s]
+\newcommand{\valReacIgualBase}{40}  % reactivo, tasa para no pasar la excursión de la quema limpia, caso base [kg/s]
+\newcommand{\valReacRazonUno}{2.8--3.0}  % reactivo simulado / quema limpia, 1 m, 4 naves
+\newcommand{\valReacRazonIgual}{12--13}  % reactivo simulado / quema limpia, misma excursión, 4 naves
+\newcommand{\valReacRazonCinco}{0.84--0.88}  % reactivo simulado / quema limpia, 5 m, 4 naves
+\newcommand{\valReacIdealUno}{1.8}  % reactivo ideal / quema limpia, 1 m, caso base
+\newcommand{\valReacIdealIgual}{4}  % reactivo ideal / quema limpia, misma excursión, caso base
+\newcommand{\valReacIdealCinco}{0.8}  % reactivo ideal / quema limpia, 5 m, caso base
+\newcommand{\valReacMismoUno}{6.3--6.7}  % reactivo / quema limpia con el MISMO desplazamiento, 1 m (la limpia con D_lim = 1 m / (1+s)), 4 naves
+\newcommand{\valReacMismoCinco}{4.2--4.4}  % lo mismo, 5 m, 4 naves
+\newcommand{\valReacIgualTodas}{35--198}  % reactivo, tasa para la misma excursión, 4 naves [kg/s]
+
+% --- Revisión 2026-10-01: ventiladores por caída de presión, humedad del aire, hélices existentes ---
+\newcommand{\valDpRechazo}{200--1000}  % caída de presión del lado del aire supuesta [Pa]
+\newcommand{\valEtaFan}{0.7}  % rendimiento supuesto del soplado de la unidad de rechazo
+\newcommand{\valFFisico}{0.008--0.041}  % f = dp/(eta rho cp dT) con esa caída de presión
+\newcommand{\valReqKWkgFfis}{8--10}  % requisito del rechazo con batería y el f por caída de presión [kW/kg]
+\newcommand{\valAireEnfrBase}{12{,}700}  % aire de enfriamiento del caso base, al 100 m3/s [m3/s]
+\newcommand{\valAreaEntradaBase}{1300}  % área de entrada de ese aire a v_aire_entrada, al 100 m2 [m2]
+\newcommand{\valVAireEntrada}{10}  % velocidad del aire en la entrada supuesta [m/s]
+\newcommand{\valSeccionCascoBase}{2000}  % sección transversal del casco del caso base, al 100 m2 [m2]
+\newcommand{\valHRAire}{50--90}  % humedad relativa del día de diseño [%]
+\newcommand{\valHumAgua}{0.46--0.84}  % agua que trae el aire de combustión húmedo y condensa [kg por kg de H2]
+\newcommand{\valHumHdos}{1.6--2.9}  % cuánto BAJA el H2 por tonelada con aire húmedo [%]
+\newcommand{\valHumQt}{0.8--1.5}  % cuánto BAJA el calor por tonelada con aire húmedo [%]
+\newcommand{\valFrenoTmin}{10.6}  % hélices existentes: quema de 1 t al rechazo de referencia [min]
+\newcommand{\valFrenoF}{9.8}  % hélices existentes: fuerza inicial [kN]
+\newcommand{\valFrenoA}{20--100}  % área total de discos supuesta [m2]
+\newcommand{\valFrenoFM}{0.7}  % figura de mérito supuesta
+\newcommand{\valFrenoP}{89--198}  % potencia de pico de las hélices [kW]
+\newcommand{\valFrenoE}{6--14}  % energía de las hélices por tonelada, 10 MW [kWh]
+\newcommand{\valFrenoEPct}{0.4--0.9}  % esa energía como % de la química del H2 que se quema por tonelada
+\newcommand{\valFrenoEQuim}{1500}  % energía química (PCI) del H2 que se quema por tonelada [kWh]
+\newcommand{\valFrenoHXAvion}{0.5--1.0}  % unidad de rechazo de 10 MW con intercambiadores de avión (80-160 °C) [t]
+\newcommand{\valFrenoHXACC}{15}  % unidad de rechazo de 10 MW con haces de ACC (temperatura del ciclo) [t]
+\newcommand{\valFrenoPotBajo}{2}  % rechazo menor de referencia [MW]
+\newcommand{\valFrenoTminBajo}{53}  % quema de 1 t con el rechazo menor [min]
+\newcommand{\valFrenoHXACCBajo}{3.1}  % haces de ACC del rechazo menor [t]
+\newcommand{\valFrenoEBajo}{31--70}  % energía de las hélices por tonelada, rechazo menor [kWh]
+\newcommand{\valFrenoEscGrande}{10}  % escalón grande de referencia [t]
+\newcommand{\valFrenoPGrande}{2.8--6.3}  % potencia de las hélices para ese escalón [MW]
+\newcommand{\valFrenoEGrande}{2.0--4.4}  % energía de las hélices para ese escalón, rechazo de referencia [MWh]
+\newcommand{\valFrenoTauFW}{9.1}  % cualquier freno: techo de respuesta, 1 t en el LCA60T [s]
+\newcommand{\valFrenoTauNT}{1.9}  % cualquier freno: techo de respuesta, 1 t en el Zeppelin NT [s]
+\newcommand{\valFrenoPGrilla}{2--39}  % rechazo instalado de la tabla del freno; el mayor es el límite de la carga útil del LCA60T [MW]
+\newcommand{\valFrenoMeFW}{27--197}  % escalón que el ciclo compensa en tiempo real, LCA60T, grilla de la tabla [kg]
+\newcommand{\valFrenoMeDiezFW}{80}  % escalón en tiempo real con 10 MW, LCA60T, 1 t [kg]
+\newcommand{\valFrenoMeDiezNT}{29}  % escalón en tiempo real con 10 MW, Zeppelin NT, 1 t [kg]
+\newcommand{\valFrenoFrac}{80.3--99.9}  % parte del escalón que toma el freno, en la tabla [%]
+\newcommand{\valFrenoTrecUno}{2.7--52.8}  % tiempo de recuperación de 1 t, grilla de la tabla [min]
+\newcommand{\valFrenoTrecDiezT}{106}  % tiempo de recuperación de 10 t con 10 MW [min]
+\newcommand{\valFrenoTrecTreintaT}{5.3}  % tiempo de recuperación de 30 t con 10 MW [h]
+\newcommand{\valFrenoPHelUno}{0.06--0.19}  % potencia de las hélices, 1 t, LCA60T, grilla de la tabla [MW]
+\newcommand{\valFrenoEHelUno}{1--67}  % energía de las hélices, 1 t, LCA60T, grilla de la tabla [kWh]
+\newcommand{\valFrenoPHelDiezT}{2.7--6.2}  % potencia de las hélices, 10 t, LCA60T [MW]
+\newcommand{\valFrenoEHelDiezT}{0.5--22.0}  % energía de las hélices, 10 t, LCA60T, grilla de la tabla [MWh]
+\newcommand{\valFrenoPHelTreintaT}{14--33}  % potencia de las hélices, 30 t, LCA60T [MW]
+\newcommand{\valFrenoEHelTreintaT}{8--344}  % energía de las hélices, 30 t, LCA60T, grilla de la tabla [MWh]
+\newcommand{\valFrenoRegenDiezT}{22--23}  % regenerar el H2 de 10 t (electrólisis y compresión, 1 atm) [MWh]
+\newcommand{\valFrenoPLimNT}{0.65}  % NT: rechazo con el que los haces de ACC pesan su carga útil [MW]
+\newcommand{\valFrenoTrecLimNT}{2.7}  % NT: recuperación de 1 t con ese rechazo [h]
+\newcommand{\valFrenoEquipoDiez}{18--20}  % LCA60T, 10 MW: haces + buffer de sus ventiladores + cajas fijas [t]
+\newcommand{\valFrenoPLimHaces}{39}  % rechazo con el que los haces de ACC pesan la carga útil del LCA60T [MW]
+\newcommand{\valFrenoMargen}{30}  % margen del autor con el que se dimensiona la fuerza del freno [%]
+\newcommand{\valFrenoMu}{0.43}  % exceso de fuerza del freno, mu = 1/(1 - margen) - 1
+\newcommand{\valFrenoU}{3.197}  % raíz u de (1 + mu)(1 - e^-u) = mu u
+\newcommand{\valFrenoG}{1.007}  % G(mu) = u (1 - mu u / 2): subida mínima / (a tau^2)
+\newcommand{\valFrenoTauPrimerFW}{6.4}  % plazo del freno con fuerza (1+mu) m g y el mejor control, 1 t, LCA60T [s]
+\newcommand{\valFrenoTauPrimerNT}{1.4}  % plazo del freno con fuerza (1+mu) m g y el mejor control, 1 t, Zeppelin NT [s]
+\newcommand{\valFrenoNTLiv}{200}  % liviandad estática certificada del Zeppelin NT (FAA TCDS AS1CE) [kg]
+\newcommand{\valFrenoNTCarga}{1}  % carga útil del Zeppelin NT [t]
+\newcommand{\valFrenoTnatFW}{14}  % el ciclo solo recupera 1 t en el LCA60T en [s]
+\newcommand{\valFrenoTnatNT}{3.0}  % el ciclo solo recupera 1 t en el Zeppelin NT en [s]
+\newcommand{\valFrenoSimSubeNT}{0.67}  % simulación con freno, NT, 1 t con 10 MW: subida [m]
+\newcommand{\valFrenoSimSubeFW}{0.00}  % simulación con freno, LCA60T, 1 t con 10 MW: subida [m]
+\newcommand{\valFrenoSimERazon}{1.00--1.02}  % energía del freno, simulación / forma cerrada
+\newcommand{\valFrenoSimHdos}{44.8--44.9}  % simulación con freno, 1 t con 10 MW: H2 quemado [kg]
+\newcommand{\valFrenoSimHdosEsp}{44.8}  % H2 de equilibrio, m / L_eff, para 1 t [kg]
+\newcommand{\valFrenoPrtFW}{446}  % rechazo en tiempo real de 1 t en el LCA60T, P_rt = dm* q [MW]
+\newcommand{\valFrenoAFW}{0.0240}  % aceleración al soltar 1 t, LCA60T [m/s2]
+\newcommand{\valFrenoANT}{0.526}  % aceleración al soltar 1 t, Zeppelin NT [m/s2]
+\newcommand{\valFrenoFDiezFW}{9.03}  % fuerza del freno, 1 t con 10 MW, LCA60T [kN]
+\newcommand{\valFrenoPHelDiezFW}{78--175}  % potencia de las hélices, 1 t con 10 MW, LCA60T [kW]
+\newcommand{\valFrenoEHelDiezFW}{5.5--12.3}  % energía de las hélices, 1 t con 10 MW, LCA60T [kWh]
+\newcommand{\valFrenoTrecDiezFWs}{634}  % tiempo de recuperación de 1 t con 10 MW [s]
+\newcommand{\valFrenoKWkgHaces}{0.653}  % haces de ACC: potencia específica usada por freno.py [kW/kg]
+\newcommand{\valFrenoRampaFW}{0.69}  % freno anticipado: rampa L g dm*, 1 t, LCA60T [kN/s]
+\newcommand{\valFrenoRampaNT}{3.2}  % freno anticipado: rampa L g dm*, 1 t, Zeppelin NT [kN/s]
+\newcommand{\valFrenoRampaPreviaFW}{7.1}  % freno anticipado: rampa antes de soltar, LCA60T [s]
+\newcommand{\valFrenoRampaPreviaNT}{1.5}  % freno anticipado: rampa antes de soltar, Zeppelin NT [s]
+\newcommand{\valFrenoSinPreviaPct}{4--39}  % sin quema previa: aumento de la potencia de las hélices, 1 t, LCA60T, grilla de la tabla [%]
+\newcommand{\valFrenoSinPreviaDiez}{13}  % sin quema previa: aumento de la potencia de las hélices, 1 t, LCA60T, 10 MW [%]
+\newcommand{\valFrenoTauEsperaNT}{1.2}  % NT, 1 t, 10 MW: retardo máximo del freno que espera, |dh| <= h_max [s]
+\newcommand{\valFrenoTauAnticipaNT}{2.3}  % NT, 1 t, 10 MW: retardo máximo del freno que anticipa, |dh| <= h_max [s]
+\newcommand{\valFrenoEsperaSubeNT}{3.1}  % NT: con ese retardo, el freno que espera deja subir [m]
+\newcommand{\valFrenoSinPreviaSubeNT}{0.79}  % NT, sin quema previa, retardo base: |dh| máximo [m]
+\newcommand{\valFrenoHelTau}{1.0}  % retardo de primer orden de la fuerza del freno en la simulación [s]
+\newcommand{\valFrenoHelWn}{0.3}  % frecuencia natural del lazo del freno en la simulación [rad/s]
+\newcommand{\valFrenoHelZeta}{1.0}  % amortiguamiento del lazo del freno en la simulación
+
+% --- EXP-09: el minimax del artículo con dinámica del condensador (exp09_condensacion_dinamica.json) ---
+\newcommand{\valNuevePhi}{0.85}  % fracción máxima que condensa (equilibrio, 40 °C, aire justo)
+\newcommand{\valNueveTau}{5}  % retardo térmico base del condensador [s]
+\newcommand{\valNuevePulmonT}{70}  % temperatura del vapor retenido como gas [°C]
+\newcommand{\valNuevePulmonInerte}{2.9}  % N2 + Ar del escape por kg de vapor: lo que habría que guardar con él [kg/kg]
+\newcommand{\valNueveIdealRet}{100}  % agua retenida [%] — ideal
+\newcommand{\valNueveIdealSube}{0.00}  % subida máxima [m] — ideal
+\newcommand{\valNueveIdealHdos}{45}  % H2 quemado [kg] — ideal
+\newcommand{\valNueveIdealAguaRet}{401}  % agua retenida a bordo [kg] — ideal
+\newcommand{\valNueveIdealAguaVent}{0}  % agua venteada con el nitrógeno [kg] — ideal
+\newcommand{\valNueveVentInfRet}{85}  % agua retenida [%] — ventear_infMW
+\newcommand{\valNueveVentInfSube}{0.06}  % subida máxima [m] — ventear_infMW
+\newcommand{\valNueveVentInfHdos}{49}  % H2 quemado [kg] — ventear_infMW
+\newcommand{\valNueveVentInfAguaRet}{371}  % agua retenida a bordo [kg] — ventear_infMW
+\newcommand{\valNueveVentInfAguaVent}{65}  % agua venteada con el nitrógeno [kg] — ventear_infMW
+\newcommand{\valNueveVentCienRet}{20}  % agua retenida [%] — ventear_100MW
+\newcommand{\valNueveVentCienSube}{1.66}  % subida máxima [m] — ventear_100MW
+\newcommand{\valNueveVentCienHdos}{78}  % H2 quemado [kg] — ventear_100MW
+\newcommand{\valNueveVentCienAguaRet}{140}  % agua retenida a bordo [kg] — ventear_100MW
+\newcommand{\valNueveVentCienAguaVent}{560}  % agua venteada con el nitrógeno [kg] — ventear_100MW
+\newcommand{\valNueveVentDiezRet}{3}  % agua retenida [%] — ventear_10MW
+\newcommand{\valNueveVentDiezSube}{2.50}  % subida máxima [m] — ventear_10MW
+\newcommand{\valNueveVentDiezHdos}{92}  % H2 quemado [kg] — ventear_10MW
+\newcommand{\valNueveVentDiezAguaRet}{24}  % agua retenida a bordo [kg] — ventear_10MW
+\newcommand{\valNueveVentDiezAguaVent}{795}  % agua venteada con el nitrógeno [kg] — ventear_10MW
+\newcommand{\valNuevePulInfRet}{85}  % agua retenida [%] — pulmon_infMW
+\newcommand{\valNuevePulInfSube}{0.06}  % subida máxima [m] — pulmon_infMW
+\newcommand{\valNuevePulInfHdos}{49}  % H2 quemado [kg] — pulmon_infMW
+\newcommand{\valNuevePulInfAguaRet}{371}  % agua retenida a bordo [kg] — pulmon_infMW
+\newcommand{\valNuevePulInfAguaVent}{65}  % agua venteada con el nitrógeno [kg] — pulmon_infMW
+\newcommand{\valNuevePulCienRet}{85}  % agua retenida [%] — pulmon_100MW
+\newcommand{\valNuevePulCienSube}{11.18}  % subida máxima [m] — pulmon_100MW
+\newcommand{\valNuevePulCienHdos}{105}  % H2 quemado [kg] — pulmon_100MW
+\newcommand{\valNuevePulCienAguaRet}{798}  % agua retenida a bordo [kg] — pulmon_100MW
+\newcommand{\valNuevePulCienAguaVent}{139}  % agua venteada con el nitrógeno [kg] — pulmon_100MW
+\newcommand{\valNuevePulDiezRet}{27}  % agua retenida [%] — pulmon_10MW
+\newcommand{\valNuevePulDiezSube}{31.92}  % subida máxima [m] — pulmon_10MW
+\newcommand{\valNuevePulDiezHdos}{141}  % H2 quemado [kg] — pulmon_10MW
+\newcommand{\valNuevePulDiezAguaRet}{335}  % agua retenida a bordo [kg] — pulmon_10MW
+\newcommand{\valNuevePulDiezAguaVent}{187}  % agua venteada con el nitrógeno [kg] — pulmon_10MW
+\newcommand{\valNueveTauCeroRet}{85}  % agua retenida [%] — tau_0s
+\newcommand{\valNueveTauCeroSube}{0.06}  % subida máxima [m] — tau_0s
+\newcommand{\valNueveTauCeroHdos}{49}  % H2 quemado [kg] — tau_0s
+\newcommand{\valNueveTauCeroAguaRet}{371}  % agua retenida a bordo [kg] — tau_0s
+\newcommand{\valNueveTauCeroAguaVent}{65}  % agua venteada con el nitrógeno [kg] — tau_0s
+\newcommand{\valNueveTauTreintaRet}{85}  % agua retenida [%] — tau_30s
+\newcommand{\valNueveTauTreintaSube}{0.06}  % subida máxima [m] — tau_30s
+\newcommand{\valNueveTauTreintaHdos}{49}  % H2 quemado [kg] — tau_30s
+\newcommand{\valNueveTauTreintaAguaRet}{371}  % agua retenida a bordo [kg] — tau_30s
+\newcommand{\valNueveTauTreintaAguaVent}{65}  % agua venteada con el nitrógeno [kg] — tau_30s
+\newcommand{\valNueveSinPreRet}{63}  % agua retenida [%] — sin_prearranque_inf
+\newcommand{\valNueveSinPreSube}{0.71}  % subida máxima [m] — sin_prearranque_inf
+\newcommand{\valNueveSinPreHdos}{58}  % H2 quemado [kg] — sin_prearranque_inf
+\newcommand{\valNueveSinPreAguaRet}{324}  % agua retenida a bordo [kg] — sin_prearranque_inf
+\newcommand{\valNueveSinPreAguaVent}{194}  % agua venteada con el nitrógeno [kg] — sin_prearranque_inf
+\newcommand{\valNueveHmax}{1}  % umbral de la maniobra del artículo [m]
+\newcommand{\valNuevePlatSube}{1.6--2.5}  % subida con 100 MW (ventear), rango de las 4 plataformas [m]
+\newcommand{\valNuevePlatRet}{4--22}  % agua retenida con 100 MW (ventear), rango de las 4 plataformas [%]
+
+% --- EXP-10: escalones de EXP-06 con retardo del condensador (exp10_escalones_condensador.json) ---
+\newcommand{\valDiezKgtIdeal}{44.8}  % H2 por tonelada con condensación instantánea [kg/t]
+\newcommand{\valDiezKgtVenteo}{74.8}  % H2 por tonelada venteando H2 directamente [kg/t]
+\newcommand{\valDiezIdealRet}{100}  % agua retenida [%], 4 plataformas x 10/100 MW — ideal
+\newcommand{\valDiezIdealKgt}{45--49}  % H2 quemado por tonelada [kg/t], 4 plataformas x 10/100 MW — ideal
+\newcommand{\valDiezIdealSube}{0.00}  % subida máxima [m], peor caso — ideal
+\newcommand{\valDiezIdealFallan}{0}  % casos que no cumplen h_max (de 8) — ideal
+\newcommand{\valDiezIdealKgtGrandes}{45--46}  % H2 por tonelada [kg/t], sin el Zeppelin NT — ideal
+\newcommand{\valDiezTauCeroRet}{85}  % agua retenida [%], 4 plataformas x 10/100 MW — ventear_tau0s
+\newcommand{\valDiezTauCeroKgt}{49--54}  % H2 quemado por tonelada [kg/t], 4 plataformas x 10/100 MW — ventear_tau0s
+\newcommand{\valDiezTauCeroSube}{0.02}  % subida máxima [m], peor caso — ventear_tau0s
+\newcommand{\valDiezTauCeroFallan}{0}  % casos que no cumplen h_max (de 8) — ventear_tau0s
+\newcommand{\valDiezTauCeroKgtGrandes}{49--52}  % H2 por tonelada [kg/t], sin el Zeppelin NT — ventear_tau0s
+\newcommand{\valDiezTauCincoRet}{85}  % agua retenida [%], 4 plataformas x 10/100 MW — ventear_tau5s
+\newcommand{\valDiezTauCincoKgt}{49--54}  % H2 quemado por tonelada [kg/t], 4 plataformas x 10/100 MW — ventear_tau5s
+\newcommand{\valDiezTauCincoSube}{0.02}  % subida máxima [m], peor caso — ventear_tau5s
+\newcommand{\valDiezTauCincoFallan}{0}  % casos que no cumplen h_max (de 8) — ventear_tau5s
+\newcommand{\valDiezTauCincoKgtGrandes}{49--52}  % H2 por tonelada [kg/t], sin el Zeppelin NT — ventear_tau5s
+\newcommand{\valDiezTauTreintaRet}{83--85}  % agua retenida [%], 4 plataformas x 10/100 MW — ventear_tau30s
+\newcommand{\valDiezTauTreintaKgt}{50--54}  % H2 quemado por tonelada [kg/t], 4 plataformas x 10/100 MW — ventear_tau30s
+\newcommand{\valDiezTauTreintaSube}{0.03}  % subida máxima [m], peor caso — ventear_tau30s
+\newcommand{\valDiezTauTreintaFallan}{0}  % casos que no cumplen h_max (de 8) — ventear_tau30s
+\newcommand{\valDiezTauTreintaKgtGrandes}{50--52}  % H2 por tonelada [kg/t], sin el Zeppelin NT — ventear_tau30s
+\newcommand{\valDiezPulmonRet}{85}  % agua retenida [%], 4 plataformas x 10/100 MW — pulmon_tau5s
+\newcommand{\valDiezPulmonKgt}{49--54}  % H2 quemado por tonelada [kg/t], 4 plataformas x 10/100 MW — pulmon_tau5s
+\newcommand{\valDiezPulmonSube}{0.02}  % subida máxima [m], peor caso — pulmon_tau5s
+\newcommand{\valDiezPulmonFallan}{0}  % casos que no cumplen h_max (de 8) — pulmon_tau5s
+\newcommand{\valDiezPulmonKgtGrandes}{49--52}  % H2 por tonelada [kg/t], sin el Zeppelin NT — pulmon_tau5s
+\newcommand{\valDiezQuema}{9--64}  % duración de la quema por escalón, ideal [s]
+\newcommand{\valDiezEscalon}{29--397}  % tamaño del escalón (EXP-06, h = 1 m, 10 y 100 MW) [kg]
+
+% --- EXP-11: cajas negras, balance de energía y regeneración (exp11_balance_energia.json) ---
+\newcommand{\valOnceEtaMinAtm}{0.15--0.19}  % eta mínima para autoabastecer el enfriamiento — 1atm
+\newcommand{\valOnceRazonAtm}{1.8--2.4}  % trabajo generado / pedido con eta de referencia — 1atm
+\newcommand{\valOncePideAtm}{202--270}  % trabajo que pide el enfriamiento [kWh por tonelada] — 1atm
+\newcommand{\valOnceGeneraAtm}{476}  % trabajo generado [kWh por tonelada] — 1atm
+\newcommand{\valOncePhiAtm}{0.85}  % fracción que condensa — 1atm
+\newcommand{\valOnceEtaMinPres}{0.21--0.25}  % eta mínima para autoabastecer el enfriamiento — presurizado
+\newcommand{\valOnceRazonPres}{1.2--1.5}  % trabajo generado / pedido con eta de referencia — presurizado
+\newcommand{\valOncePidePres}{291--361}  % trabajo que pide el enfriamiento [kWh por tonelada] — presurizado
+\newcommand{\valOnceGeneraPres}{450}  % trabajo generado [kWh por tonelada] — presurizado
+\newcommand{\valOncePhiPres}{0.99}  % fracción que condensa — presurizado
+\newcommand{\valOnceEtaRef}{0.30}  % eta de referencia (el grupo electrógeno del artículo)
+\newcommand{\valOncePresAtm}{14}  % presión del caso presurizado [atm]
+\newcommand{\valOnceKgKW}{0.21--0.50}  % radiador + buffer por kW de condensación instalada [kg/kW]
+\newcommand{\valOnceBufDiez}{1.1--3.0}  % masa del buffer [t] — 10 MW
+\newcommand{\valOnceTasaCDiez}{46--97}  % tasa de descarga del buffer [C] — 10 MW
+\newcommand{\valOnceTasaCGrandesDiez}{46--61}  % tasa de descarga de un buffer dimensionado por energía [C], sin el Zeppelin NT — 10 MW
+\newcommand{\valOnceTasaCPaqGrandesDiez}{5--10}  % tasa de descarga del buffer dimensionado por potencia [C], sin el Zeppelin NT — 10 MW
+\newcommand{\valOnceCargaDiez}{4--100}  % radiador + buffer [% de la carga útil], sin el Zeppelin NT — 10 MW
+\newcommand{\valOnceBufCien}{11--30}  % masa del buffer [t] — 100 MW
+\newcommand{\valOnceTasaCCien}{84--146}  % tasa de descarga del buffer [C] — 100 MW
+\newcommand{\valOnceTasaCGrandesCien}{84--103}  % tasa de descarga de un buffer dimensionado por energía [C], sin el Zeppelin NT — 100 MW
+\newcommand{\valOnceTasaCPaqGrandesCien}{5--10}  % tasa de descarga del buffer dimensionado por potencia [C], sin el Zeppelin NT — 100 MW
+\newcommand{\valOnceCargaCien}{36--1004}  % radiador + buffer [% de la carga útil], sin el Zeppelin NT — 100 MW
+\newcommand{\valOnceRecarga}{0.5--1.4}  % energía que genera la quema del escalón / energía del buffer
+\newcommand{\valOnceBufManda}{16}  % casos en que la masa del buffer la fija la potencia
+\newcommand{\valOnceBufCasos}{16}  % casos de buffer evaluados
+\newcommand{\valOnceVenteo}{74.8}  % H2 perdido por tonelada venteando H2 [kg/t]
+\newcommand{\valOncePerdidoTauCero}{7--8}  % H2 perdido por tonelada, plataformas grandes [kg/t] — ventear_tau0s
+\newcommand{\valOnceAhorroTauCero}{90}  % pérdida evitada frente a ventear H2 [%] — ventear_tau0s
+\newcommand{\valOnceDiasTauCero}{0.29--0.55}  % días de regeneración solar por tonelada, plataformas grandes — ventear_tau0s
+\newcommand{\valOncePerdidoTauCinco}{7--8}  % H2 perdido por tonelada, plataformas grandes [kg/t] — ventear_tau5s
+\newcommand{\valOnceAhorroTauCinco}{90}  % pérdida evitada frente a ventear H2 [%] — ventear_tau5s
+\newcommand{\valOnceDiasTauCinco}{0.29--0.55}  % días de regeneración solar por tonelada, plataformas grandes — ventear_tau5s
+\newcommand{\valOncePerdidoZNT}{8}  % H2 perdido por tonelada, Zeppelin NT, retardo 5 s [kg/t]
+\newcommand{\valOnceQPorT}{6.3}  % calor a rechazar por tonelada liberada, condensando todo [GJ/t]
+\newcommand{\valOnceLNdos}{15}  % LN2 que habría que evaporar por tonelada liberada [t/t]
+\newcommand{\valOnceLNdosLatente}{2.2}  % LN2 por tonelada contando solo el latente del agua [t/t]
+
+% --- EXP-12: comparación con helio a nivel de caja negra (exp12_helio.json) ---
+\newcommand{\valDoceRatioRho}{1.99}  % rho_He / rho_H2 a igual T y P
+\newcommand{\valDoceLHdos}{22.2}  % pesadez por kg de H2 quemado con agua retenida (phi objetivo) [kg/kg]
+\newcommand{\valDoceLHdosVent}{13.4}  % pesadez por kg de H2 venteado [kg/kg]
+\newcommand{\valDoceLHe}{7.24}  % pesadez por kg de He comprimido a bordo [kg/kg]
+\newcommand{\valDoceLHeVent}{6.24}  % pesadez por kg de He venteado [kg/kg]
+\newcommand{\valDoceKgHdos}{45}  % H2 quemado por tonelada liberada [kg/t]
+\newcommand{\valDoceKgHe}{138}  % He comprimido por tonelada liberada [kg/t]
+\newcommand{\valDoceKgHeVent}{160}  % He perdido por tonelada liberada si se ventea [kg/t]
+\newcommand{\valDoceSuccionHdos}{528}  % gas procesado por tonelada, H2 [m3/t a 1 atm]
+\newcommand{\valDoceSuccionHe}{816}  % gas procesado por tonelada, He comprimido [m3/t a 1 atm]
+\newcommand{\valDoceCalorHdos}{6.3}  % calor a rechazar por tonelada, H2 con agua retenida [GJ/t]
+\newcommand{\valDoceWCinco}{2.35}  % trabajo mínimo isotérmico para comprimir He a 5 MPa [MJ/kg]
+\newcommand{\valDoceCalorHeCinco}{0.32}  % calor (= trabajo) por tonelada, He a 5 MPa [GJ/t]
+\newcommand{\valDoceAlmacenCinco}{17.0}  % volumen de He comprimido a 5 MPa por tonelada [m3/t]
+\newcommand{\valDoceWVeinte}{3.22}  % trabajo mínimo isotérmico para comprimir He a 20 MPa [MJ/kg]
+\newcommand{\valDoceCalorHeVeinte}{0.45}  % calor (= trabajo) por tonelada, He a 20 MPa [GJ/t]
+\newcommand{\valDoceAlmacenVeinte}{4.5}  % volumen de He comprimido a 20 MPa por tonelada [m3/t]
+\newcommand{\valDoceWTreinta}{3.49}  % trabajo mínimo isotérmico para comprimir He a 30 MPa [MJ/kg]
+\newcommand{\valDoceCalorHeTreinta}{0.48}  % calor (= trabajo) por tonelada, He a 30 MPa [GJ/t]
+\newcommand{\valDoceAlmacenTreinta}{3.2}  % volumen de He comprimido a 30 MPa por tonelada [m3/t]
+\newcommand{\valDoceFactorCalor}{14}  % calor por tonelada H2 / He a 20 MPa
+\newcommand{\valDoceBaseDmHdos}{3.17}  % caso base caso base 1 t: flujo minimax H2 (forma cerrada exacta) [kg/s]
+\newcommand{\valDoceBaseDmHe}{9.8}  % caso base caso base 1 t: flujo minimax He comprimido [kg/s]
+\newcommand{\valDoceBaseAlphaHe}{0.500}  % caso base caso base 1 t: alpha* con He
+\newcommand{\valDoceFactorFlujo}{3.08}  % flujo He / H2 con la misma forma cerrada
+\newcommand{\valDoceFactorL}{3.07}  % flujo He / H2 por regla de tres con L (no es el minimax)
+\newcommand{\valDoceBaseSuccionHdos}{37}  % caso base: succión H2 [m3/s a 1 atm]
+\newcommand{\valDoceBaseSuccionHe}{58}  % caso base: succión He [m3/s a 1 atm]
+\newcommand{\valDoceBasePotHdos}{446}  % caso base: calor a rechazar en tiempo real, H2 [MW]
+\newcommand{\valDoceBasePotHe}{31}  % caso base: trabajo mínimo de compresión He a 20 MPa [MW]
+\newcommand{\valDoceTnatHdos}{14.2}  % caso base: duración de la maniobra limpia, H2 [s]
+\newcommand{\valDoceTnatHe}{14.2}  % caso base: duración de la maniobra limpia, He (la misma: no depende de L) [s]
+\newcommand{\valPhiUnoDifPct}{0.4}  % tasa instalada con phi_objetivo en lugar de phi = 1: cuánto más alta [%]
+\newcommand{\valDocePotHeRec}{0.7}  % COSH: potencia de compresión para 1 t en el tiempo de recuperación del ciclo con 10 MW [MW]
+\newcommand{\valDoceTanqueHe}{0.65}  % COSH: compuesto del tanque por tonelada liberada, cota inferior [t]
+\newcommand{\valDoceTanqueHeCarga}{39}  % COSH: compuesto de los tanques para toda la carga útil del LCA60T, cota inferior [t]
+\newcommand{\valDoceAguaM}{0.40}  % agua retenida por tonelada liberada (phi = 0.99) [m3]
+\newcommand{\valDoceTanqueCiclo}{0.87--0.91}  % tanques de H2 del ciclo, una tonelada regenerada [t]
+\newcommand{\valDoceRecupHdos}{2.4--2.5}  % energía para devolver la sustentación de 1 t: electrólisis y compresión del H2 regenerable (phi = 0.99) [MWh]
+\newcommand{\valDoceInstantePct}{65}  % ciclo: sustentación devuelta al instante con los B kg de sus tanques [% de 1 t]
+\newcommand{\valDoceRestoKg}{353}  % ciclo: resto que vuelve con la electrólisis, B (r phi - 1) [kg por t]
+\newcommand{\valDoceTanqueCicloComp}{0.47}  % ciclo: compuesto de los tanques de B kg a 35 MPa, cota inferior [t por t]
+\newcommand{\valDocePTanqueMPa}{35}  % presión de los tanques del ciclo en la comparación [MPa]
+\newcommand{\valDoceTodoKgHdos}{69.6}  % H2 de los tanques para devolver 1 t entera de golpe [kg]
+\newcommand{\valDoceTanqueTodo}{0.73}  % compuesto para devolver 1 t entera de golpe con H2 a 35 MPa [t]
+\newcommand{\valDoceMinHdosDiez}{10.6}  % minutos por tonelada con 10 MW, H2
+\newcommand{\valDoceMinHeDiez}{0.74}  % minutos por tonelada con 10 MW, He a 20 MPa
+\newcommand{\valDoceMinHdosCien}{1.1}  % minutos por tonelada con 100 MW, H2
+\newcommand{\valDoceMinHeCien}{0.07}  % minutos por tonelada con 100 MW, He a 20 MPa
+
+% --- EXP-13: masa añadida en la dinámica (inercia.py) ---
+\newcommand{\valEsbeltezNaves}{4.0--7.3}  % esbelteces L/D de las naves
+\newcommand{\valCotaSimFormulaMm}{2}  % bajada pico simulada frente a (1 + s) D_lim, la mayor de las cuatro naves [mm]
+\newcommand{\valKNaves}{0.86--0.94}  % k de masa añadida de las naves, cada una con su esbeltez (Lamb)
+\newcommand{\valTreceUnoMasK}{1.86}  % inercia / aire del volumen del casco en el equilibrio, 1 + k (caso base)
+\newcommand{\valTreceMasaBase}{109}  % masa total caso base con 1 t [t]
+\newcommand{\valTreceMasaAireBase}{221}  % aire del volumen del casco del caso base, rho V_casco [t]
+\newcommand{\valTreceVcascoBase}{180{,}000}  % volumen total del casco del caso base [m3]
+\newcommand{\valBaseVolAltPct}{5}  % flujo instalado con 200 000 m3 en vez de 180 000: cuánto baja [%]
+\newcommand{\valTreceInerciaBase}{410}  % inercia vertical caso base con 1 t [t]
+\newcommand{\valTreceDmConBase}{3.17}  % ṁ* caso base 1 t, h = 1 m, con masa añadida [kg/s]
+\newcommand{\valTreceDmSinBase}{4.32}  % ṁ* caso base 1 t, h = 1 m, sin masa añadida [kg/s]
+\newcommand{\valTrecePcondConBase}{446}  % P_cond en tiempo real caso base 1 t, con masa añadida [MW]
+\newcommand{\valTrecePcondSinBase}{609}  % P_cond en tiempo real caso base 1 t, sin masa añadida [MW]
+\newcommand{\valTreceZetaAnterior}{0.67}  % zeta real que tenía el diseño anterior (Kd sin masa añadida ni H2), caso base 1 t
+
+% --- VAL-01: validación por componente contra datos publicados (val01_componentes.json) ---
+\newcommand{\valValidFilas}{22}  % comparaciones modelo vs dato publicado
+\newcommand{\valValidDentro}{22}  % comparaciones dentro de su criterio
+\newcommand{\valValidOdos}{7.937}  % O2 por kg de H2, estequiometría exacta (IUPAC)
+\newcommand{\valOdosLastre}{7.9}  % lastre que dejaría guardar el O2 a bordo, por kg de H2 regenerado [kg/kg]
+\newcommand{\valValidAgua}{8.937}  % H2O por kg de H2, estequiometría exacta (IUPAC)
+\newcommand{\valRazonVolHdosAgua}{1300}  % volumen del H2 quemado (gas a T1, 1 atm) / volumen de su agua líquida a la salida de la unidad de rechazo [veces]
+\newcommand{\valValidPCI}{119.96}  % PCI del H2, CODATA [MJ/kg]
+\newcommand{\valValidPCS}{141.79}  % PCS del H2, CODATA [MJ/kg]
+\newcommand{\valValidPCSModelo}{141.78}  % PCS reconstruido con PCI + (M_H2O/M_H2) L_v [MJ/kg]
+\newcommand{\valValidHfg}{2442}  % calor latente del agua a 25 °C, NIST [kJ/kg]
+\newcommand{\valValidPsatDesv}{0.007}  % |desvío| máx. de p_sat (IF97) frente a IAPWS-95 de NIST [%]
+\newcommand{\valValidRhoHDesv}{0.06}  % desvío de rho_H2 gas ideal frente a NIST [%]
+\newcommand{\valValidHsISA}{10{,}405}  % altura de escala local de la densidad ISA en h0 [m]
+\newcommand{\valValidNinerte}{1.89}  % mol de N2 + Ar por mol de H2O en el escape estequiométrico
+\newcommand{\valValidHs}{10{,}416}  % altura de escala de la densidad del modelo [m]
+\newcommand{\valValidHsKm}{10.4}  % la misma altura de escala, en km (texto: tres cifras significativas)
+\newcommand{\valValidEfIEA}{63}  % eficiencia de electrólisis IEA 2024 [% PCI]
+\newcommand{\valValidElecIEA}{52.9}  % energía de electrólisis, promedio IEA 2024 [kWh/kg]
+\newcommand{\valValidElecTermo}{39.4}  % energía termoneutral de electrólisis (PCS) [kWh/kg]
+\newcommand{\valValidMaRestringido}{0.77}  % masa vertical medida / analítica, ensayo restringido (Yamasaki & Goto 2003)
+\newcommand{\valValidMaVueloLibre}{1.20}  % masa vertical medida / analítica, vuelo libre (Yamasaki & Goto 2003)
+\newcommand{\valValidMaFlujoAlto}{14}  % flujo dinámico si la inercia fuera la del ensayo restringido [+%]
+\newcommand{\valValidMaFlujoBajo}{9}  % flujo dinámico si la inercia fuera la del vuelo libre [-%]
+\newcommand{\valValidGasReal}{0.04}  % |efecto| del gas ideal en H2 por tonelada [%]
+\newcommand{\valValidRhoHcero}{0.5}  % |diferencia| de densidad entre ISA nivel del mar e ISA en h0 [%]
+\newcommand{\valValidQQuince}{-0.5}  % cambio de q con aire exterior a 15 °C [%]
+\newcommand{\valValidQLatente}{0.5}  % cambio de q contando solo el latente [%]
+\newcommand{\valValidElecOpt}{15}  % reducción del tiempo de regeneración con 45 kWh/kg [%]
+\newcommand{\valValidHsEfecto}{0.3}  % |cambio| de la excursión máx. de la simulación del artículo con H_s = 8500 m [mm]
+\newcommand{\valValidAntesLeff}{22.37}  % L_eff con los valores anteriores (redondeados)
+\newcommand{\valValidAhoraLeff}{22.31}  % L_eff con los datos publicados
+\newcommand{\valValidAntesHdos}{44.7}  % H2_por_t_kg con los valores anteriores (redondeados)
+\newcommand{\valValidAhoraHdos}{44.8}  % H2_por_t_kg con los datos publicados
+\newcommand{\valValidAntesQ}{140.1}  % q_MJkg con los valores anteriores (redondeados)
+\newcommand{\valValidAhoraQ}{140.8}  % q_MJkg con los datos publicados
+\newcommand{\valValidAntesPhi}{0.850}  % phi_max_40C_1atm con los valores anteriores (redondeados)
+\newcommand{\valValidAhoraPhi}{0.852}  % phi_max_40C_1atm con los datos publicados
+\newcommand{\valValidAntesRocio}{72.6}  % T_rocio_1atm_C con los valores anteriores (redondeados)
+\newcommand{\valValidAhoraRocio}{72.7}  % T_rocio_1atm_C con los datos publicados
+\newcommand{\valValidAntesPres}{13.9}  % P_phi_objetivo_atm con los valores anteriores (redondeados)
+\newcommand{\valValidAhoraPres}{13.8}  % P_phi_objetivo_atm con los datos publicados
+\newcommand{\valValidAntesElec}{45.0}  % E_electrolisis_kWhkg con los valores anteriores (redondeados)
+\newcommand{\valValidAhoraElec}{52.9}  % E_electrolisis_kWhkg con los datos publicados
+
+% --- EXP-14: calor por nivel de temperatura (exp14_calor_por_temperatura.json) ---
+\newcommand{\valCatorceRocio}{73}  % punto de rocío del escape a 1 atm [°C]
+\newcommand{\valCatorceFria}{19.8}  % calor de la banda fría (rocío -> 40 °C), 1 atm [MJ/kg H2]
+\newcommand{\valCatorceFracFriaCero}{14}  % fracción fría del calor, eta = 0 [%]
+\newcommand{\valCatorceFracFriaEta}{19}  % fracción fría, eta de referencia [%]
+\newcommand{\valCatorceFriaObj}{26.2}  % calor de la banda fría a la presión que retiene 0.99, rocío -> 40 °C [MJ/kg H2]
+\newcommand{\valCatorceFracFriaObj}{19}  % fracción de q(0, 0.99) que sale en esa banda [%]
+\newcommand{\valCatorceKWkgFria}{2.2--2.4}  % kW/kg efectivo del radiador en la banda fría, 1 atm, 2026--2035
+\newcommand{\valCatorceKgKW}{0.107--0.102}  % masa de rechazo con dos bandas, 1 atm, eta = 0, 2026--2035 [kg/kW]
+\newcommand{\valCatorceRazonArt}{1.07--2.04}  % dos bandas / cifra única del artículo, 1 atm, 2026--2035
+\newcommand{\valCatorceRocioCinco}{116}  % rocío a 5 atm [°C]
+\newcommand{\valCatorceFinCinco}{74}  % fin de la condensación a 5 atm [°C]
+\newcommand{\valCatorceKWkgFriaCinco}{7.9}  % kW/kg banda fría a 5 atm, 2026
+\newcommand{\valCatorceRazonCinco}{0.59}  % masa de rechazo a 5 atm / a 1 atm, 2026
+\newcommand{\valCatorceWCinco}{5.4}  % compresión isotérmica mínima a 5 atm [MJ/kg H2]
+\newcommand{\valCatorceRocioVeinte}{165}  % rocío a 20 atm [°C]
+\newcommand{\valCatorceFinVeinte}{111}  % fin de la condensación a 20 atm [°C]
+\newcommand{\valCatorceKWkgFriaVeinte}{14.2}  % kW/kg banda fría a 20 atm, 2026
+\newcommand{\valCatorceRazonVeinte}{0.51}  % masa de rechazo a 20 atm / a 1 atm, 2026
+\newcommand{\valCatorceWVeinte}{12.3}  % compresión isotérmica mínima a 20 atm [MJ/kg H2]
+\newcommand{\valCatorceTinaDiez}{23}  % agua de la tina para guardar el calor frío de 1 t subiendo 10 °C [t]
+\newcommand{\valCatorceLastreFrac}{1.6}  % calor frío que absorbe el propio lastre subiendo 10 °C [%]
+
+% --- Irradiancia sobre el casco: SENAMHI (Lima) x factor de forma (irradiancia_casco.json) ---
+\newcommand{\valIrrTablaAnual}{4.06}  % SENAMHI, energía solar diaria anual, tabla 2 [kWh/m2/día]
+\newcommand{\valIrrGhiInv}{2.4}  % irradiación global horizontal medida, invierno [kWh/m2/día]
+\newcommand{\valIrrFormaInv}{0.84}  % factor de forma de la mitad superior del casco, invierno
+\newcommand{\valIrrCascoInv}{2.0}  % irradiación sobre los paneles del casco, invierno [kWh/m2/día]
+\newcommand{\valIrrFdInv}{67}  % fracción difusa (Page 1964), invierno [%]
+\newcommand{\valIrrGhiVer}{5.6}  % irradiación global horizontal medida, verano [kWh/m2/día]
+\newcommand{\valIrrFormaVer}{0.81}  % factor de forma de la mitad superior del casco, verano
+\newcommand{\valIrrCascoVer}{4.6}  % irradiación sobre los paneles del casco, verano [kWh/m2/día]
+\newcommand{\valIrrFdVer}{43}  % fracción difusa (Page 1964), verano [%]
+\newcommand{\valIrrGhiAnual}{4.1}  % irradiación global horizontal medida, anual [kWh/m2/día]
+\newcommand{\valIrrFormaAnual}{0.82}  % factor de forma de la mitad superior del casco, anual
+\newcommand{\valIrrCascoAnual}{3.4}  % irradiación sobre los paneles del casco, anual [kWh/m2/día]
+\newcommand{\valIrrFdAnual}{54}  % fracción difusa (Page 1964), anual [%]
+\newcommand{\valIrrFormaRumbo}{0.76--0.86}  % factor de forma según el rumbo del eje (N-S a E-W)
+\newcommand{\valIrrFormaFd}{0.78--0.85}  % factor de forma con toda la luz directa o toda difusa
+\newcommand{\valIrrDifusa}{0.82}  % difusa isotrópica sobre la mitad superior: 1/2 + 1/pi
+\newcommand{\valIrrAlbedo}{0.2}  % reflectancia del suelo (supuesto estándar)
+\newcommand{\valIrrDifAnual}{0.8}  % anual rearmado con los anexos 6 y 7 vs tabla 2 [%]
+
+% --- Balance de masa por caja negra (balance_masa.json) ---
+\newcommand{\valMasaPref}{10}  % potencia de rechazo de referencia [MW]
+\newcommand{\valMasaQuema}{0.098}  % quema que produce esa potencia de calor [kg/s]
+\newcommand{\valMasaEje}{3.5}  % potencia de eje de la unidad de conversión [MW]
+\newcommand{\valMasaKWkgTurb}{6.2--7.7}  % turbina CT7 (EASA TCDS) [kW/kg]
+\newcommand{\valMasaKWkgRotax}{1.1--1.4}  % Rotax 916 iS, continua instalado / despegue [kW/kg] (proxy de aviación)
+\newcommand{\valMasaKWkgDeutz}{0.29}  % DEUTZ TCG 7.8 H2 [kW/kg]
+
+% --- Tabla 6: cajas negras con el flujo IDEAL del caso base (caso base, 1 t de una vez) ---
+\newcommand{\valMasaIdealQuema}{3.17}  % quema ideal del caso base [kg/s]
+\newcommand{\valMasaIdealEje}{114}  % potencia de eje de la conversión con el flujo ideal [MW]
+\newcommand{\valMasaIdealPrej}{332}  % calor a rechazar con eta de referencia y phi objetivo [MW]
+\newcommand{\valMasaIdealPrejCero}{446}  % calor a rechazar sin exportar trabajo (= tabla 5, caso base 1 t) [MW]
+\newcommand{\valMasaIdealTbuf}{29}  % tiempo del buffer: 3 tau + quema [s]
+\newcommand{\valMasaIdealConv}{84--399}  % unidad de conversión [t]
+\newcommand{\valMasaIdealRech}{33--66}  % unidad de rechazo [t]
+\newcommand{\valMasaIdealBuf}{38--100}  % buffer [t]
+\newcommand{\valMasaIdealTotal}{156--567}  % total de las cajas negras, flujo ideal [t]
+\newcommand{\valMasaIdealVeces}{2.6--9.5}  % total / carga útil del caso base [veces]
+\newcommand{\valMasaIdealTotalMin}{156}  % total de las cajas negras, flujo ideal, optimista [t]
+\newcommand{\valMasaIdealTotalMax}{567}  % total de las cajas negras, flujo ideal, pesimista [t]
+\newcommand{\valMasaIdealVecesMin}{2.6}  % total / carga útil del caso base, optimista [veces]
+\newcommand{\valMasaIdealVecesMax}{9.5}  % total / carga útil del caso base, pesimista [veces]
+\newcommand{\valCargaMaxBase}{60}  % carga útil máxima del caso base [t]
+\newcommand{\valMasaEjeSobra}{48--64}  % eje del motor que sobra frente a los ventiladores durante la quema [MW]
+\newcommand{\valMasaQuemadorTotal}{97--226}  % cajas con quemador (eta 0) y buffer para los ventiladores, sin el quemador [t]
+\newcommand{\valMasaQuemadorVeces}{1.6--3.8}  % lo mismo / carga útil del caso base [veces]
+\newcommand{\valMasaRangoTotal}{97--567}  % cajas, de quemador a motor [t]
+\newcommand{\valMasaRangoVeces}{1.6--9.5}  % cajas, de quemador a motor / carga del caso base [veces]
+\newcommand{\valMasaRangoMin}{97}  % cajas con quemador, extremo liviano [t] (abstract)
+\newcommand{\valMasaRangoVecesMin}{1.6}  % cajas con quemador, extremo liviano / carga del caso base [veces] (abstract)
+\newcommand{\valMasaIdealTurb}{15--18}  % la conversión con turbinas CT7 [t]
+\newcommand{\valCabeFlujo}{0.32--1.92}  % flujo que cabe en la carga útil del caso base: motor pesado -- quemador liviano [kg/s]
+\newcommand{\valCabeVeces}{1.7--9.9}  % veces menos que el flujo requerido: quemador -- motor
+\newcommand{\valCabeEscalon}{0.2--0.7}  % escalón único que ese flujo sostiene (ley m^{3/2}) [t]: motor -- quemador
+
+% --- Requisito de masa del rechazo por kg/s de H2 y brecha con lo que existe (req_masa_rechazo.py) ---
+\newcommand{\valReqPresupuesto}{18.2}  % presupuesto de las cajas que escalan con el flujo [t por kg/s de H2]
+\newcommand{\valReqFijas}{1.45}  % cajas fijas (regeneración, tanques, compresor), extremo liviano [t]
+\newcommand{\valReqConv}{26--126}  % motor alternativo de H2 [t por kg/s]
+\newcommand{\valReqBuf}{16--43}  % batería que mueve los ventiladores del quemador [t por kg/s]
+\newcommand{\valReqQueda}{2.2}  % lo que deja el presupuesto al rechazo (quemador, batería liviana) [t por kg/s]
+\newcommand{\valReqTurb}{4.7--5.8}  % conversión con turbinas CT7 [t por kg/s]
+\newcommand{\valReqKWkgSinVent}{7.8}  % kW/kg que pide el rechazo si sus ventiladores no gastaran nada
+\newcommand{\valReqKWkgFZ}{63}  % kW/kg que pide el rechazo con la f de FlyZero 2035
+\newcommand{\valReqFMax}{0.17}  % f sobre la cual la batería sola llena el presupuesto [fracción del calor]
+\newcommand{\valReqTurbVentKWkg}{6.2--7.7}  % turbinas CT7 (TCDS de EASA), potencia de eje por masa [kW/kg]
+\newcommand{\valReqTurbVentT}{2.7--3.4}  % esa turbina para los ventiladores con f de 2035 [t por kg/s]
+\newcommand{\valReqKWkgTurb}{9.1--9.5}  % kW/kg que pide el rechazo con esa turbina y f de 2035
+\newcommand{\valReqKWkgTurbMin}{9.1}  % lo mismo, con la turbina más liviana (extremo bajo del requisito)
+\newcommand{\valReqTurbHdosExtra}{0.59}  % H2 que quema esa turbina por kg/s del quemador, f de 2035 [kg/s]
+\newcommand{\valReqTempVeces}{3--61}  % brecha de las clases que condensan a la temperatura del ciclo [veces]
+\newcommand{\valReqKWkgFfisUnaAtm}{8--11}  % requisito del rechazo a 1 atm (phi_max, sin compresor del escape), con batería y el f por caída de presión [kW/kg]
+\newcommand{\valReqTempVecesUnaAtm}{3--64}  % brecha de las clases a la temperatura del ciclo, 1 atm [veces]
+\newcommand{\valReqPresupuestoUnaAtm}{17.1}  % presupuesto para lo que escala, 1 atm [t por kg/s]
+\newcommand{\valReqKWkgSinVentUnaAtm}{8.1}  % kW/kg que pide el rechazo sin ventiladores, 1 atm
+\newcommand{\valReqKWkgFZUnaAtm}{93}  % kW/kg que pide el rechazo con la f de FlyZero 2035, 1 atm
+\newcommand{\valReqFMaxUnaAtm}{0.16}  % f sobre la cual la batería sola llena el presupuesto, 1 atm [fracción del calor]
+\newcommand{\valReqKWkgFZBatMejorUnaAtm}{12}  % kW/kg que pide el rechazo con la mejor batería de 30 s y f de 2035, 1 atm
+\newcommand{\valReqQAguaUnaAtm}{18.1}  % calor del ciclo por kg de agua retenida a 1 atm (quemador, phi_max) [MJ/kg]
+\newcommand{\valReqACCQ}{389}  % calor del condensador enfriado por aire de referencia [MW] (Zhang et al. 2020)
+\newcommand{\valReqACCMasa}{2879}  % masa de ese condensador [t] (tabla S7)
+\newcommand{\valReqACCT}{57}  % temperatura a la que condensa [°C]
+\newcommand{\valReqACCf}{0.01}  % potencia de sus ventiladores / calor [fracción]
+\newcommand{\valReqACCKWkg}{0.135}  % kW/kg del sistema completo
+\newcommand{\valReqACCHacesKWkg}{0.653}  % kW/kg de los haces de tubos solos
+\newcommand{\valReqACCPide}{8.2}  % kW/kg que pide el rechazo con la f de ese condensador
+\newcommand{\valReqRigKWkg}{0.267--0.497}  % recuperación de agua de los rígidos, equivalente [kW/kg]
+\newcommand{\valReqRigFav}{2.5}  % lo mismo, a potencia máxima y con el agua del metano [kW/kg]
+\newcommand{\valReqTRocioPres}{151}  % rocío del escape a la presión que retiene el 99 % [°C]
+\newcommand{\valReqQAgua}{15.9}  % calor de este ciclo por kg de agua retenida (quemador) [MJ/kg]
+\newcommand{\valReqVConsumo}{50}  % velocidad del consumo de los rígidos (Goodyear 1975, nota ***) [kn]
+\newcommand{\valReqCandidatos}{7}  % candidatos con fuente en la tabla de brecha
+\newcommand{\valReqBatMejorCelda}{5.5}  % mejor celda para 30 s (Amprius SA88, pulso x voltaje nominal) [kW/kg]
+\newcommand{\valReqBatMejorPaquete}{3.6}  % lo mismo a nivel paquete (x 0.66 del X-57) [kW/kg]
+\newcommand{\valReqKWkgFZBatMejor}{11}  % kW/kg que pide el rechazo con esa batería y f de 2035
+\newcommand{\valMasaPem}{89}  % electrolizador para recuperar 1 t en 24 h [kW]
+\newcommand{\valMasaTotal}{6.2--19.0}  % masa total de las cajas negras [t]
+\newcommand{\valMasaCargaHind}{32--100}  % masa total / carga útil [%] — Hind
+\newcommand{\valMasaPvASiHind}{1.4}  % masa de paneles a-Si [t] — Hind
+\newcommand{\valDiasPvASiHindInv}{1.14}  % días por tonelada con paneles a-Si, invierno — Hind
+\newcommand{\valDiasPvASiHindVer}{0.51}  % días por tonelada con paneles a-Si, verano — Hind
+\newcommand{\valDiasPvASiHindAnual}{0.69}  % días por tonelada con paneles a-Si, anual — Hind
+\newcommand{\valMasaPvCigsHind}{27.6}  % masa de paneles CIGS [t] — Hind
+\newcommand{\valDiasPvCigsHindInv}{0.63}  % días por tonelada con paneles CIGS, invierno — Hind
+\newcommand{\valDiasPvCigsHindVer}{0.28}  % días por tonelada con paneles CIGS, verano — Hind
+\newcommand{\valDiasPvCigsHindAnual}{0.38}  % días por tonelada con paneles CIGS, anual — Hind
+\newcommand{\valMasaCargaFW}{10--32}  % masa total / carga útil [%] — FW
+\newcommand{\valMasaPvASiFW}{1.4}  % masa de paneles a-Si [t] — FW
+\newcommand{\valDiasPvASiFWInv}{1.15}  % días por tonelada con paneles a-Si, invierno — FW
+\newcommand{\valDiasPvASiFWVer}{0.52}  % días por tonelada con paneles a-Si, verano — FW
+\newcommand{\valDiasPvASiFWAnual}{0.70}  % días por tonelada con paneles a-Si, anual — FW
+\newcommand{\valMasaPvCigsFW}{27.3}  % masa de paneles CIGS [t] — FW
+\newcommand{\valDiasPvCigsFWInv}{0.63}  % días por tonelada con paneles CIGS, invierno — FW
+\newcommand{\valDiasPvCigsFWVer}{0.28}  % días por tonelada con paneles CIGS, verano — FW
+\newcommand{\valDiasPvCigsFWAnual}{0.38}  % días por tonelada con paneles CIGS, anual — FW
+\newcommand{\valMasaCargaZR}{124--380}  % masa total / carga útil [%] — ZR
+\newcommand{\valMasaPvASiZR}{0.7}  % masa de paneles a-Si [t] — ZR
+\newcommand{\valDiasPvASiZRInv}{2.11}  % días por tonelada con paneles a-Si, invierno — ZR
+\newcommand{\valDiasPvASiZRVer}{0.95}  % días por tonelada con paneles a-Si, verano — ZR
+\newcommand{\valDiasPvASiZRAnual}{1.28}  % días por tonelada con paneles a-Si, anual — ZR
+\newcommand{\valMasaPvCigsZR}{14.9}  % masa de paneles CIGS [t] — ZR
+\newcommand{\valDiasPvCigsZRInv}{1.16}  % días por tonelada con paneles CIGS, invierno — ZR
+\newcommand{\valDiasPvCigsZRVer}{0.52}  % días por tonelada con paneles CIGS, verano — ZR
+\newcommand{\valDiasPvCigsZRAnual}{0.70}  % días por tonelada con paneles CIGS, anual — ZR
+\newcommand{\valMasaCargaZNT}{618--1902}  % masa total / carga útil [%] — ZNT
+\newcommand{\valMasaPvASiZNT}{0.1}  % masa de paneles a-Si [t] — ZNT
+\newcommand{\valDiasPvASiZNTInv}{10.94}  % días por tonelada con paneles a-Si, invierno — ZNT
+\newcommand{\valDiasPvASiZNTVer}{4.90}  % días por tonelada con paneles a-Si, verano — ZNT
+\newcommand{\valDiasPvASiZNTAnual}{6.63}  % días por tonelada con paneles a-Si, anual — ZNT
+\newcommand{\valMasaPvCigsZNT}{2.9}  % masa de paneles CIGS [t] — ZNT
+\newcommand{\valDiasPvCigsZNTInv}{5.99}  % días por tonelada con paneles CIGS, invierno — ZNT
+\newcommand{\valDiasPvCigsZNTVer}{2.68}  % días por tonelada con paneles CIGS, verano — ZNT
+\newcommand{\valDiasPvCigsZNTAnual}{3.63}  % días por tonelada con paneles CIGS, anual — ZNT
+\newcommand{\valMasaCargaGrandes}{10--380}  % masa total / carga útil, naves grandes [%]
+\newcommand{\valMasaPvASi}{0.7--1.4}  % masa de paneles a-Si, naves grandes [t]
+\newcommand{\valDiasPvASiInv}{1.1--2.1}  % días por tonelada con paneles a-Si, invierno, naves grandes
+\newcommand{\valDiasPvASiVer}{0.5--0.9}  % días por tonelada con paneles a-Si, verano, naves grandes
+\newcommand{\valDiasPvASiAnual}{0.7--1.3}  % días por tonelada con paneles a-Si, anual, naves grandes
+\newcommand{\valMasaPvCigs}{14.9--27.6}  % masa de paneles CIGS, naves grandes [t]
+\newcommand{\valDiasPvCigsInv}{0.6--1.2}  % días por tonelada con paneles CIGS, invierno, naves grandes
+\newcommand{\valDiasPvCigsVer}{0.3--0.5}  % días por tonelada con paneles CIGS, verano, naves grandes
+\newcommand{\valDiasPvCigsAnual}{0.4--0.7}  % días por tonelada con paneles CIGS, anual, naves grandes
+\newcommand{\valPvEfASi}{8}  % eficiencia a-Si sobre el área del módulo [%]
+\newcommand{\valPvKgmASi}{0.12}  % masa por área a-Si [kg/m2]
+\newcommand{\valPvEfCigs}{14.6}  % eficiencia CIGS sobre el área del módulo [%]
+\newcommand{\valPvKgmCigs}{2.4}  % masa por área CIGS [kg/m2]
+\newcommand{\valElecCubre}{20--22}  % electrólisis cubierta por la propia quema [%]
+\newcommand{\valElecCubreAvion}{10--13}  % electrólisis cubierta por la propia quema, con la f de radiadores de avión [%]
+\newcommand{\valElecPorT}{2147}  % electricidad de electrólisis por tonelada [kWh]
+\newcommand{\valWtCopv}{5.4}  % H2 / (H2 + sistema), Tipo IV, estado 2023 del DOE llevado a 350 bar [%]
+\newcommand{\valWtCopvSetecientos}{5.1}  % lo mismo a 700 bar, como lo da el DOE [%]
+\newcommand{\valPTanqueBar}{350}  % presión de los tanques del modelo [bar]
+\newcommand{\valKWkgPem}{0.5--2.2}  % electrolizador PEM [kW/kg] (proxy de pilas PEM)
+
+% --- Paper 1, revisión del autor: potencia por escalón, maniobra, FlyZero, motores ---
+\newcommand{\valEscPotUno}{400--659}  % P_rej para soltar 1 t (5 m), naves grandes [MW]
+\newcommand{\valDlimMaxBase}{0.50}  % mayor D_lim que cumple h_max = 1 m, h_max/(1+s) [m] — caso base
+\newcommand{\valDlimMaxQuemaBase}{1.42}  % ṁ* con D_lim = h_max/(1+s) [kg/s] — caso base
+\newcommand{\valDlimMaxPrejBase}{199}  % P_rej con D_lim = h_max/(1+s) [MW] — caso base
+\newcommand{\valDlimVceroBase}{0.042}  % velocidad de bajada al soltar, |v0| = 3 D_lim/t_anticip, D_lim operacional [m/s]
+\newcommand{\valDlimMaxVceroBase}{0.095}  % velocidad de bajada al soltar con D_lim = h_max/(1+s) [m/s]
+\newcommand{\valEscPotDiez}{12.7--14.2}  % P_rej para soltar 10 t (5 m), naves grandes [GW]
+\newcommand{\valOpArranque}{22}  % la unidad de rechazo arranca antes de soltar [s]
+\newcommand{\valOpNTau}{3}  % tiempos de respuesta entre la orden de arranque y la quema previa [-]
+\newcommand{\valOpCapArranque}{95}  % capacidad alcanzada al comenzar la quema previa (primer orden) [%]
+\newcommand{\valOpAnticip}{7.1}  % quema previa antes de soltar [s]
+\newcommand{\valOpReactiva}{7}  % duración de la quema reactiva [s]
+\newcommand{\valCatorceTFlyHoy}{100}  % temperatura de rechazo de FlyZero, 2026 [°C]
+\newcommand{\valCatorceTFlyFuturo}{160}  % temperatura de rechazo de FlyZero, 2035 [°C]
+\newcommand{\valEtaMotor}{0.30--0.45}  % eficiencia de motores de H2 publicada
+\newcommand{\valCatorceTinaDT}{10}  % calentamiento admitido del agua de la tina [°C]
+\newcommand{\valKWkgCaliente}{20}  % intercambiadores de alta temperatura, FlyZero 2026 (en 2035 solo ">20") [kW/kg]
+
+% --- EXP-15: operación en altura (exp15_altura.json) ---
+\newcommand{\valQuinceHRef}{1}  % altura de comparación [km]
+\newcommand{\valQuinceTAireRef}{23.5}  % aire a esa altura, día caluroso + gradiente ISA [°C]
+\newcommand{\valQuincePhiCero}{85}  % agua retenible a nivel del mar [%]
+\newcommand{\valQuincePhiRef}{89}  % agua retenible a la altura de comparación [%]
+\newcommand{\valQuinceHdosRef}{1.4}  % baja del H2 por tonelada a esa altura [%]
+\newcommand{\valQuinceMasaRef}{7}  % baja de la masa de rechazo por kW a esa altura, 2026--2035 [%]
+\newcommand{\valQuinceSustRef}{9}  % pérdida de sustentación de la misma nave a esa altura [%]
+
+% --- EXP-16: balance neto por tonelada (exp16_balance_neto.json) ---
+\newcommand{\valDieciseisEComp}{2.0--3.1}  % electricidad de compresión 20 -> 350 bar, típica DOE -- medida [kWh/kg]
+\newcommand{\valDieciseisQuimIdeal}{1494}  % energía química quemada por tonelada, caso A [kWh/t]
+\newcommand{\valDieciseisTrabajoIdeal}{448}  % trabajo generado por tonelada, caso A [kWh/t]
+\newcommand{\valDieciseisVentIdeal}{11--53}  % ventiladores por tonelada, caso A [kWh/t]
+\newcommand{\valDieciseisElecIdeal}{2371}  % electrólisis por tonelada, caso A [kWh/t]
+\newcommand{\valDieciseisCompIdeal}{91--139}  % compresión por tonelada, caso A [kWh/t]
+\newcommand{\valDieciseisNetaIdeal}{2024--2115}  % electricidad externa neta por tonelada, caso A [kWh/t]
+\newcommand{\valDieciseisQuimAtm}{1588}  % energía química quemada por tonelada, caso B [kWh/t]
+\newcommand{\valDieciseisTrabajoAtm}{476}  % trabajo generado por tonelada, caso B [kWh/t]
+\newcommand{\valDieciseisVentAtm}{11--55}  % ventiladores por tonelada, caso B [kWh/t]
+\newcommand{\valDieciseisElecAtm}{2147}  % electrólisis por tonelada, caso B [kWh/t]
+\newcommand{\valDieciseisCompAtm}{82--126}  % compresión por tonelada, caso B [kWh/t]
+\newcommand{\valDieciseisNetaAtm}{1764--1851}  % electricidad externa neta por tonelada, caso B [kWh/t]
+\newcommand{\valDieciseisReposAtm}{7.1}  % H2 de reposición por tonelada, 1 atm [kg/t]
+\newcommand{\valDieciseisNetaAtmAvion}{1955--2066}  % electricidad externa neta por tonelada, 1 atm, con la f de radiadores de avión (cota alta) [kWh/t]
+\newcommand{\valDieciseisNetaQuemAtm}{2244--2347}  % electricidad externa neta por tonelada con quemador, 1 atm [kWh/t]
+\newcommand{\valDiasNetaASiInv}{0.9--2.3}  % días por tonelada con paneles a-Si, invierno, electricidad neta de motor a quemador, 1 atm, naves grandes
+\newcommand{\valDiasNetaASiVer}{0.4--1.0}  % días por tonelada con paneles a-Si, verano, electricidad neta de motor a quemador, 1 atm, naves grandes
+\newcommand{\valDiasNetaCigsInv}{0.5--1.3}  % días por tonelada con paneles CIGS, invierno, electricidad neta de motor a quemador, 1 atm, naves grandes
+\newcommand{\valDiasNetaCigsVer}{0.2--0.6}  % días por tonelada con paneles CIGS, verano, electricidad neta de motor a quemador, 1 atm, naves grandes
+
+% --- Entradas de escenario citadas en el texto (M-11, auditoría 3) ---
+\newcommand{\valPotDiez}{10}  % potencia instalada de referencia: escalones (EXP-16), buffer (EXP-11), EXP-09 [MW]
+\newcommand{\valPotCien}{100}  % potencia instalada alta de EXP-09 y EXP-11 [MW]
+\newcommand{\valFrenoHXCien}{153}  % haces de ACC para los 100 MW de la Fig. 3 [t]
+\newcommand{\valTRegenH}{24}  % tiempo para regenerar el H2 de una tonelada [h]
+\newcommand{\valDocePRefMPa}{20}  % presión de almacenamiento del He de referencia (EXP-12, macros ...Veinte) [MPa]
+\newcommand{\valCatorcePCinco}{5}  % presión del escape de la discusión (EXP-14, macros ...Cinco) [atm]
+\newcommand{\valDieciseisNetaEsc}{1904--2055}  % electricidad externa neta por tonelada, escalones de 10 MW, naves grandes [kWh/t]
+\newcommand{\valDieciseisVentEsc}{20--110}  % ventiladores por tonelada con arranque previo, escalones de 10 MW [kWh/t]
+\newcommand{\valDieciseisReposEsc}{7.7}  % H2 de reposición por tonelada, escalones de 10 MW [kg/t]
+\newcommand{\valDieciseisTierraEsc}{420--424}  % energía en tierra del H2 de reposición, escalones de 10 MW [kWh/t]
+\newcommand{\valDieciseisCompFlujo}{1.69}  % flujo del compresor (= electrolizador) para regenerar 1 t por día [kg/h]
+\newcommand{\valDieciseisCompPot}{3.4--5.2}  % potencia del compresor [kW]
+\newcommand{\valDieciseisCompMasa}{0.55}  % masa del compresor eléctrico de referencia (Hydro-Pac C06-15), cota superior [t]
+\newcommand{\valDieciseisMasaConComp}{6.2--19.0}  % masa de las cajas negras con el compresor (cota superior) [t]
+
+% --- VAL-02: Ec. 5 contra Zakhvatkin et al. 2022 (val02_condensacion.json) ---
+\newcommand{\valValDosCurvas}{0.12}  % diferencia máxima con su figura 4 [puntos de %]
+\newcommand{\valValDosDesvio}{1.5--2.6}  % |agua esperada: este modelo vs su apéndice A| (experimentos 1-5; el modelo queda por debajo) [%]
+\newcommand{\valValDosTablaApendice}{1--12}  % |su tabla 1 vs su apéndice A recalculado con sus flujos| (experimentos 1-5) [%]
+\newcommand{\valValDosMedido}{68--85}  % agua recogida / cota de equilibrio [%]
+\newcommand{\valValDosT}{25--27}  % temperatura ambiente de los experimentos [°C]
+\newcommand{\valValDosN}{6}  % experimentos comparados
+\newcommand{\valValDosZakPropio}{70--85}  % agua recogida / SU modelo, según los autores [%] (fuentes.ZAK22)
+\newcommand{\valValDosCincoRecalc}{58}  % exp. 5: su apéndice A recalculado [g]
+\newcommand{\valValDosCincoTabla}{65}  % exp. 5: valor esperado de su tabla [g]
+\newcommand{\valValDosSeisT}{26.7}  % exp. 6: temperatura ambiente [°C]
+\newcommand{\valValDosSeisAH}{25.3}  % exp. 6: humedad de saturación que corresponde a su temperatura (IF97) [g/m3]
+
+% --- Admisión de aire al casco (req_aire_casco.json) ---
+\newcommand{\valAireCascoBase}{37}  % aire al casco, caso base (caso base, 1 t, 1 m) [m3/s]
+\newcommand{\valAireCascoUno}{33--55}  % aire al casco, 1 t, 1 m, naves grandes [m3/s]
+\newcommand{\valAireCascoCinco}{33--55}  % aire al casco, 1 t, 5 m, naves grandes [m3/s]
+\newcommand{\valAireCascoZNT}{173}  % aire al casco, Zeppelin NT, 1 t, 1 m [m3/s]
+\newcommand{\valAireCascoEscalon}{0.83}  % aire al casco en los escalones de 10 MW [m3/s]
+\newcommand{\valAireCombBase}{89}  % aire de combustión, caso base [m3/s]
+\newcommand{\valAirePorT}{526}  % aire que entra al casco por tonelada liberada [m3]
+
+% --- Recuperación de agua del escape en los rígidos históricos (fuentes.GY75) ---
+\newcommand{\valAguaHistMasa}{1.8--5.9}  % masa de los equipos de recuperación de agua (Los Angeles, Graf Zeppelin, Macon, Hindenburg) [t]
+\newcommand{\valAguaHistPct}{1.8--3.2}  % masa de esos equipos / sustentación bruta [%]
+
+% --- Derivaciones del paper 1 (derivaciones.json): entradas y pasos intermedios ---
+\newcommand{\valDerG}{9.80665}  % g [m/s2]
+\newcommand{\valDerRuniv}{8.3145}  % R universal [J/mol/K]
+\newcommand{\valDerMHdos}{2.01588}  % M_H2 [g/mol]
+\newcommand{\valDerMHdosO}{18.01528}  % M_H2O [g/mol]
+\newcommand{\valDerRHdos}{4124.5}  % R_H2 [J/kg/K]
+\newcommand{\valDerPatm}{101{,}325}  % P_atm [Pa]
+\newcommand{\valDerTuno}{288.15}  % T_1 del H2 [K]
+\newcommand{\valDerRhoAire}{1.225}  % rho_aire [kg/m3]
+\newcommand{\valDerRhoHdos}{0.08526}  % rho_H2 = P/(R_H2 T_1) [kg/m3]
+\newcommand{\valDerRazonRho}{14.37}  % rho_aire / rho_H2
+\newcommand{\valDerR}{8.937}  % r = M_H2O/M_H2
+\newcommand{\valDerPCI}{119.96}  % PCI [MJ/kg]
+\newcommand{\valDerLv}{2441.7}  % L_v a 25 C [kJ/kg]
+\newcommand{\valDerRaire}{287.05}  % R del aire [J/kg/K]
+\newcommand{\valDerTatm}{288.15}  % T ISA nivel del mar [K]
+\newcommand{\valDerGamma}{6.5}  % gradiente ISA [K/km]
+\newcommand{\valDerHsIsoterma}{8435}  % R T / g [m]
+\newcommand{\valDerHs}{10{,}416}  % H_s local [m]
+\newcommand{\valDerLuno}{22.31}  % L(1)
+\newcommand{\valDerLcero}{13.37}  % L(0)
+\newcommand{\valDerLtanques}{14.37}  % L con O2 de tanques
+\newcommand{\valDerBuno}{44.8}  % H2 por tonelada, L(1) [kg]
+\newcommand{\valDerBtanques}{69.6}  % H2 por tonelada, O2 de tanques [kg]
+\newcommand{\valDerReduccion}{35.6}  % reducción por usar O2 del aire [%]
+\newcommand{\valDerAire}{34.30}  % aire estequiométrico [kg/kg H2]
+\newcommand{\valDerWOdos}{0.2314}  % fracción másica de O2 en el aire
+\newcommand{\valDerCpHdos}{14{,}300}  % cp H2
+\newcommand{\valDerCpAire}{1005}  % cp aire
+\newcommand{\valDerCpNdos}{1041}  % cp N2
+\newcommand{\valDerCpLiq}{4180}  % cp agua líquida
+\newcommand{\valDerCpVapor}{1920}  % cp vapor
+\newcommand{\valDerQPCI}{119.96}  % término (1-eta) PCI, eta = 0 [MJ/kg]
+\newcommand{\valDerQLatente}{21.60}  % término phi r L_v [MJ/kg]
+\newcommand{\valDerQEntra}{0.244}  % calor sensible de los reactivos [MJ/kg]
+\newcommand{\valDerQSale}{0.969}  % calor sensible del escape que sale [MJ/kg]
+\newcommand{\valDerQTotal}{140.84}  % q(0, phi objetivo) [MJ/kg]
+\newcommand{\valDerXOdos}{0.2095}  % fracción molar de O2 en el aire
+\newcommand{\valDerNmolar}{1.887}  % 0.5 (1 - X_O2)/X_O2
+\newcommand{\valDerN}{1.887}  % mol N2+Ar por mol H2O
+\newcommand{\valDerPsatCuarenta}{7.384}  % p_sat a 40 C [kPa]
+\newcommand{\valDerPhiCuarenta}{0.852}  % phi_max a 40 C y 1 atm
+\newcommand{\valDerXw}{34.6}  % fracción molar de agua [%]
+\newcommand{\valDerTRocio}{72.7}  % punto de rocío a 1 atm [C]
+\newcommand{\valDerPReq}{1401}  % presión para phi objetivo a 40 C [kPa]
+\newcommand{\valDerPReqAtm}{13.8}  % presión para phi objetivo a 40 C [atm]
+\newcommand{\valDerTUnaAtm}{-1.8}  % temperatura para phi objetivo a 1 atm [C]
+\newcommand{\valDerWComp}{6.57}  % trabajo isotérmico mínimo de compresión, solo la fase gaseosa [MJ/kg H2]
+\newcommand{\valDerMolesGas}{1432}  % mol de escape (H2O + N2 + Ar) por kg de H2
+\newcommand{\valDerVcasco}{180{,}000}  % volumen total del casco, caso base [m3]
+\newcommand{\valDerMaireCasco}{220.5}  % aire del volumen del casco, rho V_casco [t]
+\newcommand{\valDerMvacio}{100.0}  % peso vacío del caso base [t]
+\newcommand{\valDerMHdosEq}{7.56}  % H2 de equilibrio del caso base con 1 t [t]
+\newcommand{\valDerVgas}{88{,}616}  % volumen de gas en equilibrio con 1 t [m3]
+\newcommand{\valDerLlenado}{0.49}  % fracción del casco con gas, con 1 t
+\newcommand{\valDerMtotal}{108.56}  % M_total del caso base con 1 t [t]
+\newcommand{\valDerK}{0.86}  % k del caso base (Lamb, su esbeltez)
+\newcommand{\valDerMI}{410.1}  % M_I = (1+k) rho V_casco [t]
+\newcommand{\valDerMIpost}{409.1}  % M_I - m_load [t]
+\newcommand{\valDerKpre}{8.95}  % K_pre [kg/s]
+\newcommand{\valDerS}{0.99878}  % s = sqrt(1 - m/M_I)
+\newcommand{\valDerAlphaAprox}{0.500}  % alpha* de la ley general (s = 1)
+\newcommand{\valDerAlphaExacta}{0.5003}  % alpha* = 1/(1+s)
+\newcommand{\valDerDmStar}{3.17}  % ṁ* = K_pre alpha*^1.5 [kg/s]
+\newcommand{\valDerDmLey}{3.16}  % ṁ* de la ley general, K_pre/2^1.5 [kg/s]
+\newcommand{\valDerTAnticip}{7.08}  % t_anticip [s]
+\newcommand{\valDerTReactiva}{7.07}  % quema después de soltar, s t_anticip [s]
+\newcommand{\valDerVcero}{0.0424}  % velocidad hacia abajo al soltar, 3 D/t_ant [m/s]
+\newcommand{\valDerHdosQuemado}{44.8}  % H2 quemado ṁ*(t_ant + t_r) = m/L [kg]
+\newcommand{\valDerHundTotal}{0.200}  % bajada total (1+s) D_lim [m]
+\newcommand{\valDerHundReactiva}{0.0999}  % bajada después de soltar, |v0| t_r / 3 [m]
+\newcommand{\valDerTasaPhiUnoPct}{0.40}  % cuánto baja la tasa al dimensionar con phi = 1 en vez de phi objetivo, 1 - L(phi)/L(1) [%]
+\newcommand{\valDerCotaW}{3.1582}  % w = 2 cosh(arccosh(sqrt(mu)(1 + h/D))/3)
+\newcommand{\valDerCotaU}{3.154}  % u = t_pico/t_ant
+\newcommand{\valDerCotaG}{16.412}  % G = g m t_ant^2/(M_I D)
+\newcommand{\valDerCotaDm}{1.98}  % ṁ de la cota con reinyección, 1 m [kg/s]
+\newcommand{\valDerCotaSobrequema}{52}  % H2 quemado de más al pico [%]
+\newcommand{\valDerKd}{1928.8}  % K_d [m3 s/m]
+\newcommand{\valDerOmega}{0.0202}  % omega_n [rad/s]
+\newcommand{\valDerPeriodo}{5.2}  % periodo natural del lazo de altitud con la rigidez real [min]
+\newcommand{\valDerLobjetivo}{22.22}  % L(phi objetivo)
+\newcommand{\valDerQPorT}{6.34}  % Q por tonelada [GJ]
+\newcommand{\valDerTDiezMW}{10.6}  % t = Q/P con 10 MW [min]
+\newcommand{\valDerPrej}{446}  % P_rej = ṁ* q, caso base 1 t, 1 m [MW]
+\newcommand{\valDerAireEnfr}{4671}  % aire de enfriamiento [kg por kg H2]
+\newcommand{\valDerRazonAire}{136}  % aire de enfriamiento / aire de combustión
+\newcommand{\valDerAguaBuffer}{30.3}  % agua para guardar el calor [t]
+\newcommand{\valDerLNdosAbsorbe}{434}  % calor que absorbe 1 kg de LN2 [kJ/kg]
+\newcommand{\valDerLNdos}{14.6}  % LN2 por tonelada [t]
+\newcommand{\valDerQCeroAtm}{137.9}  % q(0, phi a 1 atm) [MJ/kg]
+\newcommand{\valDerEtaMinHoy}{0.192}  % eta_min a 1 atm, f = 0.2
+\newcommand{\valDerEtaMinFuturo}{0.150}  % eta_min a 1 atm, f = 0.15
+\newcommand{\valDerTad}{2256}  % temperatura de llama adiabática, aire justo a T exterior [°C]
+\newcommand{\valDerCascoWm}{125--625}  % casco como intercambiador pasivo [W/m2]
+\newcommand{\valDerCascoHind}{3.2--16.0}  % casco como intercambiador pasivo [MW] — LZ 129 Hindenburg
+\newcommand{\valDerCascoFW}{3.2--15.8}  % casco como intercambiador pasivo [MW] — Flying Whales LCA60T
+\newcommand{\valDerCascoZR}{1.7--8.6}  % casco como intercambiador pasivo [MW] — ZR-3 Los Angeles
+\newcommand{\valDerCascoZNT}{0.3--1.7}  % casco como intercambiador pasivo [MW] — Zeppelin NT
+\newcommand{\valDerEscalonAprox}{80}  % escalón con 10 MW por la ley m^{3/2} [kg]
+\newcommand{\valDerInerciaRestringido}{14.0}  % cambio de flujo si M_I x 0.77 [%]
+\newcommand{\valDerInerciaLibre}{-8.7}  % cambio de flujo si M_I x 1.2 [%]
+\newcommand{\valDerOdos}{7.94}  % O2 por kg de H2 = r - 1 (lastre si se guardara) [kg/kg]
+\newcommand{\valDerBatm}{47.7}  % H2 por tonelada a 1 atm, phi_max(40 C) [kg/t]
+\newcommand{\valDerRatm}{40.6}  % H2 regenerable por tonelada a 1 atm = B phi [kg/t]
+\newcommand{\valDerKFriaHoy}{0.143}  % k de la banda fría, 2026 [kW/kg por K]
+\newcommand{\valDerKFriaFuturo}{0.154}  % k de la banda fría, 2035 [kW/kg por K]
+\newcommand{\valDerQFrioT}{0.94}  % calor de la banda fría por tonelada, 1 atm [GJ/t]
+\newcommand{\valDerTina}{22.5}  % agua para guardar la banda fría subiendo 10 K [t/t]
+\newcommand{\valDerQRef}{101.9}  % q(eta ref, phi 1 atm) [MJ/kg]
+\newcommand{\valDerQuemaRef}{0.098}  % quema que produce 10 MW de calor [kg/s]
+\newcommand{\valDerPpem}{89}  % electrolizador para 1 t en 24 h [kW]
+\newcommand{\valDerEcomp}{2.02}  % electricidad de compresión típica [kWh/kg]
+\newcommand{\valDerCompFlujo}{1.69}  % compresor al ritmo del electrolizador [kg/h]
+\newcommand{\valDerTanquePorKg}{17.5}  % kg de tanque por kg de H2 guardado
+\newcommand{\valDerWHeIdeal}{3.16}  % trabajo isotérmico de gas ideal, He de 1 atm a 20 MPa [MJ/kg]
+\newcommand{\valDerHConvCalma}{5}  % convección exterior sobre el casco, calma [W/m2K]
+\newcommand{\valDerHConvViento}{25}  % convección exterior sobre el casco, con viento [W/m2K]
+\newcommand{\valDerDTCasco}{25}  % diferencia media pared-aire [K]
+\newcommand{\valDerAtotalBase}{25{,}311}  % superficie del casco del caso base [m2]
+\newcommand{\valDerApvBase}{11{,}390}  % área de paneles del caso base [m2]
+\newcommand{\valDerGefInv}{2.04}  % irradiación sobre la mitad superior del casco, invierno [kWh/m2/día]
+\newcommand{\valDerEdiaBase}{1859}  % electricidad diaria de los paneles a-Si del caso base, invierno [kWh]
+\newcommand{\valDerElecT}{2147}  % electrólisis por tonelada a 1 atm [kWh]
+\newcommand{\valDerDiasBase}{1.15}  % días por tonelada, caso base, a-Si, invierno
+\newcommand{\valDerMasaPvBase}{1.4}  % masa de los paneles a-Si del caso base [t]
+\newcommand{\valDerTAireAlt}{23.5}  % aire a 1 km, día caluroso + gradiente ISA [C]
+\newcommand{\valDerExpAlt}{5.26}  % exponente g/(R_aire Gamma)
+\newcommand{\valDerPAlt}{90.4}  % presión a 1 km [kPa]
+\newcommand{\valDerRhoRelAlt}{0.912}  % densidad del aire a 1 km / nivel del mar
+\newcommand{\valDerTSalAlt}{33.5}  % salida del condensador a 1 km [C]
+\newcommand{\valDerPhiAlt}{0.885}  % phi_max a 1 km
+\newcommand{\valDerTRocioCinco}{116}  % rocío a 5 atm [C]
+\newcommand{\valDerTFinCinco}{74}  % fin de la condensación a 5 atm, misma phi [C]
+\newcommand{\valDerWCinco}{5.4}  % trabajo isotérmico mínimo para comprimir el escape a 5 atm, solo la fase gaseosa [MJ/kg H2]
+\newcommand{\valDerKgPorK}{377}  % cambio de sustentación por K del gas, caso base con 1 t [kg/K]
+\newcommand{\valDerCascoBase}{3.2--15.8}  % = \valDerCascoFW (caso base)
+
+% --- VER-01: verificación interna del subsistema (verificacion.json) ---
+\newcommand{\valVerTotal}{1122}  % chequeos de verificación
+\newcommand{\valVerOk}{1122}  % chequeos que pasan
+\newcommand{\valVerCond}{330}  % chequeos que son condiciones (desigualdades, signos, cotas)
+\newcommand{\valVerNula}{663}  % chequeos de diferencia nula (identidades entre scripts, regresiones)
+\newcommand{\valVerTol}{129}  % chequeos con tolerancia (forma cerrada, solución exacta, convergencia)
+
+% --- Auditoría 2 de la copia del 2026-10-06: H2 comprimido, haces, devolución, hielo, ventear y detalles ---
+\newcommand{\valDoceHcW}{7.2}  % H2 comprimido a 35 MPa: trabajo mínimo isotérmico, gas real (Leachman) [MJ/kg]
+\newcommand{\valDoceHcGJ}{0.50}  % H2 comprimido a 35 MPa: trabajo (= calor) por tonelada liberada [GJ/t]
+\newcommand{\valDoceHcPot}{35}  % H2 comprimido: potencia de compresión de golpe, caso base [MW]
+\newcommand{\valDoceHcPotRec}{0.8}  % H2 comprimido: potencia en el tiempo de recuperación del ciclo con 10 MW [MW]
+\newcommand{\valDoceHcLiber}{2.9}  % H2 comprimido a 35 MPa: volumen guardado por tonelada [m3]
+\newcommand{\valDoceHcCompEntrega}{26}  % H2 comprimido: compuesto de los tanques para la entrega de referencia del LCA60T (36 sueltas de 1 t), cota inferior [t]
+\newcommand{\valDoceHeCompRango}{0.61--0.68}  % He: compuesto de los tanques por tonelada en las presiones evaluadas [t por t]
+\newcommand{\valDoceAlmacenPRango}{5--30}  % He: presiones de almacenamiento evaluadas [MPa]
+\newcommand{\valDoceTRestoH}{26}  % ciclo (phi = 0.99): horas para devolver el resto con el electrolizador de la tabla 6 [h]
+\newcommand{\valDoceRecupHdosUnaAtm}{2.2--2.3}  % energía para devolver la sustentación de 1 t a 1 atm: electrólisis y compresión [MWh]
+\newcommand{\valFrenoACCEnteroDiez}{74}  % sistema ACC entero para 10 MW [t]
+\newcommand{\valFrenoPLimEntero}{8.1}  % potencia con la que el ACC entero pesa la carga del LCA60T [MW]
+\newcommand{\valXNdosEscape}{65}  % fracción molar de N2 y Ar en el escape [%]
+\newcommand{\valCatorceFracCaliente}{86}  % fracción del calor por encima del rocío, eta = 0 [%]
+\newcommand{\valTramoBandaMW}{64}  % cota ideal del caso base: calor de la banda [MW]
+\newcommand{\valTramoCalienteMW}{382}  % cota ideal del caso base: calor del gas caliente, sobre el rocío [MW]
+\newcommand{\valTramoBandaT}{98}  % banda con haces de ACC [t]
+\newcommand{\valTramoCalienteT}{19--38}  % gas caliente con radiadores de avión 2035-2026 [t]
+\newcommand{\valTramoTotalT}{117--136}  % unidad en dos tramos, total [t]
+\newcommand{\valHieloBandaGJ}{0.94}  % calor de la banda por tonelada liberada [GJ/t]
+\newcommand{\valHieloT}{2.1--2.8}  % hielo que absorbe la banda por tonelada: fundido y calentado al ambiente -- solo fundido [t/t]
+\newcommand{\valHieloCargaT}{123--169}  % hielo para toda la carga del LCA60T [t]
+\newcommand{\valVentAhorroKg}{67.7}  % H2 que el ciclo ahorra frente a ventear, 1 atm [kg/t]
+\newcommand{\valVentReponerMWh}{3.96}  % electrólisis para reponer el H2 venteado por tonelada [MWh]
+\newcommand{\valMotorEjeDiez}{2.6--3.8}  % eje del motor al ritmo de 10 MW de rechazo [MW]
+\newcommand{\valMotorMasaDiez}{2--13}  % masa del motor al ritmo de 10 MW [t]
+\newcommand{\valInerciaTreintaPct}{5}  % inercia vertical más baja el día de 30 °C [%]
+\newcommand{\valTasaTreintaPct}{2.6}  % tasa instalada más alta el día de 30 °C [%]
+\newcommand{\valVolEsferoideFW}{262{,}000}  % volumen del esferoide de las dimensiones publicadas del LCA60T [m3]
+\newcommand{\valTasaEsferoidePct}{17}  % tasa instalada más baja con ese volumen [%]
+\newcommand{\valAbortoKg}{500}  % nave pesada si la liberación falla tras la quema previa, caso base [kg]
+\newcommand{\valAbortoHdosKg}{35}  % H2 a devolver desde los tanques [kg]
+\newcommand{\valAbortoS}{11}  % tiempo para devolverlo al ritmo instalado [s]
+\newcommand{\valHeHdosVolRazon}{0.93}  % volumen de H2 / volumen de He para la misma sustentación
+\newcommand{\valHeHdosVolPct}{7}  % gas que el H2 ahorra frente al He con la misma sustentación [%]
+\newcommand{\valDlimFraccionPct}{20}  % (1+s) D_lim frente a h_max de precisión [%]
+
+% --- Figura de los esferoides: cascos como esferoides prolatos y k de Lamb (fig_esferoides.py) ---
+\newcommand{\valEsfRazonOtras}{0.94--1.02}  % volumen del esferoide / V_casco, LZ 129, ZR-3 y NT
+\newcommand{\valEsfRazonFW}{1.45}  % volumen del esferoide / V_casco, LCA60T
+\newcommand{\valEsfFWBajaPct}{17}  % cuánto bajarían los requisitos dinámicos del LCA60T con el esferoide de sus medidas [%]
+\newcommand{\valEsfFWEqL}{177}  % largo del esferoide del LCA60T con su V_casco y su esbeltez [m]
+\newcommand{\valEsfFWEqD}{44}  % diámetro de ese esferoide [m]
+
+% --- Críticas externas: 1 atm sin compresor, compresor y motor a 10 MW, potencia neta con el freno, inercia ---
+\newcommand{\valFrenoTminUnaAtm}{11.0}  % recuperación de 1 t con 10 MW a 1 atm, sin compresor (phi_max) [min]
+\newcommand{\valFrenoTminUnaAtmPct}{4}  % cuánto más tarda a 1 atm que con phi = 0.99 [%]
+\newcommand{\valDocePerdidoCiclo}{0.5}  % H2 perdido por tonelada, phi = 0.99 [kg]
+\newcommand{\valDocePerdidoUnaAtm}{7.1}  % H2 perdido por tonelada a 1 atm, phi_max [kg]
+\newcommand{\valFrenoDmDiez}{0.071}  % ritmo de quema con 10 MW de rechazo y el dispositivo de freno [kg/s]
+\newcommand{\valFrenoFlotDiez}{1.6}  % con 10 MW, flotabilidad que la quema quita por segundo: L x tasa [kg/s]
+\newcommand{\valFrenoCompDiez}{0.5}  % compresor del escape a la presión de phi objetivo, al ritmo de 10 MW [MW]
+\newcommand{\valSGTMasa}{285}  % paquete clásico del SGT-800, con el generador [t]
+\newcommand{\valSGTPR}{20.1--21.8}  % relación de presión del compresor del SGT-800
+\newcommand{\valFrenoCompMasaDiez}{3.8--4.0}  % compresor del escape al ritmo de 10 MW, escalado por trabajo de compresión con el paquete del SGT-800 [t]
+\newcommand{\valFrenoCompMasaDobleDiez}{7.5--8.1}  % lo mismo con el doble de kg/kW (máquina chica) [t]
+\newcommand{\valCompMasaBase}{168--180}  % lo mismo para el compresor de la cota ideal, caso base [t]
+\newcommand{\valFrenoMotorDiez}{1.9--8.9}  % motor alternativo de H2 al ritmo de 10 MW [t]
+\newcommand{\valDoceNetaCiclo}{0.5--3.3}  % potencia neta del ciclo con motor hacia la planta, con el freno y 10 MW, ya descontados los ventiladores y el compresor del escape [MW]
+\newcommand{\valZetaInercia}{1.19--1.48}  % amortiguamiento del lazo con la masa vertical medida (zeta / raiz(f), f de Yamasaki & Goto 2003)
+
+% --- Presupuesto de masa sin y con freno, las cuatro naves (fig_presupuesto_masa.py; la tabla 5 pasó al suplemento) ---
+\newcommand{\valPilaSinNaves}{842--4359}  % sin freno, equipo y la tonelada (clase más liviana, haces de ACC), de la nave más liviana a la más pesada [t]
+\newcommand{\valPilaSinFW}{938}  % lo mismo en el LCA60T [t]
+\newcommand{\valPilaSinHXFW}{684}  % de eso, el rechazo con los haces de ACC en el LCA60T [t]
+\newcommand{\valPilaCompEscSinFW}{168}  % sin freno, LCA60T: compresor del escape (14 atm) a la tasa de tiempo real [t]
+\newcommand{\valPilaCompEscSinVeces}{2.8}  % lo mismo / la carga útil [veces]
+\newcommand{\valPilaRazonCondMotor}{10}  % sin freno, LCA60T: haces + compresor del escape (lo que existe para condensar) / motor (igual con cualquier tasa)
+\newcommand{\valFijaPem}{0.04--0.18}  % caja fija: electrolizador PEM para regenerar 1 t en 24 h [t por t]
+\newcommand{\valPilaConDiez}{23}  % con freno y 10 MW, equipo y la tonelada (igual en las cuatro naves) [t]
+\newcommand{\valPilaTporMW}{2.1}  % con freno: masa de lo que escala con el rechazo (haces, motor, compresor) [t por MW]
+\newcommand{\valPilaMaxFW}{27.4}  % con freno, el rechazo más grande que cabe en la carga útil, FW [MW]
+\newcommand{\valPilaMaxFWMin}{3.9}  % con él, la recuperación de 1 t, FW [min]
+\newcommand{\valPilaMaxHind}{7.9}  % con freno, el rechazo más grande que cabe en la carga útil, Hind [MW]
+\newcommand{\valPilaMaxHindMin}{13}  % con él, la recuperación de 1 t, Hind [min]
+\newcommand{\valPilaMaxZR}{1.2}  % con freno, el rechazo más grande que cabe en la carga útil, ZR [MW]
+\newcommand{\valPilaMaxZRMin}{87}  % con él, la recuperación de 1 t, ZR [min]
+\newcommand{\valPilaMaxACCFW}{7.2}  % lo mismo con el sistema ACC entero, LCA60T [MW]
+\newcommand{\valPilaMaxACCFWMin}{15}  % con él, la recuperación de 1 t, LCA60T [min]
+\newcommand{\valPilaMaxFWUnaAtm}{33.4}  % a 1 atm, sin compresor del escape, el rechazo más grande que cabe en la carga útil, LCA60T [MW]
+\newcommand{\valPilaSinGrandes}{842--1385}  % sin freno, 1 t: LZ 129, LCA60T y ZR-3 [t]
+\newcommand{\valPilaNTSuelta}{0.2}  % suelta del Zeppelin NT en la figura del desglose [t]
+\newcommand{\valPilaNTSin}{385}  % sin freno, esa suelta en el Zeppelin NT: equipo y carga [t]
+\newcommand{\valPilaNTMax}{0.04}  % con freno, el rechazo más grande que cabe para esa suelta, NT [MW]
+\newcommand{\valPilaNTMaxMin}{603}  % con él, la recuperación de esa suelta, NT [min]
+\newcommand{\valPilaNTMaxH}{10}  % lo mismo en horas (2026-10-13: con una unidad entera del compresor de H2) [h]
+
+% --- EXP-18: alturas de las cuatro naves, 1 t, con la dinámica del condensador (exp18_por_nave.py) ---
+\newcommand{\valAlturasSube}{1.6--2.7}  % subida máxima con 100 o 10 MW, las cuatro naves [m]
+\newcommand{\valDisenoA}{2.1}  % con freno: masa de lo que escala con el rechazo (haces, motor, compresor del escape) [t por MW]
+\newcommand{\valDisenoB}{1.45}  % cajas fijas por tonelada liberada [t por t]
+\newcommand{\valDisenoQ}{6.34}  % calor por tonelada liberada, phi objetivo [GJ por t]
+\newcommand{\valDisenoTechoPct}{41--44}  % techo de la fracción de la carga útil que se puede soltar (t largo), LZ 129, LCA60T y ZR-3 [%]
+\newcommand{\valDisenoUnaHoraPct}{16--17}  % fracción de la carga útil que se suelta en 1 h, las tres grandes [%]
+\newcommand{\valDisenoMedioH}{1.5--1.7}  % tiempo en que se llega a la mitad del techo, las tres grandes [h]
+\newcommand{\valDisenoTechoNT}{0.24}  % lo más que podría soltar el Zeppelin NT, con t largo [t]
+\newcommand{\valDisenoTechoFW}{27}  % lo mismo en el LCA60T [t]
+\newcommand{\valDisenoAUnaAtm}{1.7}  % a 1 atm, sin compresor del escape: lo que escala con el rechazo [t por MW]
+\newcommand{\valDisenoQUnaAtm}{6.57}  % a 1 atm: calor por tonelada liberada, phi_max [GJ por t]
+\newcommand{\valDisenoUnaAtmPct}{15}  % a 1 atm: cuánto más corta es la recuperación de la misma carga, igual en toda nave [%]
+\newcommand{\valDisenoUnaAtmFWMin}{3.3}  % a 1 atm: recuperación de 1 t en el LCA60T con el rechazo más grande que cabe [min]
+
+% --- EXP-20: repartir la carga en sueltas con el freno (exp20_reparto_sueltas.py) ---
+\newcommand{\valRepartoTauH}{3.7}  % a Q: escala de tiempo del reparto (y de la carta de diseño) [h]
+\newcommand{\valRepartoBsinComp}{0.91}  % b': cajas fijas sin el compresor de H2 (tanques y PEM) [t por t]
+\newcommand{\valTanqueAguaKgT}{1.3--2.7}  % tanque de agua: kg por tonelada liberada (tela de 30-62 oz/yd2)
+\newcommand{\valTanqueAguaPct}{0.33--0.68}  % tanque de agua: % de la masa del agua que guarda
+\newcommand{\valTanqueAguaTela}{1.0--2.1}  % tela de MIL-T-53029C [kg/m2]
+\newcommand{\valTanqueAguaW}{1.3}  % b_w: tanque de agua por tonelada (la clase liviana) [kg por t]
+\newcommand{\valTanqueAguaPorT}{398}  % agua retenida que guarda por tonelada liberada (phi objetivo) [kg]
+\newcommand{\valMargenMasaDiezT}{2.4}  % B2: carga que cuesta un 10 % más de masa en TODO el equipo, LCA60T, sueltas de 1 t de 10 min [t]
+\newcommand{\valMargenCalorDiezT}{2.2}  % B2: carga que cuesta un 10 % más de a Q (calor por tonelada o rechazo de sobra), el mismo caso [t]
+\newcommand{\valRepartoTauHw}{3.7}  % a Q / (1 + b_w): la mitad de C' / (1 + b_w) se entrega en este tiempo [h]
+\newcommand{\valRepartoCompUnidadT}{1.6}  % suelta que una unidad del compresor de H2 alcanza a comprimir al ritmo del electrolizador (1 t en 24 h) [t]
+\newcommand{\valRepartoBLineal}{1.25}  % b' + el compresor proporcional a su capacidad (familia universal) [t por t]
+\newcommand{\valRepartoFWDiez}{36}  % LCA60T, sueltas de 1 t de 10 min: carga de negocio [t]
+\newcommand{\valRepartoFWTreinta}{51}  % lo mismo con 30 min [t]
+\newcommand{\valRepartoFWMax}{58.5}  % lo mismo con recuperación muy larga (solo cajas fijas) [t]
+\newcommand{\valRepartoEquipoDiez}{24}  % equipo para sueltas de 1 t de 10 min (igual en toda nave) [t]
+\newcommand{\valRepartoHelUnoPes}{29}  % sueltas de 1 t, 14 atm: las hélices alcanzan hasta esta recuperación, pesimista (EXP-22) [min]
+\newcommand{\valRepartoHelUnoOpt}{6.7}  % lo mismo, optimista [h]
+\newcommand{\valRepartoHelDosPes}{20}  % sueltas de 2 t, pesimista (EXP-22) [min]
+\newcommand{\valRepartoDiezMin}{60}  % LCA60T, sueltas de 10 t: recuperación mínima [min]
+\newcommand{\valRepartoDiezHelOpt}{2.1}  % sueltas de 10 t: hélices hasta, optimista (EXP-22) [h]
+\newcommand{\valRepartoVeinteMin}{5.0}  % LCA60T, sueltas de 20 t: recuperación mínima [h]
+\newcommand{\valRepartoVeinteHelOpt}{1.5}  % sueltas de 20 t: hélices hasta, optimista (EXP-22) [h]
+\newcommand{\valRepartoHindTreinta}{10}  % LZ 129, sueltas de 1 t de 30 min: carga de negocio [t]
+\newcommand{\valRepartoZRUnaHora}{3.3}  % ZR-3, sueltas de 250 kg de 1 h: carga de negocio [t]
+\newcommand{\valRepartoNTUnaHora}{0.34}  % Zeppelin NT, sueltas de 25 kg de 1 h: carga de negocio [t]
+\newcommand{\valRepartoNTMax}{0.43}  % Zeppelin NT: lo más que reparte (una unidad del compresor de H2) [t]
+\newcommand{\valRepartoNTUnicaMax}{0.24}  % Zeppelin NT: la suelta única más grande con el compresor de H2 en unidades de catálogo (t muy largo) [t]
+\newcommand{\valRepartoNTUnaHoraProp}{0.87}  % lo mismo con el compresor proporcional a la suelta, 25 kg de 1 h [t]
+\newcommand{\valRepartoUnivUnoTreinta}{91}  % universal: sueltas del 1 % de la carga útil de 30 min, carga de negocio [% de la carga útil]
+
+% --- EXP-22: la entrega de referencia y la energía por etapa (exp22_energia_potencia.py) ---
+\newcommand{\valEntregaPasos}{36}  % entrega de referencia, LCA60T: sueltas de 1 t de 10 min (= t de carga de negocio)
+\newcommand{\valEntregaHoras}{6}  % entrega de referencia: duración, sueltas una tras otra [h]
+\newcommand{\valRepartoTauHwUnaAtm}{3.1}  % a Q / (1 + b_w) a 1 atm [h]
+\newcommand{\valRepartoFWSeisUnaAtm}{38}  % LCA60T, sueltas de 1 t, a 1 atm: carga de negocio en la duración de la entrega de referencia (ec. 12) [t]
+\newcommand{\valRepartoEquipoDiezUnaAtm}{20}  % equipo para sueltas de 1 t de 10 min, 1 atm [t]
+\newcommand{\valRepartoTauHwACC}{14.0}  % a Q / (1 + b_w) con el sistema ACC entero [h]
+\newcommand{\valRepartoFWSeisACC}{18}  % LCA60T, sueltas de 1 t, ACC entero: carga de negocio en la duración de la entrega de referencia (ec. 12) [t]
+\newcommand{\valRepartoFWTreintaACC}{30}  % LCA60T, sueltas de 1 t de 30 min, ACC entero: carga de negocio [t]
+\newcommand{\valRepartoHindUnaHoraACC}{3.6}  % LZ 129, sueltas de 1 t de 1 h, ACC entero: carga de negocio [t]
+\newcommand{\valEntregaPrechMW}{10.6}  % entrega de referencia: rechazo instalado [MW]
+\newcommand{\valEntregaHdosPaso}{45}  % entrega de referencia: H2 quemado por suelta [kg]
+\newcommand{\valEntregaHdosTotal}{1.62}  % entrega de referencia: H2 quemado en toda la entrega [t]
+\newcommand{\valEntregaAguaPaso}{398}  % entrega de referencia: agua retenida por suelta [kg]
+\newcommand{\valEntregaAguaTotal}{14.3}  % entrega de referencia: agua retenida en toda la entrega [t]
+\newcommand{\valEntregaHelPasoMW}{0.08--0.17}  % entrega de referencia: hélices al soltar, discos mayores-menores [MW]
+\newcommand{\valEntregaHelPaso}{5--12}  % entrega de referencia: energía de las hélices por suelta [kWh]
+\newcommand{\valEntregaHelTotal}{0.2--0.4}  % entrega de referencia: energía de las hélices, toda la entrega [MWh]
+\newcommand{\valEntregaNetoPaso}{78--578}  % entrega de referencia: neto a la planta por suelta, ya descontados ventiladores, compresor del escape y hélices [kWh]
+\newcommand{\valEntregaNetoTotal}{2.8--20.8}  % entrega de referencia: neto a la planta, toda la entrega [MWh]
+\newcommand{\valEntregaRegenPaso}{2.45--2.50}  % entrega de referencia: regeneración (electrólisis + compresión) por suelta [MWh]
+\newcommand{\valEntregaRegenTotal}{88--90}  % entrega de referencia: regeneración, toda la entrega [MWh]
+\newcommand{\valEntregaExtPaso}{1.87--2.42}  % entrega de referencia: electricidad de tierra neta por suelta [MWh]
+\newcommand{\valEntregaExtTotal}{67--87}  % entrega de referencia: electricidad de tierra neta, toda la entrega [MWh]
+\newcommand{\valEntregaReposKg}{16}  % entrega de referencia: H2 de reposición desde tierra (agua no retenida) [kg]
+\newcommand{\valEntregaPemKW}{98}  % PEM del equipo: regenera una suelta de 1 t en t_regeneracion_h [kW]
+\newcommand{\valEntregaRegenDias}{36}  % entrega de referencia: días de regeneración con ese PEM
+\newcommand{\valEntregaBaseMW}{3.7}  % entrega de referencia: electrólisis en tierra para regenerar toda la entrega en t_regeneracion_h [MW]
+\newcommand{\valEntregaGasIni}{11.9}  % entrega de referencia: H2 de los gases al salir [t]
+\newcommand{\valEntregaGasPct}{14}  % entrega de referencia: H2 de los gases quemado en la entrega [%]
+\newcommand{\valSinFrenoCabeHind}{78}  % LZ 129: la suelta más grande que se compensa sin freno con un equipo que cabe en la carga útil [kg]
+\newcommand{\valSinFrenoCabeFW}{159}  % LCA60T: la suelta más grande que se compensa sin freno con un equipo que cabe en la carga útil [kg]
+\newcommand{\valSinFrenoCabeZR}{22}  % ZR-3: la suelta más grande que se compensa sin freno con un equipo que cabe en la carga útil [kg]
+\newcommand{\valSinFrenoCabeZNT}{2}  % Zeppelin NT: la suelta más grande que se compensa sin freno con un equipo que cabe en la carga útil [kg]
+\newcommand{\valEtapasLimPotPes}{29}  % LCA60T 1 t: hélices al soltar <= potencia neta del motor hasta, pesimista (fuerza tras lo que absorbe la quema) [min]
+\newcommand{\valEtapasLimPotOpt}{6.7}  % lo mismo, optimista [h]
+\newcommand{\valEtapasLimEnePes}{1.2}  % LCA60T 1 t: energía de las hélices <= neto del motor hasta, pesimista [h]
+\newcommand{\valEtapasLimEneOpt}{16.5}  % lo mismo, optimista [h]
+
+% --- EXP-21/22 en el paper: energía de la suelta, regeneración y ley de entrega ---
+\newcommand{\valRegenOdosVentCat}{354}  % O2 venteado al regenerar el H2 de una tonelada a 14 atm (sustentación que gana) [kg]
+\newcommand{\valRegenHdosCompCat}{24.6}  % H2 a comprimir en los tanques para compensarlo todo a 14 atm [kg por t]
+\newcommand{\valRegenVueloPctCat}{71--75}  % parte del H2 de una tonelada que se puede regenerar en vuelo compensando solo con los tanques a 14 atm [%]
+\newcommand{\valRegenPisoCompCat}{1.21}  % piso del costo por tonelada recuperada con tanques también para el gas que compensa el O2 a 14 atm [t por t]
+\newcommand{\valRegenOdosVentUna}{322}  % O2 venteado al regenerar el H2 de una tonelada a 1 atm (sustentación que gana) [kg]
+\newcommand{\valRegenHdosCompUna}{22.4}  % H2 a comprimir en los tanques para compensarlo todo a 1 atm [kg por t]
+\newcommand{\valRegenVueloPctUna}{78--82}  % parte del H2 de una tonelada que se puede regenerar en vuelo compensando solo con los tanques a 1 atm [%]
+\newcommand{\valRegenPisoCompUna}{1.10}  % piso del costo por tonelada recuperada con tanques también para el gas que compensa el O2 a 1 atm [t por t]
+\newcommand{\valEnergiaQuimCat}{1500}  % energía química quemada por tonelada a 14 atm [kWh]
+\newcommand{\valEnergiaMotorCat}{450--675}  % trabajo del motor por tonelada a 14 atm [kWh]
+\newcommand{\valEnergiaNetoCat}{77--578}  % neto a la planta por tonelada a 14 atm, HD 10 MW, ya sin ventiladores, compresor del escape (14 atm) y hélices [kWh]
+\newcommand{\valEnergiaElecCat}{2357}  % electrólisis por tonelada a 14 atm [kWh]
+\newcommand{\valEnergiaCompCat}{90--138}  % compresión del H2 regenerado por tonelada a 14 atm [kWh]
+\newcommand{\valEnergiaRegenCat}{2447--2495}  % regeneración por tonelada a 14 atm (electrólisis + compresión) [kWh]
+\newcommand{\valEnergiaPagaCat}{3--24}  % parte de la regeneración que paga el neto del motor a 14 atm [%]
+\newcommand{\valEnergiaExtCat}{1869--2418}  % electricidad de tierra neta por tonelada a 14 atm [kWh]
+\newcommand{\valEnergiaQuimUna}{1588}  % energía química quemada por tonelada a 1 atm [kWh]
+\newcommand{\valEnergiaMotorUna}{476--715}  % trabajo del motor por tonelada a 1 atm [kWh]
+\newcommand{\valEnergiaNetoUna}{194--700}  % neto a la planta por tonelada a 1 atm, HD 10 MW, ya sin ventiladores, compresor del escape (14 atm) y hélices [kWh]
+\newcommand{\valEnergiaElecUna}{2147}  % electrólisis por tonelada a 1 atm [kWh]
+\newcommand{\valEnergiaCompUna}{82--126}  % compresión del H2 regenerado por tonelada a 1 atm [kWh]
+\newcommand{\valEnergiaRegenUna}{2229--2273}  % regeneración por tonelada a 1 atm (electrólisis + compresión) [kWh]
+\newcommand{\valEnergiaPagaUna}{9--31}  % parte de la regeneración que paga el neto del motor a 1 atm [%]
+\newcommand{\valEnergiaExtUna}{1529--2079}  % electricidad de tierra neta por tonelada a 1 atm [kWh]
+\newcommand{\valEnergiaCompEsc}{82}  % compresor del escape por tonelada a 14 atm [kWh]
+\newcommand{\valCicloExtMWh}{1.5--2.1}  % electricidad externa neta del ciclo por tonelada, 1 atm (EXP-22) [MWh]
+\newcommand{\valVentAhorroPct}{47--61}  % energía que el ciclo ahorra frente a reponer lo venteado, 1 atm (EXP-22) [%]
+\newcommand{\valVentAhorroPctCat}{39--53}  % lo mismo a 14 atm (EXP-22) [%]
+\newcommand{\valVentEvitaUnaAtm}{91}  % H2 que el ciclo deja de perder frente a ventear, 1 atm (tabla 6) [%]
+\newcommand{\valVentEvitaCatorce}{99}  % lo mismo a 14 atm, phi = 0.99 (tabla 6) [%]
+\newcommand{\valDoceInstantePctUnaAtm}{68}  % ciclo a 1 atm: sustentación devuelta al instante [% de 1 t]
+\newcommand{\valDoceFactorCalorUnaAtm}{15}  % calor por tonelada a 1 atm / He a 20 MPa
+\newcommand{\valEnergiaHelPotUnaPes}{1.1}  % 1 atm, 1 t: hélices al soltar <= potencia neta del motor hasta, pesimista [h]
+\newcommand{\valEnergiaHelPotUnaOpt}{8.0}  % lo mismo, optimista [h]
+\newcommand{\valEnergiaHelEneUnaPes}{2.7}  % 1 atm, 1 t: energía de las hélices <= neto del motor hasta, pesimista [h]
+\newcommand{\valEnergiaHelEneUnaOpt}{20}  % lo mismo, optimista [h]
+\newcommand{\valRegenKWh}{54.9--56.0}  % módulo de regeneración: kWh por kg de H2 (electrólisis + compresión)
+\newcommand{\valRegenPemKg}{24--106}  % PEM por kg de H2 por hora [kg]
+\newcommand{\valRegenCompCap}{2.69}  % una unidad de compresor de catálogo [kg de H2 por hora]
+\newcommand{\valRegenCompKg}{545}  % masa de esa unidad [kg]
+\newcommand{\valRegenTanqueKg}{17.5}  % tanques a 350 bar por kg de H2 guardado [kg]
+\newcommand{\valRegenHdosT}{44.6}  % H2 regenerado por tonelada liberada a 14 atm (el del nomograma y el costo por tonelada) [kg]
+\newcommand{\valRegenTanqueSiete}{18.5}  % tanques a 700 bar por kg de H2 guardado [kg]
+\newcommand{\valRegenSolAnual}{3.4}  % horas de sol pleno por día sobre los paneles del casco, Lima, promedio anual
+\newcommand{\valRegenSolInv}{2.0}  % lo mismo, invierno
+\newcommand{\valRegenSolVer}{4.6}  % lo mismo, verano
+\newcommand{\valCostoPiso}{0.78}  % carga útil por tonelada recuperada a bordo: piso de los tanques [t por t]
+\newcommand{\valCostoSemanaASi}{1.37--1.52}  % carga útil por tonelada recuperada en una semana, a-Si [t por t]
+\newcommand{\valCostoEquilASi}{19--24}  % cuesta menos de 1 t por t recuperada desde estos días, a-Si
+\newcommand{\valCostoSemanaCigs}{2.95--3.11}  % carga útil por tonelada recuperada en una semana, CIGS [t por t]
+\newcommand{\valCostoEquilCigs}{69--74}  % cuesta menos de 1 t por t recuperada desde estos días, CIGS
+\newcommand{\valCostoSemanaRed}{0.84--0.86}  % carga útil por tonelada recuperada en una semana, red [t por t]
+\newcommand{\valCostoEquilRed}{1.9--2.6}  % cuesta menos de 1 t por t recuperada desde estos días, red
+\newcommand{\valRepartoUnicaMaxFW}{27}  % LCA60T: la suelta única más grande con el compresor de H2 fijo (recuperación muy larga) [t]

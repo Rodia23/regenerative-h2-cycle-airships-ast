@@ -1,0 +1,1124 @@
+  ok    [C] q condensando todo (EXP-06 = fórmula de EXP-05): obtenido 140.838 vs esperado 140.838 (tol 1e-07 %)
+  ok    [C] caso a 1 atm: phi = phi_max a T_salida (EXP-05): obtenido 0.851675 vs esperado 0.851675 (tol 1e-10 %)
+  ok    [C] caso a 1 atm: ṁ* L(phi_max) = ṁ* (cota ideal) L_eff: obtenido 70.6487 vs esperado 70.6487 (tol 1e-07 %)
+  ok    [C] caso a 1 atm: P_cond = ṁ* q(0, phi_max): obtenido 464.25 vs esperado 464.25 (tol 1e-10 %)
+  ok    [E] ideal: retenida + venteada + pulmón = r x H2 quemado: obtenido 401.364 vs esperado 401.364 (tol 2 %)
+  ok    [E] ventear_infMW: retenida + venteada + pulmón = r x H2 quemado: obtenido 435.329 vs esperado 435.329 (tol 2 %)
+  ok    [E] ventear_1000MW: retenida + venteada + pulmón = r x H2 quemado: obtenido 435.329 vs esperado 435.329 (tol 2 %)
+  ok    [E] ventear_100MW: retenida + venteada + pulmón = r x H2 quemado: obtenido 699.878 vs esperado 699.878 (tol 2 %)
+  ok    [E] ventear_10MW: retenida + venteada + pulmón = r x H2 quemado: obtenido 818.518 vs esperado 818.518 (tol 2 %)
+  ok    [E] pulmon_infMW: retenida + venteada + pulmón = r x H2 quemado: obtenido 435.329 vs esperado 435.329 (tol 2 %)
+  ok    [E] pulmon_1000MW: retenida + venteada + pulmón = r x H2 quemado: obtenido 435.329 vs esperado 435.329 (tol 2 %)
+  ok    [E] pulmon_100MW: retenida + venteada + pulmón = r x H2 quemado: obtenido 936.561 vs esperado 936.561 (tol 2 %)
+  ok    [E] pulmon_10MW: retenida + venteada + pulmón = r x H2 quemado: obtenido 1262.75 vs esperado 1262.75 (tol 2 %)
+  ok    [E] tau_0s: retenida + venteada + pulmón = r x H2 quemado: obtenido 435.329 vs esperado 435.329 (tol 2 %)
+  ok    [E] tau_5s: retenida + venteada + pulmón = r x H2 quemado: obtenido 435.329 vs esperado 435.329 (tol 2 %)
+  ok    [E] tau_30s: retenida + venteada + pulmón = r x H2 quemado: obtenido 435.329 vs esperado 435.329 (tol 2 %)
+  ok    [E] sin_prearranque_inf: retenida + venteada + pulmón = r x H2 quemado: obtenido 518.117 vs esperado 518.117 (tol 2 %)
+  ok    [E] Hind ventear_100MW: retenida + venteada + pulmón = r x H2 quemado: obtenido 687.362 vs esperado 687.362 (tol 2 %)
+  ok    [E] FW ventear_100MW: retenida + venteada + pulmón = r x H2 quemado: obtenido 699.878 vs esperado 699.878 (tol 2 %)
+  ok    [E] ZR ventear_100MW: retenida + venteada + pulmón = r x H2 quemado: obtenido 736.368 vs esperado 736.368 (tol 2 %)
+  ok    [E] ZNT ventear_100MW: retenida + venteada + pulmón = r x H2 quemado: obtenido 793.25 vs esperado 793.25 (tol 2 %)
+  ok    [E] Hind: sin condensador = artículo (H2 neto): obtenido 44.7746 vs esperado 44.8539 (tol 2 %)
+  ok    [E] FW: sin condensador = artículo (H2 neto): obtenido 44.78 vs esperado 44.8425 (tol 2 %)
+  ok    [E] ZR: sin condensador = artículo (H2 neto): obtenido 44.8059 vs esperado 44.8279 (tol 2 %)
+  ok    [E] ZNT: sin condensador = artículo (H2 neto): obtenido 44.8193 vs esperado 44.8196 (tol 2 %)
+  ok    [E] sin retardo y con capacidad sobrada retiene la fracción de equilibrio phi: obtenido 0.851675 vs esperado 0.851675 (tol 2 %)
+  ok    [F] Hind 10 MW ideal: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 85.4814 vs esperado 85.4813 (tol 1 %)
+  ok    [F] Hind 10 MW ventear_tau0s: retenida + venteada + pulmón = r x H2 quemado: obtenido 39.5327 vs esperado 39.5327 (tol 2 %)
+  ok    [F] Hind 10 MW ventear_tau0s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 85.4813 vs esperado 85.4813 (tol 1 %)
+  ok    [F] Hind 10 MW ventear_tau0s: sin retardo retiene la fracción de equilibrio phi: obtenido 0.851675 vs esperado 0.851675 (tol 1 %)
+  ok    [F] Hind 10 MW ventear_tau5s: retenida + venteada + pulmón = r x H2 quemado: obtenido 39.5779 vs esperado 39.5779 (tol 2 %)
+  ok    [F] Hind 10 MW ventear_tau5s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 85.4813 vs esperado 85.4813 (tol 1 %)
+  ok    [F] Hind 10 MW ventear_tau30s: retenida + venteada + pulmón = r x H2 quemado: obtenido 39.7833 vs esperado 39.7833 (tol 2 %)
+  ok    [F] Hind 10 MW ventear_tau30s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 85.4813 vs esperado 85.4813 (tol 1 %)
+  ok    [F] Hind 10 MW pulmon_tau5s: retenida + venteada + pulmón = r x H2 quemado: obtenido 39.5398 vs esperado 39.5398 (tol 2 %)
+  ok    [F] Hind 10 MW pulmon_tau5s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 85.4813 vs esperado 85.4813 (tol 1 %)
+  ok    [F] Hind 100 MW ideal: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 396.709 vs esperado 396.708 (tol 1 %)
+  ok    [F] Hind 100 MW ventear_tau0s: retenida + venteada + pulmón = r x H2 quemado: obtenido 174.838 vs esperado 174.838 (tol 2 %)
+  ok    [F] Hind 100 MW ventear_tau0s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 396.708 vs esperado 396.708 (tol 1 %)
+  ok    [F] Hind 100 MW ventear_tau0s: sin retardo retiene la fracción de equilibrio phi: obtenido 0.851675 vs esperado 0.851675 (tol 1 %)
+  ok    [F] Hind 100 MW ventear_tau5s: retenida + venteada + pulmón = r x H2 quemado: obtenido 175.126 vs esperado 175.126 (tol 2 %)
+  ok    [F] Hind 100 MW ventear_tau5s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 396.708 vs esperado 396.708 (tol 1 %)
+  ok    [F] Hind 100 MW ventear_tau30s: retenida + venteada + pulmón = r x H2 quemado: obtenido 176.308 vs esperado 176.308 (tol 2 %)
+  ok    [F] Hind 100 MW ventear_tau30s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 396.708 vs esperado 396.708 (tol 1 %)
+  ok    [F] Hind 100 MW pulmon_tau5s: retenida + venteada + pulmón = r x H2 quemado: obtenido 174.925 vs esperado 174.925 (tol 2 %)
+  ok    [F] Hind 100 MW pulmon_tau5s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 396.708 vs esperado 396.708 (tol 1 %)
+  ok    [F] FW 10 MW ideal: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 79.5482 vs esperado 79.5482 (tol 1 %)
+  ok    [F] FW 10 MW ventear_tau0s: retenida + venteada + pulmón = r x H2 quemado: obtenido 36.7929 vs esperado 36.7929 (tol 2 %)
+  ok    [F] FW 10 MW ventear_tau0s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 79.5481 vs esperado 79.5482 (tol 1 %)
+  ok    [F] FW 10 MW ventear_tau0s: sin retardo retiene la fracción de equilibrio phi: obtenido 0.851675 vs esperado 0.851675 (tol 1 %)
+  ok    [F] FW 10 MW ventear_tau5s: retenida + venteada + pulmón = r x H2 quemado: obtenido 36.8389 vs esperado 36.8389 (tol 2 %)
+  ok    [F] FW 10 MW ventear_tau5s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 79.5481 vs esperado 79.5482 (tol 1 %)
+  ok    [F] FW 10 MW ventear_tau30s: retenida + venteada + pulmón = r x H2 quemado: obtenido 37.0458 vs esperado 37.0458 (tol 2 %)
+  ok    [F] FW 10 MW ventear_tau30s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 79.5481 vs esperado 79.5482 (tol 1 %)
+  ok    [F] FW 10 MW pulmon_tau5s: retenida + venteada + pulmón = r x H2 quemado: obtenido 36.8011 vs esperado 36.8011 (tol 2 %)
+  ok    [F] FW 10 MW pulmon_tau5s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 79.5481 vs esperado 79.5482 (tol 1 %)
+  ok    [F] FW 100 MW ideal: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 369.165 vs esperado 369.165 (tol 1 %)
+  ok    [F] FW 100 MW ventear_tau0s: retenida + venteada + pulmón = r x H2 quemado: obtenido 162.809 vs esperado 162.809 (tol 2 %)
+  ok    [F] FW 100 MW ventear_tau0s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 369.165 vs esperado 369.165 (tol 1 %)
+  ok    [F] FW 100 MW ventear_tau0s: sin retardo retiene la fracción de equilibrio phi: obtenido 0.851675 vs esperado 0.851675 (tol 1 %)
+  ok    [F] FW 100 MW ventear_tau5s: retenida + venteada + pulmón = r x H2 quemado: obtenido 163.101 vs esperado 163.101 (tol 2 %)
+  ok    [F] FW 100 MW ventear_tau5s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 369.165 vs esperado 369.165 (tol 1 %)
+  ok    [F] FW 100 MW ventear_tau30s: retenida + venteada + pulmón = r x H2 quemado: obtenido 164.278 vs esperado 164.278 (tol 2 %)
+  ok    [F] FW 100 MW ventear_tau30s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 369.165 vs esperado 369.165 (tol 1 %)
+  ok    [F] FW 100 MW pulmon_tau5s: retenida + venteada + pulmón = r x H2 quemado: obtenido 162.906 vs esperado 162.906 (tol 2 %)
+  ok    [F] FW 100 MW pulmon_tau5s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 369.165 vs esperado 369.165 (tol 1 %)
+  ok    [F] ZR 10 MW ideal: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 61.3469 vs esperado 61.3469 (tol 1 %)
+  ok    [F] ZR 10 MW ventear_tau0s: retenida + venteada + pulmón = r x H2 quemado: obtenido 28.0554 vs esperado 28.0554 (tol 2 %)
+  ok    [F] ZR 10 MW ventear_tau0s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 61.3469 vs esperado 61.3469 (tol 1 %)
+  ok    [F] ZR 10 MW ventear_tau0s: sin retardo retiene la fracción de equilibrio phi: obtenido 0.851675 vs esperado 0.851675 (tol 1 %)
+  ok    [F] ZR 10 MW ventear_tau5s: retenida + venteada + pulmón = r x H2 quemado: obtenido 28.1075 vs esperado 28.1075 (tol 2 %)
+  ok    [F] ZR 10 MW ventear_tau5s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 61.3469 vs esperado 61.3469 (tol 1 %)
+  ok    [F] ZR 10 MW ventear_tau30s: retenida + venteada + pulmón = r x H2 quemado: obtenido 28.3266 vs esperado 28.3266 (tol 2 %)
+  ok    [F] ZR 10 MW ventear_tau30s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 61.3469 vs esperado 61.3469 (tol 1 %)
+  ok    [F] ZR 10 MW pulmon_tau5s: retenida + venteada + pulmón = r x H2 quemado: obtenido 28.0692 vs esperado 28.0692 (tol 2 %)
+  ok    [F] ZR 10 MW pulmon_tau5s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 61.3469 vs esperado 61.3469 (tol 1 %)
+  ok    [F] ZR 100 MW ideal: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 284.662 vs esperado 284.662 (tol 1 %)
+  ok    [F] ZR 100 MW ventear_tau0s: retenida + venteada + pulmón = r x H2 quemado: obtenido 125.69 vs esperado 125.69 (tol 2 %)
+  ok    [F] ZR 100 MW ventear_tau0s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 284.662 vs esperado 284.662 (tol 1 %)
+  ok    [F] ZR 100 MW ventear_tau0s: sin retardo retiene la fracción de equilibrio phi: obtenido 0.851675 vs esperado 0.851675 (tol 1 %)
+  ok    [F] ZR 100 MW ventear_tau5s: retenida + venteada + pulmón = r x H2 quemado: obtenido 125.998 vs esperado 125.998 (tol 2 %)
+  ok    [F] ZR 100 MW ventear_tau5s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 284.662 vs esperado 284.662 (tol 1 %)
+  ok    [F] ZR 100 MW ventear_tau30s: retenida + venteada + pulmón = r x H2 quemado: obtenido 127.102 vs esperado 127.102 (tol 2 %)
+  ok    [F] ZR 100 MW ventear_tau30s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 284.662 vs esperado 284.662 (tol 1 %)
+  ok    [F] ZR 100 MW pulmon_tau5s: retenida + venteada + pulmón = r x H2 quemado: obtenido 125.831 vs esperado 125.831 (tol 2 %)
+  ok    [F] ZR 100 MW pulmon_tau5s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 284.662 vs esperado 284.662 (tol 1 %)
+  ok    [F] ZNT 10 MW ideal: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 28.873 vs esperado 28.873 (tol 1 %)
+  ok    [F] ZNT 10 MW ventear_tau0s: retenida + venteada + pulmón = r x H2 quemado: obtenido 13.9095 vs esperado 13.9095 (tol 2 %)
+  ok    [F] ZNT 10 MW ventear_tau0s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 28.873 vs esperado 28.873 (tol 1 %)
+  ok    [F] ZNT 10 MW ventear_tau0s: sin retardo retiene la fracción de equilibrio phi: obtenido 0.851675 vs esperado 0.851675 (tol 1 %)
+  ok    [F] ZNT 10 MW ventear_tau5s: retenida + venteada + pulmón = r x H2 quemado: obtenido 13.912 vs esperado 13.912 (tol 2 %)
+  ok    [F] ZNT 10 MW ventear_tau5s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 28.873 vs esperado 28.873 (tol 1 %)
+  ok    [F] ZNT 10 MW ventear_tau30s: retenida + venteada + pulmón = r x H2 quemado: obtenido 14.0069 vs esperado 14.0069 (tol 2 %)
+  ok    [F] ZNT 10 MW ventear_tau30s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 28.873 vs esperado 28.873 (tol 1 %)
+  ok    [F] ZNT 10 MW pulmon_tau5s: retenida + venteada + pulmón = r x H2 quemado: obtenido 13.8769 vs esperado 13.8769 (tol 2 %)
+  ok    [F] ZNT 10 MW pulmon_tau5s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 28.873 vs esperado 28.873 (tol 1 %)
+  ok    [F] ZNT 100 MW ideal: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 133.837 vs esperado 133.837 (tol 1 %)
+  ok    [F] ZNT 100 MW ventear_tau0s: retenida + venteada + pulmón = r x H2 quemado: obtenido 59.5429 vs esperado 59.5429 (tol 2 %)
+  ok    [F] ZNT 100 MW ventear_tau0s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 133.837 vs esperado 133.837 (tol 1 %)
+  ok    [F] ZNT 100 MW ventear_tau0s: sin retardo retiene la fracción de equilibrio phi: obtenido 0.851675 vs esperado 0.851675 (tol 1 %)
+  ok    [F] ZNT 100 MW ventear_tau5s: retenida + venteada + pulmón = r x H2 quemado: obtenido 59.9071 vs esperado 59.9071 (tol 2 %)
+  ok    [F] ZNT 100 MW ventear_tau5s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 133.837 vs esperado 133.837 (tol 1 %)
+  ok    [F] ZNT 100 MW ventear_tau30s: retenida + venteada + pulmón = r x H2 quemado: obtenido 60.593 vs esperado 60.593 (tol 2 %)
+  ok    [F] ZNT 100 MW ventear_tau30s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 133.837 vs esperado 133.837 (tol 1 %)
+  ok    [F] ZNT 100 MW pulmon_tau5s: retenida + venteada + pulmón = r x H2 quemado: obtenido 59.9657 vs esperado 59.9657 (tol 2 %)
+  ok    [F] ZNT 100 MW pulmon_tau5s: balance final (rho_a/rho_H2 - 1) H2 neto + agua = escalón: obtenido 133.837 vs esperado 133.837 (tol 1 %)
+  ok    [F] Hind 10 MW: el ideal no quema más H2 por tonelada que ventear sin retardo: ideal 45.82 vs ventear 51.75 kg/t
+  ok    [F] Hind 100 MW: el ideal no quema más H2 por tonelada que ventear sin retardo: ideal 45.05 vs ventear 49.32 kg/t
+  ok    [F] FW 10 MW: el ideal no quema más H2 por tonelada que ventear sin retardo: ideal 45.79 vs ventear 51.76 kg/t
+  ok    [F] FW 100 MW: el ideal no quema más H2 por tonelada que ventear sin retardo: ideal 45.05 vs ventear 49.35 kg/t
+  ok    [F] ZR 10 MW: el ideal no quema más H2 por tonelada que ventear sin retardo: ideal 45.47 vs ventear 51.17 kg/t
+  ok    [F] ZR 100 MW: el ideal no quema más H2 por tonelada que ventear sin retardo: ideal 44.97 vs ventear 49.41 kg/t
+  ok    [F] ZNT 10 MW: el ideal no quema más H2 por tonelada que ventear sin retardo: ideal 49.13 vs ventear 53.91 kg/t
+  ok    [F] ZNT 100 MW: el ideal no quema más H2 por tonelada que ventear sin retardo: ideal 44.98 vs ventear 49.78 kg/t
+  ok    [G] 1atm conservador: con eta = eta_min el trabajo alcanza justo (razón = 1): obtenido 1 vs esperado 1 (tol 1e-07 %)
+  ok    [G] 1atm conservador: razón por tonelada = razón por kg de H2: obtenido 1.76632 vs esperado 1.76632 (tol 1e-07 %)
+  ok    [G] 1atm optimista: con eta = eta_min el trabajo alcanza justo (razón = 1): obtenido 1 vs esperado 1 (tol 1e-07 %)
+  ok    [G] 1atm optimista: razón por tonelada = razón por kg de H2: obtenido 2.35509 vs esperado 2.35509 (tol 1e-07 %)
+  ok    [G] presurizado conservador: con eta = eta_min el trabajo alcanza justo (razón = 1): obtenido 1 vs esperado 1 (tol 1e-07 %)
+  ok    [G] presurizado conservador: razón por tonelada = razón por kg de H2: obtenido 1.24713 vs esperado 1.24713 (tol 1e-07 %)
+  ok    [G] presurizado optimista: con eta = eta_min el trabajo alcanza justo (razón = 1): obtenido 1 vs esperado 1 (tol 1e-07 %)
+  ok    [G] presurizado optimista: razón por tonelada = razón por kg de H2: obtenido 1.5455 vs esperado 1.5455 (tol 1e-07 %)
+  ok    [G] H2 por tonelada ideal (EXP-11) = H2 de descenso del artículo: obtenido 44.8329 vs esperado 44.8329 (tol 0.5 %)
+  ok    [G] Hind forma cerrada forma_cerrada: recuperado + perdido = quemado: obtenido 44.8329 vs esperado 44.8329 (tol 1e-07 %)
+  ok    [G] Hind forma cerrada forma_cerrada: días por tonelada = días del artículo: obtenido 0.306628 vs esperado 0.306628 (tol 0.5 %)
+  ok    [G] Hind 10.0 ideal: recuperado + perdido = quemado: obtenido 45.8205 vs esperado 45.8205 (tol 1e-07 %)
+  ok    [G] Hind 10.0 ventear_tau0s: recuperado + perdido = quemado: obtenido 51.7498 vs esperado 51.7498 (tol 1e-07 %)
+  ok    [G] Hind 10.0 ventear_tau0s: r x recuperado = agua retenida en EXP-10: obtenido 33.669 vs esperado 33.669 (tol 1 %)
+  ok    [G] Hind 10.0 ventear_tau5s: recuperado + perdido = quemado: obtenido 51.8091 vs esperado 51.8091 (tol 1e-07 %)
+  ok    [G] Hind 10.0 ventear_tau5s: r x recuperado = agua retenida en EXP-10: obtenido 33.6784 vs esperado 33.6784 (tol 1 %)
+  ok    [G] Hind 100.0 ideal: recuperado + perdido = quemado: obtenido 45.0509 vs esperado 45.0509 (tol 1e-07 %)
+  ok    [G] Hind 100.0 ventear_tau0s: recuperado + perdido = quemado: obtenido 49.3159 vs esperado 49.3159 (tol 1e-07 %)
+  ok    [G] Hind 100.0 ventear_tau0s: r x recuperado = agua retenida en EXP-10: obtenido 148.905 vs esperado 148.905 (tol 1 %)
+  ok    [G] Hind 100.0 ventear_tau5s: recuperado + perdido = quemado: obtenido 49.3972 vs esperado 49.3972 (tol 1e-07 %)
+  ok    [G] Hind 100.0 ventear_tau5s: r x recuperado = agua retenida en EXP-10: obtenido 148.859 vs esperado 148.859 (tol 1 %)
+  ok    [G] FW forma cerrada forma_cerrada: recuperado + perdido = quemado: obtenido 44.8329 vs esperado 44.8329 (tol 1e-07 %)
+  ok    [G] FW forma cerrada forma_cerrada: días por tonelada = días del artículo: obtenido 0.309312 vs esperado 0.309312 (tol 0.5 %)
+  ok    [G] FW 10.0 ideal: recuperado + perdido = quemado: obtenido 45.793 vs esperado 45.793 (tol 1e-07 %)
+  ok    [G] FW 10.0 ventear_tau0s: recuperado + perdido = quemado: obtenido 51.7556 vs esperado 51.7556 (tol 1e-07 %)
+  ok    [G] FW 10.0 ventear_tau0s: r x recuperado = agua retenida en EXP-10: obtenido 31.3356 vs esperado 31.3356 (tol 1 %)
+  ok    [G] FW 10.0 ventear_tau5s: recuperado + perdido = quemado: obtenido 51.8203 vs esperado 51.8203 (tol 1e-07 %)
+  ok    [G] FW 10.0 ventear_tau5s: r x recuperado = agua retenida en EXP-10: obtenido 31.3457 vs esperado 31.3457 (tol 1 %)
+  ok    [G] FW 100.0 ideal: recuperado + perdido = quemado: obtenido 45.0455 vs esperado 45.0455 (tol 1e-07 %)
+  ok    [G] FW 100.0 ventear_tau0s: recuperado + perdido = quemado: obtenido 49.3494 vs esperado 49.3494 (tol 1e-07 %)
+  ok    [G] FW 100.0 ventear_tau0s: r x recuperado = agua retenida en EXP-10: obtenido 138.66 vs esperado 138.66 (tol 1 %)
+  ok    [G] FW 100.0 ventear_tau5s: recuperado + perdido = quemado: obtenido 49.4381 vs esperado 49.4381 (tol 1e-07 %)
+  ok    [G] FW 100.0 ventear_tau5s: r x recuperado = agua retenida en EXP-10: obtenido 138.618 vs esperado 138.618 (tol 1 %)
+  ok    [G] ZR forma cerrada forma_cerrada: recuperado + perdido = quemado: obtenido 44.8329 vs esperado 44.8329 (tol 1e-07 %)
+  ok    [G] ZR forma cerrada forma_cerrada: días por tonelada = días del artículo: obtenido 0.56575 vs esperado 0.56575 (tol 0.5 %)
+  ok    [G] ZR 10.0 ideal: recuperado + perdido = quemado: obtenido 45.4682 vs esperado 45.4682 (tol 1e-07 %)
+  ok    [G] ZR 10.0 ventear_tau0s: recuperado + perdido = quemado: obtenido 51.1739 vs esperado 51.1739 (tol 1e-07 %)
+  ok    [G] ZR 10.0 ventear_tau0s: r x recuperado = agua retenida en EXP-10: obtenido 23.8941 vs esperado 23.8941 (tol 1 %)
+  ok    [G] ZR 10.0 ventear_tau5s: recuperado + perdido = quemado: obtenido 51.2688 vs esperado 51.2688 (tol 1e-07 %)
+  ok    [G] ZR 10.0 ventear_tau5s: r x recuperado = agua retenida en EXP-10: obtenido 23.9093 vs esperado 23.9093 (tol 1 %)
+  ok    [G] ZR 100.0 ideal: recuperado + perdido = quemado: obtenido 44.9732 vs esperado 44.9732 (tol 1e-07 %)
+  ok    [G] ZR 100.0 ventear_tau0s: recuperado + perdido = quemado: obtenido 49.4075 vs esperado 49.4075 (tol 1e-07 %)
+  ok    [G] ZR 100.0 ventear_tau0s: r x recuperado = agua retenida en EXP-10: obtenido 107.047 vs esperado 107.047 (tol 1 %)
+  ok    [G] ZR 100.0 ventear_tau5s: recuperado + perdido = quemado: obtenido 49.5287 vs esperado 49.5287 (tol 1e-07 %)
+  ok    [G] ZR 100.0 ventear_tau5s: r x recuperado = agua retenida en EXP-10: obtenido 107.018 vs esperado 107.018 (tol 1 %)
+  ok    [G] ZNT forma cerrada forma_cerrada: recuperado + perdido = quemado: obtenido 44.8329 vs esperado 44.8329 (tol 1e-07 %)
+  ok    [G] ZNT forma cerrada forma_cerrada: días por tonelada = días del artículo: obtenido 2.93017 vs esperado 2.93017 (tol 0.5 %)
+  ok    [G] ZNT 10.0 ideal: recuperado + perdido = quemado: obtenido 49.1341 vs esperado 49.1341 (tol 1e-07 %)
+  ok    [G] ZNT 10.0 ventear_tau0s: recuperado + perdido = quemado: obtenido 53.9069 vs esperado 53.9069 (tol 1e-07 %)
+  ok    [G] ZNT 10.0 ventear_tau0s: r x recuperado = agua retenida en EXP-10: obtenido 11.8464 vs esperado 11.8464 (tol 1 %)
+  ok    [G] ZNT 10.0 ventear_tau5s: recuperado + perdido = quemado: obtenido 53.9162 vs esperado 53.9162 (tol 1e-07 %)
+  ok    [G] ZNT 10.0 ventear_tau5s: r x recuperado = agua retenida en EXP-10: obtenido 11.8194 vs esperado 11.8194 (tol 1 %)
+  ok    [G] ZNT 100.0 ideal: recuperado + perdido = quemado: obtenido 44.982 vs esperado 44.982 (tol 1e-07 %)
+  ok    [G] ZNT 100.0 ventear_tau0s: recuperado + perdido = quemado: obtenido 49.7826 vs esperado 49.7826 (tol 1e-07 %)
+  ok    [G] ZNT 100.0 ventear_tau0s: r x recuperado = agua retenida en EXP-10: obtenido 50.7112 vs esperado 50.7112 (tol 1 %)
+  ok    [G] ZNT 100.0 ventear_tau5s: recuperado + perdido = quemado: obtenido 50.087 vs esperado 50.087 (tol 1e-07 %)
+  ok    [G] ZNT 100.0 ventear_tau5s: r x recuperado = agua retenida en EXP-10: obtenido 50.7303 vs esperado 50.7303 (tol 1 %)
+  ok    [I] minimax generalizado con los datos del H2 = minimax del artículo: obtenido 3.16739 vs esperado 3.16739 (tol 1e-10 %)
+  ok    [I] He a 5 MPa: trabajo isotérmico de gas real (NIST) ~ gas ideal R T ln(P2/P1): obtenido 2.3482 vs esperado 2.33372 (tol 3 %)
+  ok    [I] He a 20 MPa: trabajo isotérmico de gas real (NIST) ~ gas ideal R T ln(P2/P1): obtenido 3.2219 vs esperado 3.1635 (tol 3 %)
+  ok    [I] He a 30 MPa: trabajo isotérmico de gas real (NIST) ~ gas ideal R T ln(P2/P1): obtenido 3.49347 vs esperado 3.4062 (tol 3 %)
+  ok    [I] rho_He de gas ideal = NIST (15 °C, 1 atm): obtenido 0.16928 vs esperado 0.169195 (tol 0.1 %)
+  ok    [I] la maniobra limpia dura lo mismo con He que con H2 (L se cancela): obtenido 14.1545 vs esperado 14.1545 (tol 0.0001 %)
+  ok    [I] COSH: compuesto = 72.7 kg del DOE x (P V) / (700 bar x 144.2 L), 20 MPa (NIST): obtenido 0.653504 vs esperado 0.653504 (tol 1e-07 %)
+  ok    [I] ruta 0: agua guardada = r phi B / 1000: obtenido 0.398246 vs esperado 0.398246 (tol 1e-07 %)
+  ok    [I] ruta 0: compuesto de los tanques de B kg a 35 MPa (NIST) con el mismo escalado P V: obtenido 0.472888 vs esperado 0.472888 (tol 1e-07 %)
+  ok    [I] ruta 0: B rho_a/rho_H2 + B (r phi - 1) = 1000 kg (lo que vuelve al instante y con la electrólisis): obtenido 1000 vs esperado 1000 (tol 1e-07 %)
+  ok    [I] ruta 0: el resto que vuelve con la electrólisis = B (r phi - 1): obtenido 353.233 vs esperado 353.233 (tol 1e-07 %)
+  ok    [I] ruta 1: agua guardada = r phi B / 1000: obtenido 0.362789 vs esperado 0.362789 (tol 1e-07 %)
+  ok    [I] ruta 1: compuesto de los tanques de B kg a 35 MPa (NIST) con el mismo escalado P V: obtenido 0.500752 vs esperado 0.500752 (tol 1e-07 %)
+  ok    [I] ruta 1: B rho_a/rho_H2 + B (r phi - 1) = 1000 kg (lo que vuelve al instante y con la electrólisis): obtenido 1000 vs esperado 1000 (tol 1e-07 %)
+  ok    [I] ruta 1: el resto que vuelve con la electrólisis = B (r phi - 1): obtenido 315.124 vs esperado 315.124 (tol 1e-07 %)
+  ok    [I] COSH: descomprimir todo el He devuelve la tonelada entera: obtenido 1000 vs esperado 1000 (tol 1e-07 %)
+  ok    [I] devolver 1 t de golpe pide los mismos moles de H2 que de He: obtenido 34.5245 vs esperado 34.5245 (tol 1e-07 %)
+  ok    [I] esos moles = 1000 kg / M_aire (gas ideal): obtenido 34.5245 vs esperado 34.5251 (tol 0.1 %)
+  ok    [I] H2 a 1.5 MPa, 15 °C: densidad de Leachman (CoolProp) = consulta a NIST (parametros): obtenido 1.25086 vs esperado 1.2509 (tol 0.01 %)
+  ok    [I] H2 a 35 MPa, 15 °C: densidad de Leachman (CoolProp) = consulta a NIST (parametros): obtenido 23.9948 vs esperado 23.995 (tol 0.01 %)
+  ok    [I] H2 a 70 MPa, 15 °C: densidad de Leachman (CoolProp) = consulta a NIST (parametros): obtenido 40.1722 vs esperado 40.172 (tol 0.01 %)
+  ok    [I] H2 comprimido a 35 MPa: trabajo de gas real ~ gas ideal R T ln(P2/P1): obtenido 7.2062 vs esperado 6.94633 (tol 5 %)
+  ok    [I] H2 comprimido: los mismos moles por tonelada que el He de COSH: obtenido 34.5245 vs esperado 34.5245 (tol 1e-07 %)
+  ok    [I] devolución del resto: horas en proporción al H2 regenerado (phi = 0.99 frente a 1 atm): obtenido 26.3456 vs esperado 26.3456 (tol 1e-07 %)
+  ok    [I] electrólisis por tonelada de la ruta a 1 atm = balance_masa: obtenido 2147.21 vs esperado 2147.21 (tol 0.0001 %)
+  ok    [I] ruta H2 con agua retenida: L de EXP-12 = L(phi) de EXP-06: obtenido 22.2157 vs esperado 22.2157 (tol 1e-07 %)
+  ok    [I] ruta H2 con agua retenida: q de EXP-12 = q de EXP-06: obtenido 140.838 vs esperado 140.838 (tol 1e-07 %)
+  ok    [I] H2 a 10 MW: minutos por tonelada = tiempo de calor de EXP-06 / carga: obtenido 10.566 vs esperado 10.566 (tol 0.0001 %)
+  ok    [I] H2 a 100 MW: minutos por tonelada = tiempo de calor de EXP-06 / carga: obtenido 1.0566 vs esperado 1.0566 (tol 0.0001 %)
+  ok    [J] inercia en el equilibrio = (1 + k) rho_aire V_casco (con el casco no lleno de gas): obtenido 410077 vs esperado 410077 (tol 1e-07 %)
+  ok    [J] forma cerrada: m* con / sin masa añadida = 1/sqrt(1 + k): obtenido 0.732705 vs esperado 0.733283 (tol 1 %)
+  ok    [J] simulación del artículo (caso base, 1 t): bajada al soltar = D_lim (misma inercia en fórmula y simulación): obtenido 0.0998592 vs esperado 0.1 (tol 2 %)
+  ok    [J] simulación del artículo (caso base, 1 t) cumple h_max con la masa añadida: excursión máx. 0.198 m
+  ok    [K] JANAF: h, S y Cp interpolados = valores tabulados en todos los nodos (6 especies): obtenido 7.10543e-15 vs esperado 0 (tol 1e-09 kJ/mol, J/mol K)
+  ok    [K] JANAF interpolado vs ajuste de Shomate (NIST WebBook): Cp, 6 especies, rangos de validez: obtenido 0.000536989 vs esperado 0 (tol 0.005)
+  ok    [K] PCI del H2 de las entalpías de formación JANAF = Q_comb_H2 de parametros (CODATA): obtenido 1.19961e+08 vs esperado 1.19961e+08 (tol 0.001 %)
+  ok    [Q] código vs solución exacta (control apagado): error relativo en v con tolerancia estricta: obtenido 9.36003e-10 vs esperado 0 (tol 0.0001)
+  ok    [Q] código vs solución exacta (control apagado): error relativo en z con tolerancia estricta: obtenido 3.20656e-05 vs esperado 0 (tol 0.0001)
+  ok    [Q] el error contra la solución exacta baja al apretar la tolerancia (código consistente): 2.0e-02 -> 3.2e-05
+  ok    [Q] equilibrio antes de soltar: la nave queda quieta: obtenido 0 vs esperado 0 (tol 1e-09 m)
+  ok    [Q] base: las dos configuraciones más finas coinciden (solución convergida): obtenido 2.5763e-07 vs esperado 0 (tol 0.0001)
+  ok    [Q] base: incertidumbre numérica de la configuración adoptada (excursión, H2, agua): obtenido 1.06957e-06 vs esperado 0 (tol 0.005)
+  ok    [Q] condensador_100MW_tau5: las dos configuraciones más finas coinciden (solución convergida): obtenido 9.9074e-07 vs esperado 0 (tol 0.0001)
+  ok    [Q] condensador_100MW_tau5: incertidumbre numérica de la configuración adoptada (excursión, H2, agua): obtenido 1.9543e-05 vs esperado 0 (tol 0.005)
+  ok    [R] tau: la k de EXP-14 reproduce los 10 kW/kg de FlyZero a 100 C con aire a la T de diseño: obtenido 10 vs esperado 10 (tol 1e-07 %)
+  ok    [R] tau supuesto dentro de x0.5-x2 de c/k del radiador de FlyZero de aluminio: supuesto 5 s; c/k 6.3-5.8 s
+  ok    [R] la cota de 30 s cubre el extremo rápido del intercambiador de laboratorio (Ghatos 2023): cota 30 s; Ghatos 16-59 s
+  ok    [R] base: el arrastre (Cd 0 a 1) mueve la excursión menos de 2 % (PIRT P5, baja importancia): obtenido 0.00096447 vs esperado 0 (tol 0.02)
+  ok    [R] condensador_100MW_tau5: el arrastre (Cd 0 a 1) mueve la excursión menos de 2 % (PIRT P5, baja importancia): obtenido 0.00547683 vs esperado 0 (tol 0.02)
+  ok    [R] gas isotérmico: deriva en la maniobra minimax con dT_eq 10 K < 5 % de la carga: obtenido 0.0324668 vs esperado 0 (tol 0.05)
+  ok    [R] incertidumbre ideal: el valor base de dm_star cae dentro de su mínimo-máximo: 3.167 en [2.891, 3.611]
+  ok    [R] incertidumbre ideal: el valor base de P_MW cae dentro de su mínimo-máximo: 446.1 en [407.2, 508.5]
+  ok    [R] incertidumbre ideal: el valor base de H2_t cae dentro de su mínimo-máximo: 44.83 en [44.83, 44.83]
+  ok    [R] incertidumbre ideal: el valor base de Q_GJ_t cae dentro de su mínimo-máximo: 6.314 en [6.314, 6.314]
+  ok    [R] incertidumbre real: el valor base de dm_star cae dentro de su mínimo-máximo: 3.678 en [3.245, 4.341]
+  ok    [R] incertidumbre real: el valor base de P_MW cae dentro de su mínimo-máximo: 491.4 en [438.7, 573.1]
+  ok    [R] incertidumbre real: el valor base de H2_t cae dentro de su mínimo-máximo: 52.06 en [50.33, 53.91]
+  ok    [R] incertidumbre real: el valor base de Q_GJ_t cae dentro de su mínimo-máximo: 6.955 en [6.804, 7.117]
+  ok    [R] incertidumbre ideal: mínimo-máximo del flujo = los dos ensayos de YG03 (sujeto y vuelo libre): obtenido 0.719586 vs esperado 0.719586 (tol 1e-10 %)
+  ok    [R] incertidumbre real: mínimo-máximo del H2 por tonelada = los extremos de la recolección medida: obtenido 3.57784 vs esperado 3.57784 (tol 1e-10 %)
+  ok    [R] inercia: VAL-03 escala toda la inercia con el factor de YG03 (restringido), como VAL-01: obtenido 1.13992 vs esperado 1.13862 (tol 1 %)
+  ok    [R] inercia: VAL-03 escala toda la inercia con el factor de YG03 (vuelo_libre), como VAL-01: obtenido 0.912732 vs esperado 0.912258 (tol 1 %)
+  ok    [P] YG03: los 6 pasos del protocolo están llenos: completo
+  ok    [P] YG03: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] YG03: los datos que usa el modelo (val01_componentes.YG03_MASA_VERTICAL) = los registrados: 3 datos iguales
+  ok    [P] ZAK22: los 6 pasos del protocolo están llenos: completo
+  ok    [P] ZAK22: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] ZAK22: la transcripción tabla 1 (6 experimentos) (val02_condensacion.EXPERIMENTOS) no cambió: misma huella
+  ok    [P] IZ25: los 6 pasos del protocolo están llenos: completo
+  ok    [P] IZ25: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] RM93: los 6 pasos del protocolo están llenos: completo
+  ok    [P] RM93: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] LXS14: los 6 pasos del protocolo están llenos: completo
+  ok    [P] LXS14: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] GH23: los 6 pasos del protocolo están llenos: completo
+  ok    [P] GH23: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] ISA: los 6 pasos del protocolo están llenos: completo
+  ok    [P] ISA: los datos que usa el modelo (parametros.constantes) = los registrados: 8 datos iguales
+  ok    [P] CODATA: los 6 pasos del protocolo están llenos: completo
+  ok    [P] CODATA: los datos que usa el modelo (parametros.constantes) = los registrados: 1 datos iguales
+  ok    [P] IUPAC: los 6 pasos del protocolo están llenos: completo
+  ok    [P] IUPAC: los datos que usa el modelo (parametros.constantes) = los registrados: 3 datos iguales
+  ok    [P] IF97: los 6 pasos del protocolo están llenos: completo
+  ok    [P] IF97: la transcripción coeficientes n1-n10 de la ec. 30 (exp05_condensacion_tiempo_real._IF97) no cambió: misma huella
+  ok    [P] NIST_agua: los 6 pasos del protocolo están llenos: completo
+  ok    [P] NIST_agua: los datos que usa el modelo (parametros.constantes) = los registrados: 5 datos iguales
+  ok    [P] IEA: los 6 pasos del protocolo están llenos: completo
+  ok    [P] IEA: los datos que usa el modelo (parametros.constantes) = los registrados: 1 datos iguales
+  ok    [P] NIST_H2: los 6 pasos del protocolo están llenos: completo
+  ok    [P] NIST_H2: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] JANAF_Al: los 6 pasos del protocolo están llenos: completo
+  ok    [P] JANAF_Al: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] FZ22: los 6 pasos del protocolo están llenos: completo
+  ok    [P] FZ22: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] FZ22: los datos que usa el modelo (parametros.constantes) = los registrados: 3 datos iguales
+  ok    [P] FZ22: la transcripción temperaturas de rechazo 100 / 160 C (p. 4) (exp14_calor_por_temperatura.T_RECHAZO_FLYZERO) no cambió: misma huella
+  ok    [P] FZ22: la transcripción banda caliente 20 / 20 kW/kg (p. 7) (exp14_calor_por_temperatura.KWKG_CALIENTE) no cambió: misma huella
+  ok    [P] CHIN20: los 6 pasos del protocolo están llenos: completo
+  ok    [P] CHIN20: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] CHIN20: los datos que usa el modelo (parametros.constantes) = los registrados: 1 datos iguales
+  ok    [P] HL18: los 6 pasos del protocolo están llenos: completo
+  ok    [P] HL18: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] PAT25: los 6 pasos del protocolo están llenos: completo
+  ok    [P] PAT25: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] PAT25: los datos que usa el modelo (parametros.constantes) = los registrados: 1 datos iguales
+  ok    [P] CT7: los 6 pasos del protocolo están llenos: completo
+  ok    [P] CT7: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] CT7: los datos que usa el modelo (parametros.constantes) = los registrados: 1 datos iguales
+  ok    [P] PV18: los 6 pasos del protocolo están llenos: completo
+  ok    [P] PV18: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] PV18: los datos que usa el modelo (parametros.PV_TEC) = los registrados: 1 datos iguales
+  ok    [P] MIA14: los 6 pasos del protocolo están llenos: completo
+  ok    [P] MIA14: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] MIA14: los datos que usa el modelo (parametros.PV_TEC) = los registrados: 1 datos iguales
+  ok    [P] TK26: los 6 pasos del protocolo están llenos: completo
+  ok    [P] TK26: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] SEN03: los 6 pasos del protocolo están llenos: completo
+  ok    [P] SEN03: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] SEN03: los datos que usa el modelo (parametros.constantes) = los registrados: 2 datos iguales
+  ok    [P] SEN03: la transcripción H/H0 mensual de A. von Humboldt (anexo 6, p. 29, leído +-0.01) (parametros.SENAMHI_KT_MES) no cambió: misma huella
+  ok    [P] PAGE61: los 6 pasos del protocolo están llenos: completo
+  ok    [P] PAGE61: los datos que usa el modelo (irradiancia_casco.constantes) = los registrados: 1 datos iguales
+  ok    [P] DB13: los 6 pasos del protocolo están llenos: completo
+  ok    [P] DB13: los datos que usa el modelo (parametros.constantes) = los registrados: 2 datos iguales
+  ok    [P] DOE17: los 6 pasos del protocolo están llenos: completo
+  ok    [P] DOE17: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] DOE24: los 6 pasos del protocolo están llenos: completo
+  ok    [P] DOE24: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] DOE24: los datos que usa el modelo (parametros.constantes) = los registrados: 2 datos iguales
+  ok    [P] DOE19: los 6 pasos del protocolo están llenos: completo
+  ok    [P] DOE19: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] DOE19: los datos que usa el modelo (parametros.constantes) = los registrados: 1 datos iguales
+  ok    [P] HUA10: los 6 pasos del protocolo están llenos: completo
+  ok    [P] HUA10: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] SUN24: los 6 pasos del protocolo están llenos: completo
+  ok    [P] SUN24: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] ZH25: los 6 pasos del protocolo están llenos: completo
+  ok    [P] ZH25: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] ZH25: los datos que usa el modelo (parametros.constantes) = los registrados: 1 datos iguales
+  ok    [P] VW09: los 6 pasos del protocolo están llenos: completo
+  ok    [P] VW09: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] VW09: los datos que usa el modelo (parametros.constantes) = los registrados: 1 datos iguales
+  ok    [P] CC75: los 6 pasos del protocolo están llenos: completo
+  ok    [P] FIS37: los 6 pasos del protocolo están llenos: completo
+  ok    [P] FIS37: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] DOE9013: los 6 pasos del protocolo están llenos: completo
+  ok    [P] DOE9013: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] DOE9013: los datos que usa el modelo (parametros.constantes) = los registrados: 3 datos iguales
+  ok    [P] GC25: los 6 pasos del protocolo están llenos: completo
+  ok    [P] GC25: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] BAUER: los 6 pasos del protocolo están llenos: completo
+  ok    [P] BAUER: los datos que usa el modelo (parametros.constantes) = los registrados: 1 datos iguales
+  ok    [P] HPAC: los 6 pasos del protocolo están llenos: completo
+  ok    [P] HPAC: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] HPAC: los datos que usa el modelo (parametros.constantes) = los registrados: 1 datos iguales
+  ok    [P] MILT53029: los 6 pasos del protocolo están llenos: completo
+  ok    [P] MILT53029: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] MILT53029: los datos que usa el modelo (parametros.TANQUE_AGUA) = los registrados: 4 datos iguales
+  ok    [P] SGT800: los 6 pasos del protocolo están llenos: completo
+  ok    [P] SGT800: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] SGT800: los datos que usa el modelo (parametros.constantes) = los registrados: 1 datos iguales
+  ok    [P] ROTAX23: los 6 pasos del protocolo están llenos: completo
+  ok    [P] ROTAX23: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] ROTAX23: los datos que usa el modelo (parametros.constantes) = los registrados: 1 datos iguales
+  ok    [P] DEUTZ24: los 6 pasos del protocolo están llenos: completo
+  ok    [P] DEUTZ24: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] DEUTZ24: los datos que usa el modelo (parametros.constantes) = los registrados: 1 datos iguales
+  ok    [P] HASK: los 6 pasos del protocolo están llenos: completo
+  ok    [P] HASK: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] PAS15: los 6 pasos del protocolo están llenos: completo
+  ok    [P] PAS15: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] GY75: los 6 pasos del protocolo están llenos: completo
+  ok    [P] GY75: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] DOC37: los 6 pasos del protocolo están llenos: completo
+  ok    [P] DOC37: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] DUR24: los 6 pasos del protocolo están llenos: completo
+  ok    [P] DUR24: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] EASANT: los 6 pasos del protocolo están llenos: completo
+  ok    [P] EASANT: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] FWH26: los 6 pasos del protocolo están llenos: completo
+  ok    [P] FWH26: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] ZSS20: los 6 pasos del protocolo están llenos: completo
+  ok    [P] ZSS20: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] ZSS20: los datos que usa el modelo (parametros.constantes) = los registrados: 4 datos iguales
+  ok    [P] IBX22: los 6 pasos del protocolo están llenos: completo
+  ok    [P] IBX22: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] AMP26: los 6 pasos del protocolo están llenos: completo
+  ok    [P] AMP26: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] AMP26: los datos que usa el modelo (parametros.constantes) = los registrados: 1 datos iguales
+  ok    [P] LOB20: los 6 pasos del protocolo están llenos: completo
+  ok    [P] LOB20: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] LOB20: los datos que usa el modelo (parametros.constantes) = los registrados: 1 datos iguales
+  ok    [P] ZSS20S: los 6 pasos del protocolo están llenos: completo
+  ok    [P] ZSS20S: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] ZSS20S: los datos que usa el modelo (parametros.constantes) = los registrados: 1 datos iguales
+  ok    [P] HOW99: los 6 pasos del protocolo están llenos: completo
+  ok    [P] HOW99: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] BA19: los 6 pasos del protocolo están llenos: completo
+  ok    [P] BA19: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] BAR13: los 6 pasos del protocolo están llenos: completo
+  ok    [P] BAR13: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] ZR22: los 6 pasos del protocolo están llenos: completo
+  ok    [P] ZR22: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] FWEP24: los 6 pasos del protocolo están llenos: completo
+  ok    [P] FWEP24: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [P] FWUS19: los 6 pasos del protocolo están llenos: completo
+  ok    [P] FWUS19: el PDF, si está, tiene el SHA-256 registrado: mismo archivo
+  ok    [H] p_sat IF97 a 300 K = tabla 35 de IAPWS-IF97: obtenido 0.00353659 vs esperado 0.00353659 (tol 1e-06 %)
+  ok    [H] p_sat IF97 a 500 K = tabla 35 de IAPWS-IF97: obtenido 2.6389 vs esperado 2.6389 (tol 1e-06 %)
+  ok    [H] p_sat IF97 a 600 K = tabla 35 de IAPWS-IF97: obtenido 12.3443 vs esperado 12.3443 (tol 1e-06 %)
+  ok    [H] datos publicados: PCS - PCI (CODATA) = (M_H2O/M_H2) h_fg a 25 °C (NIST): obtenido 2.18287e+07 vs esperado 2.18205e+07 (tol 0.1 %)
+  ok    [H] modelo: rho_aire = P/(R_aire T1) con R_aire de la ISA: obtenido 1.225 vs esperado 1.225 (tol 0.01 %)
+  ok    [H] modelo: rho_aire/rho_H2 = M_aire/M_H2 (gases ideales a igual T y P): obtenido 14.3684 vs esperado 14.3681 (tol 0.01 %)
+  ok    [L] q: PCI + latente + sensible de entrada - de salida = q_rech del modelo: obtenido 1.40838e+08 vs esperado 1.40838e+08 (tol 1e-07 %)
+  ok    [L] quema limpia integrada: baja D_lim al soltar: obtenido 0.100001 vs esperado 0.1 (tol 0.1 %)
+  ok    [L] quema limpia integrada: termina en reposo con el H2 de equilibrio: obtenido -3.58267e-07 vs esperado 0 (tol 0.0001 m/s)
+  ok    [L] quema limpia integrada: bajada total = (1+s) D_lim: obtenido 0.199881 vs esperado 0.199878 (tol 0.1 %)
+  ok    [L] quema limpia integrada: nunca sube por encima del punto de liberación: máx. después de soltar -0.1000 m
+  ok    [L] quema limpia integrada: t de la quema después de soltar = s t_anticip: obtenido 7.07295 vs esperado 7.07295 (tol 0.1 %)
+  ok    [L] quema limpia integrada: bajada después de soltar = |v0| t_r / 3 (apéndice A): obtenido 0.0998791 vs esperado 0.099878 (tol 0.1 %)
+  ok    [L] dos lados: con 0.99 ṁ* la quema limpia necesita hundirse más de D_lim (no cabe): 0.1020 m
+  ok    [L] dos lados: con 1.01 ṁ* la quema limpia cabe en D_lim: 0.0980 m
+  ok    [L] quema limpia: H2 quemado = m/L: obtenido 44.8329 vs esperado 44.8329 (tol 1e-07 %)
+  ok    [L] cota con reinyección integrada: pico = h_max: obtenido 0.999997 vs esperado 1 (tol 0.1 %)
+  ok    [L] cota con reinyección integrada: H2 quemado de más al pico: obtenido 51.8794 vs esperado 51.8795 (tol 0.5 %)
+  ok    [L] forma cerrada del documento = minimax.resolver (m*): obtenido 3.16739 vs esperado 3.16739 (tol 1e-07 %)
+  ok    [L] cota del documento = minimax.resolver (cota): obtenido 1.97851 vs esperado 1.97851 (tol 1e-07 %)
+  ok    [L] L(1) del documento = L_eff del modelo: obtenido 22.3051 vs esperado 22.3051 (tol 1e-07 %)
+  ok    [L] H2 por tonelada = H2 de descenso del artículo: obtenido 44.8329 vs esperado 44.8329 (tol 0.0001 %)
+  ok    [L] Dalton: tras condensar, presión parcial del vapor = p_sat(40 C) (phi_max a 1 atm): obtenido 7384.43 vs esperado 7384.43 (tol 1e-07 %)
+  ok    [L] Dalton: tras condensar, presión parcial del vapor = p_sat(40 C) (presión para phi objetivo): obtenido 7384.43 vs esperado 7384.43 (tol 1e-07 %)
+  ok    [L] con eta = eta_min el trabajo paga justo el aire (f = 0.2): obtenido 2.29769e+07 vs esperado 2.29769e+07 (tol 1e-07 %)
+  ok    [L] con eta = eta_min el trabajo paga justo el aire (f = 0.15): obtenido 1.79819e+07 vs esperado 1.79819e+07 (tol 1e-07 %)
+  ok    [L] K_d da el amortiguamiento real: (rho - rho_H2) g K_d / (2 sqrt(M_I (rho - rho_H2) g K_p)) = zeta: obtenido 1.3 vs esperado 1.3 (tol 1e-07 %)
+  ok    [L] periodo natural del lazo = 2 pi sqrt(M_I / ((rho_aire - rho_H2) g K_p)): obtenido 5.17907 vs esperado 5.17907 (tol 1e-07 %)
+  ok    [L] H_s = -rho/(d rho/dh) de la densidad ISA derivada numéricamente: obtenido 10416.4 vs esperado 10416.4 (tol 0.0001 %)
+  ok    [L] H_s del modelo (macros ValidHs y ValidHsKm) = H_s de la ISA derivada numéricamente: obtenido 10416.4 vs esperado 10416.4 (tol 0.0001 %)
+  ok    [L] Q por tonelada del documento = el de EXP-11: obtenido 6.33957 vs esperado 6.33957 (tol 0.0001 %)
+  ok    [L] escalón por la ley m^{3/2} ~ escalón exacto de EXP-06 (caso base, 10 MW): obtenido 79.5035 vs esperado 79.5482 (tol 5 %)
+  ok    [L] O2 que quedaría a bordo por kg de H2 = r - 1: obtenido 7.93668 vs esperado 7.93668 (tol 1e-10 %)
+  ok    [L] tina: agua para guardar la banda fría (10 K) = EXP-14: obtenido 22.5228 vs esperado 22.5228 (tol 1e-07 %)
+  ok    [L] quema de referencia = P_ref / q(eta ref, phi 1 atm) de balance_masa: obtenido 0.0981611 vs esperado 0.0981611 (tol 1e-07 %)
+  ok    [L] electrolizador: B phi E_el / 24 h = balance_masa: obtenido 89466.9 vs esperado 89466.9 (tol 1e-07 %)
+  ok    [L] kg de tanque por kg de H2 = balance_masa: obtenido 17.5173 vs esperado 17.5173 (tol 1e-10 %)
+  ok    [L] tanque 2023: V (rho_NIST 70 MPa - rho 1.5 MPa) a 15 C = H2 útil de la tabla 2 del Record 24006: obtenido 5.61242 vs esperado 5.6 (tol 1 %)
+  ok    [L] tanque 2023: V rho_NIST 70 MPa a 15 C = H2 guardado de la tabla 2 del Record 24006: obtenido 5.7928 vs esperado 5.8 (tol 1 %)
+  ok    [L] tanque 2023: el liner por diferencia es positivo y menor que el de 2019 (HDPE de 0.5 cm, 8.0 kg; en 2023, PA de 0.38 cm): 7.73 kg
+  ok    [L] tanque: razón 350/700 bar con el diseño 2023 = la de ANL-10/24 (otro análisis, 2010): obtenido 1.05235 vs esperado 1.05769 (tol 2 %)
+  ok    [L] compresor al ritmo del electrolizador = EXP-16: obtenido 1.69148 vs esperado 1.69148 (tol 1e-07 %)
+  ok    [L] electricidad de compresión típica = extremo bajo de EXP-16: obtenido 2.01923 vs esperado 2.01923 (tol 1e-10 %)
+  ok    [L] He a 20 MPa: trabajo de gas ideal ~ gas real (NIST) de EXP-12: obtenido 3.1635e+06 vs esperado 3.2219e+06 (tol 5 %)
+  ok    [L] casco pasivo del caso base: área x h x dT (calma) = macro del documento: obtenido 3.16387 vs esperado 3.16387 (tol 1e-10 %)
+  ok    [L] paneles a-Si del caso base en invierno: días por tonelada = balance_masa: obtenido 1.15475 vs esperado 1.15475 (tol 1e-07 %)
+  ok    [L] paneles a-Si del caso base: masa = balance_masa: obtenido 1366.79 vs esperado 1366.79 (tol 1e-07 %)
+  ok    [L] electrólisis por tonelada del documento = balance_masa: obtenido 2147.21 vs esperado 2147.21 (tol 1e-07 %)
+  ok    [L] altura 1 km: presión del perfil = EXP-15: obtenido 90415.3 vs esperado 90415.3 (tol 1e-07 %)
+  ok    [L] altura 1 km: densidad relativa = EXP-15: obtenido 0.911882 vs esperado 0.911882 (tol 1e-07 %)
+  ok    [L] altura 1 km: phi_max = EXP-15: obtenido 0.885371 vs esperado 0.885371 (tol 1e-07 %)
+  ok    [L] 5 atm: fin de la condensación = EXP-14: obtenido 73.9444 vs esperado 73.9444 (tol 1e-07 %)
+  ok    [L] 5 atm: trabajo de compresión del escape = EXP-14: obtenido 5.36435 vs esperado 5.36435 (tol 1e-07 %)
+  ok    [L] compresión mínima (phi 0.99 a 40 C) = integral numérica de la fase gaseosa: obtenido 6.57241 vs esperado 6.57241 (tol 0.0001 %)
+  ok    [L] compresión mínima (5 atm, sin saturar al inicio) = integral numérica de la fase gaseosa: obtenido 5.36435 vs esperado 5.36435 (tol 0.0001 %)
+  ok    [L] 5 atm: la ecuación (5) en el fin de la condensación devuelve la misma phi (Dalton al revés): obtenido 0.851675 vs esperado 0.851675 (tol 0.0001 %)
+  ok    [L] ec. (5) como tirón limitado: a^3 / (6 j^2 (1 + s)^3) = D_lim (caso base): obtenido 0.1 vs esperado 0.1 (tol 1e-10 %)
+  ok    [L] gas isotérmico (5K_minimax): (M/T1) dT (1 - e^(-t/tau)) = deriva de VAL-03: obtenido 16.2334 vs esperado 16.2334 (tol 1e-07 %)
+  ok    [L] gas isotérmico (5K_pasos_10MW_1t): (M/T1) dT (1 - e^(-t/tau)) = deriva de VAL-03: obtenido 614.521 vs esperado 614.521 (tol 1e-07 %)
+  ok    [L] deriva de la entrega: el gas de equilibrio al salir (VAL-03) = el de EXP-22: obtenido 11942.9 vs esperado 11942.9 (tol 0.0001 %)
+  ok    [L] deriva de la entrega: la duración = n sueltas x t por suelta de EXP-22 (6 h): obtenido 21600 vs esperado 21600 (tol 1e-10 %)
+  ok    [L] gas isotérmico (5K_entrega): (M/T1) dT (1 - e^(-t/tau)) con la nave cargada al salir: obtenido 2977.58 vs esperado 2977.58 (tol 0.0001 %)
+  ok    [L] gas isotérmico (10K_entrega): (M/T1) dT (1 - e^(-t/tau)) con la nave cargada al salir: obtenido 5955.17 vs esperado 5955.17 (tol 0.0001 %)
+  ok    [L] tiempo térmico de la nave cargada: a Ra alto tau escala como V^(1/3) desde el caso base: obtenido 1877.3 vs esperado 1870.19 (tol 1 %)
+  ok    [L] deriva de la entrega: en horas el gas llega a la temperatura nueva (t > 5 tau, h x0.5): 6.0 h frente a 5 x 63 min
+  ok    [L] deriva de la entrega: mayor que una suelta (1 t) con 5 K, del orden de varias: 2978 kg frente a 1000 kg
+  ok    [M] la ley kW/kg = k (T - T_aire) reproduce FlyZero a 100 °C: obtenido 10 vs esperado 10 (tol 1e-07 %)
+  ok    [M] la ley kW/kg = k (T - T_aire) reproduce FlyZero a 160 °C: obtenido 20 vs esperado 20 (tol 1e-07 %)
+  ok    [M] 1 atm, eta 0.00, 2026: banda caliente + banda fría = calor total: obtenido 137.862 vs esperado 137.862 (tol 1e-07 %)
+  ok    [M] 1 atm, eta 0.00, 2026: al fin de la banda fría condensa la misma phi (Dalton): obtenido 0.851675 vs esperado 0.851675 (tol 0.0001 %)
+  ok    [M] 1 atm, eta 0.00, 2035: banda caliente + banda fría = calor total: obtenido 137.862 vs esperado 137.862 (tol 1e-07 %)
+  ok    [M] 1 atm, eta 0.30, 2026: banda caliente + banda fría = calor total: obtenido 101.873 vs esperado 101.873 (tol 1e-07 %)
+  ok    [M] 1 atm, eta 0.30, 2035: banda caliente + banda fría = calor total: obtenido 101.873 vs esperado 101.873 (tol 1e-07 %)
+  ok    [M] 2 atm, eta 0.00, 2026: banda caliente + banda fría = calor total: obtenido 138.989 vs esperado 138.989 (tol 1e-07 %)
+  ok    [M] 2 atm, eta 0.00, 2026: al fin de la banda fría condensa la misma phi (Dalton): obtenido 0.851675 vs esperado 0.851675 (tol 0.0001 %)
+  ok    [M] 2 atm, eta 0.00, 2035: banda caliente + banda fría = calor total: obtenido 138.989 vs esperado 138.989 (tol 1e-07 %)
+  ok    [M] 2 atm, eta 0.30, 2026: banda caliente + banda fría = calor total: obtenido 103.001 vs esperado 103.001 (tol 1e-07 %)
+  ok    [M] 2 atm, eta 0.30, 2035: banda caliente + banda fría = calor total: obtenido 103.001 vs esperado 103.001 (tol 1e-07 %)
+  ok    [M] 5 atm, eta 0.00, 2026: banda caliente + banda fría = calor total: obtenido 141.128 vs esperado 141.128 (tol 1e-07 %)
+  ok    [M] 5 atm, eta 0.00, 2026: al fin de la banda fría condensa la misma phi (Dalton): obtenido 0.851675 vs esperado 0.851675 (tol 0.0001 %)
+  ok    [M] 5 atm, eta 0.00, 2035: banda caliente + banda fría = calor total: obtenido 141.128 vs esperado 141.128 (tol 1e-07 %)
+  ok    [M] 5 atm, eta 0.30, 2026: banda caliente + banda fría = calor total: obtenido 105.14 vs esperado 105.14 (tol 1e-07 %)
+  ok    [M] 5 atm, eta 0.30, 2035: banda caliente + banda fría = calor total: obtenido 105.14 vs esperado 105.14 (tol 1e-07 %)
+  ok    [M] 10 atm, eta 0.00, 2026: banda caliente + banda fría = calor total: obtenido 143.33 vs esperado 143.33 (tol 1e-07 %)
+  ok    [M] 10 atm, eta 0.00, 2026: al fin de la banda fría condensa la misma phi (Dalton): obtenido 0.851675 vs esperado 0.851675 (tol 0.0001 %)
+  ok    [M] 10 atm, eta 0.00, 2035: banda caliente + banda fría = calor total: obtenido 143.33 vs esperado 143.33 (tol 1e-07 %)
+  ok    [M] 10 atm, eta 0.30, 2026: banda caliente + banda fría = calor total: obtenido 107.342 vs esperado 107.342 (tol 1e-07 %)
+  ok    [M] 10 atm, eta 0.30, 2035: banda caliente + banda fría = calor total: obtenido 107.342 vs esperado 107.342 (tol 1e-07 %)
+  ok    [M] 20 atm, eta 0.00, 2026: banda caliente + banda fría = calor total: obtenido 145.755 vs esperado 145.755 (tol 1e-07 %)
+  ok    [M] 20 atm, eta 0.00, 2026: al fin de la banda fría condensa la misma phi (Dalton): obtenido 0.851675 vs esperado 0.851675 (tol 0.0001 %)
+  ok    [M] 20 atm, eta 0.00, 2035: banda caliente + banda fría = calor total: obtenido 145.755 vs esperado 145.755 (tol 1e-07 %)
+  ok    [M] 20 atm, eta 0.30, 2026: banda caliente + banda fría = calor total: obtenido 109.767 vs esperado 109.767 (tol 1e-07 %)
+  ok    [M] 20 atm, eta 0.30, 2035: banda caliente + banda fría = calor total: obtenido 109.767 vs esperado 109.767 (tol 1e-07 %)
+  ok    [M] a 1 atm la banda fría termina a la temperatura de salida del modelo: obtenido 40 vs esperado 40 (tol 1e-06 °C)
+  ok    [M] a 1 atm y eta = 0 el calor total = q_rech de EXP-05: obtenido 1.37862e+08 vs esperado 1.37862e+08 (tol 1e-07 %)
+  ok    [M] banda fría a la presión que retiene 0.99: q(0, 0.99) = q_rech de EXP-05: obtenido 1.40838e+08 vs esperado 1.40838e+08 (tol 1e-07 %)
+  ok    [M] a esa presión la banda termina donde condensa 0.99 (Dalton): obtenido 0.99 vs esperado 0.99 (tol 0.0001 %)
+  ok    [M] banda fría (1atm): integrada a lo largo de la banda = diferencia de entalpías del balance de la ec. (4) entre el rocío y el fin (independiente; difieren por L_v(T) contra L_v(25 °C) + cp): obtenido 1.97512e+07 vs esperado 1.97866e+07 (tol 0.5 %)
+  ok    [M] banda fría (objetivo): integrada a lo largo de la banda = diferencia de entalpías del balance de la ec. (4) entre el rocío y el fin (independiente; difieren por L_v(T) contra L_v(25 °C) + cp): obtenido 2.61988e+07 vs esperado 2.62399e+07 (tol 0.5 %)
+  ok    [M] a la presión que retiene 0.99 la banda fría es una parte mayor del calor que a 1 atm: 18.6 % > 14.3 %
+  ok    [N] balance de masa: total = suma de las cajas (mínimo): obtenido 6175.43 vs esperado 6175.43 (tol 1e-10 %)
+  ok    [N] balance de masa: total = suma de las cajas (máximo): obtenido 19018.8 vs esperado 19018.8 (tol 1e-10 %)
+  ok    [N] quema de referencia x q = potencia de rechazo de referencia: obtenido 1e+07 vs esperado 1e+07 (tol 1e-10 %)
+  ok    [N] electrolizador: recupera en 24 h el H2 de una tonelada: obtenido 2147.21 vs esperado 2147.21 (tol 1e-10 %)
+  ok    [N] tabla potencia/escalón: caso base 1 t = P_rej de las derivaciones: obtenido 446.088 vs esperado 446.088 (tol 1e-07 %)
+  ok    [N] tabla 6 (flujo ideal): total = suma de las cajas (mínimo): obtenido 155866 vs esperado 155866 (tol 1e-10 %)
+  ok    [N] tabla 6 (flujo ideal): total = suma de las cajas (máximo): obtenido 567312 vs esperado 567312 (tol 1e-10 %)
+  ok    [N] tabla 6: quema ideal = ṁ* de la simulación del caso base (caso base, 1 t): obtenido 3.16739 vs esperado 3.16739 (tol 1e-07 %)
+  ok    [N] tabla 6: calor sin exportar trabajo = tabla de potencia por escalón (caso base, 1 t): obtenido 446.088 vs esperado 446.088 (tol 1e-07 %)
+  ok    [N] tabla 6: conversión (extremo liviano) = eje / kW/kg del Rotax al despegue: obtenido 83591.5 vs esperado 83591.5 (tol 1e-10 %)
+  ok    [N] tabla 6: rechazo (extremo liviano) = calor / 10 kW/kg (FlyZero 2035, sistema): obtenido 33210 vs esperado 33210 (tol 1e-10 %)
+  ok    [N] tabla 6 con quemador: total = suma de las cajas (mínimo): obtenido 96582.8 vs esperado 96582.8 (tol 1e-10 %)
+  ok    [N] tabla 6 con quemador: total = suma de las cajas (máximo): obtenido 225577 vs esperado 225577 (tol 1e-10 %)
+  ok    [N] tabla 6 con quemador: calor = el de la tabla de potencia por escalón (eta 0): obtenido 4.46088e+08 vs esperado 4.46088e+08 (tol 1e-10 %)
+  ok    [N] tabla 6: el eje del motor cubre los ventiladores con margen (el motor es una elección): sobra 48-64 MW
+  ok    [N] tabla de ambiente: con el aire de diseño condensa phi_max(T_salida): obtenido 0.851675 vs esperado 0.851675 (tol 1e-10 %)
+  ok    [O] Ec. 5 reproduce la figura 4 de Zakhvatkin et al. (solo cambia Tetens por IF97): obtenido 0.00118567 vs esperado 0 (tol 0.005)
+  ok    [O] agua esperada = su apéndice A recalculado (experimentos 1-5, peor caso): obtenido 0.0255897 vs esperado 0 (tol 0.03)
+  ok    [S] caso base simulado: máximo |dV_gas/dt| = ṁ*/rho_H2: obtenido 37.1512 vs esperado 37.1512 (tol 0.1 %)
+  ok    [S] aire por tonelada = (1000/L)/rho_H2: obtenido 525.858 vs esperado 525.858 (tol 1e-10 %)
+  ok    [S] Hind: escalón de 10 MW -> aire = P/(q rho_H2): obtenido 0.832821 vs esperado 0.832821 (tol 1 %)
+  ok    [S] FW: escalón de 10 MW -> aire = P/(q rho_H2): obtenido 0.832821 vs esperado 0.832821 (tol 1 %)
+  ok    [S] ZR: escalón de 10 MW -> aire = P/(q rho_H2): obtenido 0.832821 vs esperado 0.832821 (tol 1 %)
+  ok    [S] ZNT: escalón de 10 MW -> aire = P/(q rho_H2): obtenido 0.832821 vs esperado 0.832821 (tol 1 %)
+  ok    [T] difusa isotrópica: promedio de (1 + cos b)/2 en la mitad superior = 1/2 + 1/pi: obtenido 0.81831 vs esperado 0.81831 (tol 1e-06 %)
+  ok    [T] suelo: promedio de (1 - cos b)/2 en la mitad superior = 1/2 - 1/pi: obtenido 0.18169 vs esperado 0.18169 (tol 1e-05 %)
+  ok    [T] directa: (|s_p| + s_z)/pi = integración directa (25 soles y ejes al azar, peor caso): obtenido 7.94376e-12 vs esperado 0 (tol 1e-06)
+  ok    [T] ecuador en equinoccio, eje N-S (sol en el plano de la sección): R_b = (pi + 2)/(2 pi): obtenido 0.81831 vs esperado 0.81831 (tol 0.2 %)
+  ok    [T] ecuador en equinoccio, eje E-W (sol en el plano del eje): R_b = 2/pi: obtenido 0.636674 vs esperado 0.63662 (tol 0.2 %)
+  ok    [T] H0 a 12 S en junio = anexo 7 de SENAMHI (leído de la figura): obtenido 28.2505 vs esperado 28.1 (tol 2 %)
+  ok    [T] H0 a 12 S en diciembre = anexo 7 de SENAMHI (leído de la figura): obtenido 39.9807 vs esperado 40 (tol 2 %)
+  ok    [T] anual rearmado (anexo 6 x H0) = tabla 2 de SENAMHI (lectura de figura +-0.01): obtenido 4.09326 vs esperado 4.06 (tol 3 %)
+  ok    [T] invierno: el factor de forma cae entre toda directa y toda difusa: 0.844 en [0.805, 0.855]
+  ok    [T] verano: el factor de forma cae entre toda directa y toda difusa: 0.812 en [0.777, 0.855]
+  ok    [T] anual: el factor de forma cae entre toda directa y toda difusa: 0.822 en [0.777, 0.855]
+  ok    [T] Hind: días invierno / verano = irradiancia verano / invierno: obtenido 2.23472 vs esperado 2.23472 (tol 1e-07 %)
+  ok    [T] FW: días invierno / verano = irradiancia verano / invierno: obtenido 2.23472 vs esperado 2.23472 (tol 1e-07 %)
+  ok    [T] ZR: días invierno / verano = irradiancia verano / invierno: obtenido 2.23472 vs esperado 2.23472 (tol 1e-07 %)
+  ok    [T] ZNT: días invierno / verano = irradiancia verano / invierno: obtenido 2.23472 vs esperado 2.23472 (tol 1e-07 %)
+  ok    [M] banda caliente de EXP-14 = 20 kW/kg, el único número de FlyZero (decisión del autor): (20.0, 20.0)
+  ok    [U] presión a 3 km: forma cerrada = integración hidrostática del perfil: obtenido 71442.1 vs esperado 71442.1 (tol 1e-07 %)
+  ok    [U] a nivel del mar, H2 por tonelada = EXP-14: obtenido 47.6655 vs esperado 47.6655 (tol 1e-10 %)
+  ok    [U] a nivel del mar, masa de rechazo por kW = EXP-14 (2026): obtenido 0.106739 vs esperado 0.106739 (tol 1e-07 %)
+  ok    [U] a nivel del mar, masa de rechazo por kW = EXP-14 (2035): obtenido 0.102175 vs esperado 0.102175 (tol 1e-07 %)
+  ok    [U] con la altura sube el agua retenible y bajan el H2 por tonelada y la sustentación: phi 0.852 -> 0.934
+  ok    [V] B con quemador: ventiladores / ventiladores con motor = q(0, phi) / q(eta, phi): obtenido 1.35326 vs esperado 1.35326 (tol 1e-07 %)
+  ok    [V] B con quemador: neta = electrólisis + compresión + ventiladores (extremo alto): obtenido 2347.33 vs esperado 2347.33 (tol 1e-10 %)
+  ok    [V] A: materia, H2 + aire = agua retenida + vapor venteado + inertes: obtenido 1582.39 vs esperado 1582.39 (tol 1e-10 %)
+  ok    [V] A: regeneración, agua retenida = H2 regenerado + O2 liberado: obtenido 400.657 vs esperado 400.657 (tol 1e-10 %)
+  ok    [V] A: externa neta = electrólisis + compresión - excedente (extremos): obtenido 2115.37 vs esperado 2115.37 (tol 1e-10 %)
+  ok    [V] B: materia, H2 + aire = agua retenida + vapor venteado + inertes: obtenido 1682.37 vs esperado 1682.37 (tol 1e-10 %)
+  ok    [V] B: regeneración, agua retenida = H2 regenerado + O2 liberado: obtenido 362.789 vs esperado 362.789 (tol 1e-10 %)
+  ok    [V] B: externa neta = electrólisis + compresión - excedente (extremos): obtenido 1851.44 vs esperado 1851.44 (tol 1e-10 %)
+  ok    [V] C Hind: materia, H2 + aire = agua retenida + vapor venteado + inertes: obtenido 1828.62 vs esperado 1828.62 (tol 1e-10 %)
+  ok    [V] C Hind: regeneración, agua retenida = H2 regenerado + O2 liberado: obtenido 393.986 vs esperado 393.986 (tol 1e-10 %)
+  ok    [V] C Hind: externa neta = electrólisis + compresión - excedente (extremos): obtenido 2053.06 vs esperado 2053.06 (tol 1e-10 %)
+  ok    [V] C FW: materia, H2 + aire = agua retenida + vapor venteado + inertes: obtenido 1829.02 vs esperado 1829.02 (tol 1e-10 %)
+  ok    [V] C FW: regeneración, agua retenida = H2 regenerado + O2 liberado: obtenido 394.046 vs esperado 394.046 (tol 1e-10 %)
+  ok    [V] C FW: externa neta = electrólisis + compresión - excedente (extremos): obtenido 2054.86 vs esperado 2054.86 (tol 1e-10 %)
+  ok    [V] C ZR: materia, H2 + aire = agua retenida + vapor venteado + inertes: obtenido 1809.55 vs esperado 1809.55 (tol 1e-10 %)
+  ok    [V] C ZR: regeneración, agua retenida = H2 regenerado + O2 liberado: obtenido 389.74 vs esperado 389.74 (tol 1e-10 %)
+  ok    [V] C ZR: externa neta = electrólisis + compresión - excedente (extremos): obtenido 2038.91 vs esperado 2038.91 (tol 1e-10 %)
+  ok    [V] caso B = EXP-11 (1 atm, f = 0.2): trabajo generado: obtenido 476.498 vs esperado 476.498 (tol 1e-07 %)
+  ok    [V] caso B = EXP-11 (1 atm, f = 0.2): ventiladores (f de avión, cota alta): obtenido 269.769 vs esperado 269.769 (tol 1e-07 %)
+  ok    [V] caso B = EXP-11 (1 atm, f = 0.15): trabajo generado: obtenido 476.498 vs esperado 476.498 (tol 1e-07 %)
+  ok    [V] caso B = EXP-11 (1 atm, f = 0.15): ventiladores (f de avión, cota alta): obtenido 202.327 vs esperado 202.327 (tol 1e-07 %)
+  ok    [V] caso B: ventiladores con la f por caída de presión (0.0081) = f x calor (EXP-11): obtenido 10.9777 vs esperado 10.9777 (tol 1e-07 %)
+  ok    [V] caso B: ventiladores con la f por caída de presión (0.0407) = f x calor (EXP-11): obtenido 54.8883 vs esperado 54.8883 (tol 1e-07 %)
+  ok    [V] caso B: la neta con la f por caída de presión no pasa de la de avión: 1851 <= 2066 kWh/t
+  ok    [V] caso B: electrólisis = balance_masa: obtenido 2147.21 vs esperado 2147.21 (tol 1e-07 %)
+  ok    [V] caso B: excedente / electrólisis = lo que la quema cubre en balance_masa (extremo alto): obtenido 0.216803 vs esperado 0.216803 (tol 1e-07 %)
+  ok    [V] caso B, f de avión: excedente / electrólisis = cubre_avion de balance_masa (extremo alto): obtenido 0.127688 vs esperado 0.127688 (tol 1e-07 %)
+  ok    [V] caso C Hind: H2 quemado = EXP-11 (10 MW, tau 5 s): obtenido 51.8091 vs esperado 51.8091 (tol 1e-07 %)
+  ok    [V] caso C Hind: H2 regenerado = EXP-11 (10 MW, tau 5 s): obtenido 44.0864 vs esperado 44.0864 (tol 1e-07 %)
+  ok    [V] caso C FW: H2 quemado = EXP-11 (10 MW, tau 5 s): obtenido 51.8203 vs esperado 51.8203 (tol 1e-07 %)
+  ok    [V] caso C FW: H2 regenerado = EXP-11 (10 MW, tau 5 s): obtenido 44.0931 vs esperado 44.0931 (tol 1e-07 %)
+  ok    [V] caso C ZR: H2 quemado = EXP-11 (10 MW, tau 5 s): obtenido 51.2688 vs esperado 51.2688 (tol 1e-07 %)
+  ok    [V] caso C ZR: H2 regenerado = EXP-11 (10 MW, tau 5 s): obtenido 43.6113 vs esperado 43.6113 (tol 1e-07 %)
+  ok    [V] compresión 20 -> 350 bar: gas ideal isotérmico (300 K) vs DOE con gas real (NIST): obtenido 0.983758 vs esperado 1.05 (tol 10 %)
+  ok    [V] electricidad de compresión típica dentro del rango medido por el DOE (1.7-6.4 kWh/kg): 2.02 y 3.10 kWh/kg
+  ok    [V] compresión: el rango del modelo (DOE) se superpone con el de Giuffrida & Colbertaldo 2025: modelo 2.0-3.1; revisión 2.0-3.0 kWh/kg
+  ok    [V] el compresor pedido no supera el flujo del equipo de referencia con ~20 bar de entrada (su masa es cota superior): 1.69 kg/h <= 2.69 kg/h
+  ok    [V] compresión: el compresor va al ritmo del electrolizador (comprime todo lo regenerado en el mismo día): 1.691 kg/h x 24 h = H2 regenerado del caso B
+  ok    [W] las naves del modelo son las de las fuentes registradas (y ninguna más): Flying Whales LCA60T, LZ 129 Hindenburg, ZR-3 Los Angeles, Zeppelin NT
+  ok    [W] Hind: datos de parametros.PLATAFORMAS = los de fuentes.py: 5 datos iguales
+  ok    [W] Hind: con la liberación de referencia el gas cabe en el casco: llenado 46.2 %
+  ok    [W] Hind: peso vacío + carga máxima flota con H2 en el casco: 132.0 t <= 246.9 t
+  ok    [W] Hind: inercia en equilibrio = (1 + k) rho_aire V_casco: obtenido 508839 vs esperado 508839 (tol 1e-07 %)
+  ok    [W] Hind: la inercia no depende del peso vacío (-30 %): obtenido 508839 vs esperado 508839 (tol 1e-07 %)
+  ok    [W] Hind: área de arrastre = (pi/4) L D: obtenido 8030.1 vs esperado 8030.1 (tol 1e-10 %)
+  ok    [W] FW: datos de parametros.PLATAFORMAS = los de fuentes.py: 5 datos iguales
+  ok    [W] FW: con la liberación de referencia el gas cabe en el casco: llenado 49.2 %
+  ok    [W] FW: peso vacío + carga máxima flota con H2 en el casco: 160.0 t <= 205.2 t
+  ok    [W] FW: inercia en equilibrio = (1 + k) rho_aire V_casco: obtenido 410077 vs esperado 410077 (tol 1e-07 %)
+  ok    [W] FW: la inercia no depende del peso vacío (-30 %): obtenido 410077 vs esperado 410077 (tol 1e-07 %)
+  ok    [W] FW: área de arrastre = (pi/4) L D: obtenido 7853.98 vs esperado 7853.98 (tol 1e-10 %)
+  ok    [W] ZR: datos de parametros.PLATAFORMAS = los de fuentes.py: 5 datos iguales
+  ok    [W] ZR: con la liberación de referencia el gas cabe en el casco: llenado 44.5 %
+  ok    [W] ZR: peso vacío + carga máxima flota con H2 en el casco: 44.2 t <= 90.4 t
+  ok    [W] ZR: inercia en equilibrio = (1 + k) rho_aire V_casco: obtenido 188103 vs esperado 188103 (tol 1e-07 %)
+  ok    [W] ZR: la inercia no depende del peso vacío (-30 %): obtenido 188103 vs esperado 188103 (tol 1e-07 %)
+  ok    [W] ZR: área de arrastre = (pi/4) L D: obtenido 4367.88 vs esperado 4367.88 (tol 1e-10 %)
+  ok    [W] ZNT: datos de parametros.PLATAFORMAS = los de fuentes.py: 3 datos iguales
+  ok    [W] ZNT: con la liberación de referencia el gas cabe en el casco: llenado 100.0 %
+  ok    [W] ZNT: peso vacío + carga máxima flota con H2 en el casco: 9.6 t <= 9.6 t
+  ok    [W] ZNT: inercia en equilibrio = (1 + k) rho_aire V_casco: obtenido 19627.6 vs esperado 19627.6 (tol 1e-07 %)
+  ok    [W] ZNT: la inercia no depende del peso vacío (-30 %): obtenido 19627.6 vs esperado 19627.6 (tol 1e-07 %)
+  ok    [W] ZNT: área de arrastre = (pi/4) L D: obtenido 837.564 vs esperado 837.564 (tol 1e-10 %)
+  ok    [W] k de Lamb en esbeltez 3 = el de Tuckerman 1926 evaluado: obtenido 0.803899 vs esperado 0.804 (tol 0.0005)
+  ok    [W] k de Lamb en esbeltez 4 = el de Tuckerman 1926 evaluado: obtenido 0.859761 vs esperado 0.86 (tol 0.0005)
+  ok    [W] k de Lamb en esbeltez 6 = el de Tuckerman 1926 evaluado: obtenido 0.917123 vs esperado 0.917 (tol 0.0005)
+  ok    [W] k de referencia (esbeltez 4) = el registrado en fuentes.TK26 (0.86, a dos cifras): obtenido 0.86 vs esperado 0.86 (tol 1e-12)
+  ok    [W] caso base: soltar 1 t y quemar m/L deja la fuerza neta en cero: obtenido 0 vs esperado 0 (tol 1e-12)
+  ok    [W] caso base: soltar 1 t y quemar m/L deja la inercia en (1 + k) rho V_casco: obtenido 410077 vs esperado 410077 (tol 1e-07 %)
+  ok    [W] quemador_liviano: cajas fijas + fracción x lo que escala con el flujo + la tonelada = carga útil del caso base: obtenido 60000 vs esperado 60000 (tol 1e-10 %)
+  ok    [W] quemador_liviano: flujo que cabe = fracción x flujo ideal: obtenido 1.91606 vs esperado 1.91606 (tol 1e-10 %)
+  ok    [W] motor_pesado: cajas fijas + fracción x lo que escala con el flujo + la tonelada = carga útil del caso base: obtenido 60000 vs esperado 60000 (tol 1e-10 %)
+  ok    [W] motor_pesado: flujo que cabe = fracción x flujo ideal: obtenido 0.321206 vs esperado 0.321206 (tol 1e-10 %)
+  ok    [W] el flujo que cabe en la carga es menor que el requerido en los dos extremos: quemador_liviano: 1.92 kg/s, motor_pesado: 0.32 kg/s
+  ok    [W] Hind, 1 MW, h 1 m: la entrega usa la carga útil completa: obtenido 19046.3 vs esperado 19046.3 (tol 1e-10 %)
+  ok    [W] Hind, 10 MW, h 1 m: la entrega usa la carga útil completa: obtenido 19046.3 vs esperado 19046.3 (tol 1e-10 %)
+  ok    [W] Hind, 100 MW, h 1 m: la entrega usa la carga útil completa: obtenido 19046.3 vs esperado 19046.3 (tol 1e-10 %)
+  ok    [W] Hind, 1 MW, h 5 m: la entrega usa la carga útil completa: obtenido 19046.3 vs esperado 19046.3 (tol 1e-10 %)
+  ok    [W] Hind, 10 MW, h 5 m: la entrega usa la carga útil completa: obtenido 19046.3 vs esperado 19046.3 (tol 1e-10 %)
+  ok    [W] Hind, 100 MW, h 5 m: la entrega usa la carga útil completa: obtenido 19046.3 vs esperado 19046.3 (tol 1e-10 %)
+  ok    [W] FW, 1 MW, h 1 m: la entrega usa la carga útil completa: obtenido 60000 vs esperado 60000 (tol 1e-10 %)
+  ok    [W] FW, 10 MW, h 1 m: la entrega usa la carga útil completa: obtenido 60000 vs esperado 60000 (tol 1e-10 %)
+  ok    [W] FW, 100 MW, h 1 m: la entrega usa la carga útil completa: obtenido 60000 vs esperado 60000 (tol 1e-10 %)
+  ok    [W] FW, 1 MW, h 5 m: la entrega usa la carga útil completa: obtenido 60000 vs esperado 60000 (tol 1e-10 %)
+  ok    [W] FW, 10 MW, h 5 m: la entrega usa la carga útil completa: obtenido 60000 vs esperado 60000 (tol 1e-10 %)
+  ok    [W] FW, 100 MW, h 5 m: la entrega usa la carga útil completa: obtenido 60000 vs esperado 60000 (tol 1e-10 %)
+  ok    [W] ZR, 1 MW, h 1 m: la entrega usa la carga útil completa: obtenido 5000 vs esperado 5000 (tol 1e-10 %)
+  ok    [W] ZR, 10 MW, h 1 m: la entrega usa la carga útil completa: obtenido 5000 vs esperado 5000 (tol 1e-10 %)
+  ok    [W] ZR, 100 MW, h 1 m: la entrega usa la carga útil completa: obtenido 5000 vs esperado 5000 (tol 1e-10 %)
+  ok    [W] ZR, 1 MW, h 5 m: la entrega usa la carga útil completa: obtenido 5000 vs esperado 5000 (tol 1e-10 %)
+  ok    [W] ZR, 10 MW, h 5 m: la entrega usa la carga útil completa: obtenido 5000 vs esperado 5000 (tol 1e-10 %)
+  ok    [W] ZR, 100 MW, h 5 m: la entrega usa la carga útil completa: obtenido 5000 vs esperado 5000 (tol 1e-10 %)
+  ok    [W] ZNT, 1 MW, h 1 m: la entrega usa la carga útil completa: obtenido 1000 vs esperado 1000 (tol 1e-10 %)
+  ok    [W] ZNT, 10 MW, h 1 m: la entrega usa la carga útil completa: obtenido 1000 vs esperado 1000 (tol 1e-10 %)
+  ok    [W] ZNT, 100 MW, h 1 m: la entrega usa la carga útil completa: obtenido 1000 vs esperado 1000 (tol 1e-10 %)
+  ok    [W] ZNT, 1 MW, h 5 m: la entrega usa la carga útil completa: obtenido 1000 vs esperado 1000 (tol 1e-10 %)
+  ok    [W] ZNT, 10 MW, h 5 m: la entrega usa la carga útil completa: obtenido 1000 vs esperado 1000 (tol 1e-10 %)
+  ok    [W] ZNT, 100 MW, h 5 m: la entrega usa la carga útil completa: obtenido 1000 vs esperado 1000 (tol 1e-10 %)
+  ok    [W] caso base, 10 MW: duración de la entrega = max(pasos x intervalo, carga x calor por t / P): obtenido 38037.4 vs esperado 38037.4 (tol 1e-07 %)
+  ok    [X] presupuesto x flujo ideal + cajas fijas = carga útil del caso base: obtenido 60000 vs esperado 60000 (tol 1e-10 %)
+  ok    [X] el presupuesto descuenta la tonelada que se suelta (objeción 1.8): obtenido 1 vs esperado 1 (tol 1e-12 t)
+  ok    [X] sin ventiladores, el rechazo pide calor / presupuesto: obtenido 7.75162 vs esperado 7.75162 (tol 1e-10 %)
+  ok    [X] en f_max la batería sola llena el presupuesto: obtenido 18168.8 vs esperado 18168.8 (tol 1e-07 %)
+  ok    [X] presupuesto por kg/s y flujo que cabe (quemador, clases livianas) dicen lo mismo: obtenido 0.604934 vs esperado 0.604934 (tol 1e-07 %)
+  ok    [X] con la batería que mueve los ventiladores, ningún candidato con fuente cumple el requisito: 7 candidatos, ninguno cumple
+  ok    [X] con motor no hay reparto: su clase más liviana ya pesa más que el presupuesto: 26.4 > 18.2 t por kg/s
+  ok    [X] ACC: masa total = suma de la tabla S7 (2879 ton): obtenido 2879 vs esperado 2879 (tol 1e-09 t)
+  ok    [X] ACC: haces + estructura = 66 % del peso (texto del paper, p. 9): obtenido 0.658562 vs esperado 0.66 (tol 0.005)
+  ok    [X] ACC: calor / ventiladores = COP impreso en la tabla 3 (97): obtenido 96.9825 vs esperado 97 (tol 0.5)
+  ok    [X] requisitos: agua a retener = m* (1 + r) phi: obtenido 28.0229 vs esperado 28.0229 (tol 1e-10 %)
+  ok    [X] a 1 atm: la tasa = la de EXP-06 con phi_max en L (ReqDmUnaAtm): obtenido 3.36751 vs esperado 3.36751 (tol 0.1 %)
+  ok    [X] a 1 atm: presupuesto x tasa + cajas fijas = carga útil del caso base: obtenido 60000 vs esperado 60000 (tol 1e-10 %)
+  ok    [X] a 1 atm: requisito con f = 0.008 = calor / (presupuesto - batería que mueve los ventiladores): obtenido 8.48798 vs esperado 8.48798 (tol 1e-10 %)
+  ok    [X] a 1 atm: requisito con f = 0.041 = calor / (presupuesto - batería que mueve los ventiladores): obtenido 10.7257 vs esperado 10.7257 (tol 1e-10 %)
+  ok    [X] a 1 atm: sin ventiladores, el rechazo pide calor / presupuesto (fila de los rígidos de S8): obtenido 8.06722 vs esperado 8.06722 (tol 1e-10 %)
+  ok    [X] a 1 atm: en f_max la batería sola llena el presupuesto: obtenido 17089.1 vs esperado 17089.1 (tol 1e-07 %)
+  ok    [X] a 1 atm: el calor por kg de agua = calor / ((1 + r) phi_max): obtenido 1.81131e+07 vs esperado 1.81131e+07 (tol 1e-10 %)
+  ok    [X] tabla S8 a 1 atm: lo que rinden los rígidos escala con el calor por kg de agua (1 atm / 0.99): obtenido 1.13785 vs esperado 1.13785 (tol 1e-10 %)
+  ok    [X] tabla S8 a 1 atm: el extremo alto de la brecha = pide (batería, f del ACC) / ACC entero = ReqTempVecesUnaAtm: obtenido 63.7232 vs esperado 63.7232 (tol 1e-10 %)
+  ok    [X] tabla S7 a 1 atm: presupuesto por kg/s = el de 0.99 x tasa de 0.99 / tasa de 1 atm: obtenido 17.0891 vs esperado 17.0891 (tol 1e-10 %)
+  ok    [X] a 1 atm, como con 0.99: ninguna clase que condensa a la temperatura del ciclo cumple: brecha mínima 2.86
+  ok    [X] a 1 atm el requisito es mayor que con el calor de 0.99 sin compresor (más calor y menos presupuesto): 8.49 > 8.14 kW/kg
+  ok    [X] a 14 atm el compresor del escape solo ya pesa más que el presupuesto de lo que escala, por kg/s: 53.1 > 18.2 t por kg/s
+  ok    [X] requisitos: fracción retenida a 1 atm y 40 °C = la de EXP-11 (1 atm): obtenido 0.851675 vs esperado 0.851675 (tol 1e-10 %)
+  ok    [X] nota de la tabla: a la presión de EXP-06 se retiene el 99 % a 40 °C: phi = 0.9900 a 14 atm
+  ok    [X] rocío a esa presión: p_sat(T) = x_H2O P (Dalton): obtenido 485210 vs esperado 485210 (tol 0.0001 %)
+  ok    [X] tabla 6: lo que deja el presupuesto al rechazo = presupuesto - batería del quemador (f de 2035): obtenido 2218.23 vs esperado 2218.23 (tol 1e-07 %)
+  ok    [X] tabla 6: con eso el rechazo pide el kW/kg de la curva en f de 2035: obtenido 63.4913 vs esperado 63.4913 (tol 1e-07 %)
+  ok    [X] sensibilidad de la batería: celda Amprius SA88 = pulso de 30 s x voltaje nominal / masa (AMP26): obtenido 5.46995 vs esperado 5.46995 (tol 1e-10 %)
+  ok    [X] sensibilidad de la batería: paquete = celda x fracción celda/paquete del X-57: obtenido 3.62232 vs esperado 3.62232 (tol 1e-10 %)
+  ok    [X] sensibilidad de la batería: con la mejor celda baja el requisito, pero sigue sobre el sistema 2035: 11.4 kW/kg (antes 63.5); cumplen: ['FZ_radiador_2035']
+  ok    [X] sensibilidad de la batería: con el mejor empaquetado (LOB20) el requisito sigue sobre el sistema 2035: 10.9 kW/kg con 4.06 kW/kg de paquete
+  ok    [X] turbina para los ventiladores: la más liviana = potencia / masa del TCDS: obtenido 7.71346 vs esperado 7.71346 (tol 1e-10 %)
+  ok    [X] turbina para los ventiladores: el rechazo pide q / (presupuesto - f q / kW/kg de la turbina): obtenido 9.12753 vs esperado 9.12753 (tol 1e-10 %)
+  ok    [X] turbina para los ventiladores: H2 extra = f q / (eta LHV): obtenido 0.587018 vs esperado 0.587018 (tol 1e-10 %)
+  ok    [X] tabla 7: las clases de avión rechazan sobre el rocío a 1 atm y las del ciclo condensan bajo él: rocío 72.7 °C; FZ_sistema_2026 100, FZ_sistema_2035 100, FZ_radiador_2026 80, FZ_radiador_2035 160, ACC_sistema 57, ACC_haces 57, rigidos exhaust
+  ok    [X] ninguna clase que condensa a la temperatura del ciclo cumple, ni con la turbina: ACC_sistema 58.0x, ACC_haces 12.0x, rigidos 3.1x
+  ok    [X] brecha a la temperatura del ciclo: extremo favorable = min(turbina / lo mejor que rinde): obtenido 3.12913 vs esperado 3.12913 (tol 1e-10 %)
+  ok    [X] rígidos: equipo por kg/s de agua del LZ 129 = masa (p. 20) / consumo a 50 kn (p. 19): obtenido 45469.1 vs esperado 45469.1 (tol 1e-10 %)
+  ok    [Z] Hind: tasa de la quema limpia = la de la tabla 3 (minimax_plataformas): obtenido 2.84293 vs esperado 2.84293 (tol 1e-07 %)
+  ok    [Z] Hind: la quema limpia no sube sobre h0: sube 0.00e+00 m
+  ok    [Z] Hind: reactivo igual: la tasa hallada cumple el umbral y 0.1 % menos no lo cumple: 35.338 kg/s para 0.198 m
+  ok    [Z] Hind: reactivo igual: el controlador no baja de la quema reactiva ideal: sim 35.34 >= ideal 11.42 kg/s
+  ok    [Z] Hind: reactivo ideal / quema limpia = raiz(4 (1+s)^3 D_lim / (s^2 h)) (igual): obtenido 4.01753 vs esperado 4.01753 (tol 0.0001 %)
+  ok    [Z] Hind: reactivo precision: la tasa hallada cumple el umbral y 0.1 % menos no lo cumple: 8.017 kg/s para 1.000 m
+  ok    [Z] Hind: reactivo precision: el controlador no baja de la quema reactiva ideal: sim 8.02 >= ideal 5.09 kg/s
+  ok    [Z] Hind: reactivo ideal / quema limpia = raiz(4 (1+s)^3 D_lim / (s^2 h)) (precision): obtenido 1.78929 vs esperado 1.78929 (tol 0.0001 %)
+  ok    [Z] Hind: reactivo seguridad: la tasa hallada cumple el umbral y 0.1 % menos no lo cumple: 2.390 kg/s para 5.000 m
+  ok    [Z] Hind: reactivo seguridad: el controlador no baja de la quema reactiva ideal: sim 2.39 >= ideal 2.27 kg/s
+  ok    [Z] Hind: reactivo ideal / quema limpia = raiz(4 (1+s)^3 D_lim / (s^2 h)) (seguridad): obtenido 0.800197 vs esperado 0.800197 (tol 0.0001 %)
+  ok    [Z] Hind: excursión de la quema limpia, forma cerrada de la ec. (5) = la simulada: obtenido 0.199902 vs esperado 0.198356 (tol 1.5 %)
+  ok    [Z] Hind: barrido reactivo: la subida baja con la tasa instalada: 68.9 -> 0.023 m
+  ok    [Z] Hind: barrido reactivo: en la tasa del umbral (precision) la curva pasa por el umbral: obtenido 1.00039 vs esperado 1 (tol 5 %)
+  ok    [Z] Hind: barrido reactivo: en la tasa del umbral (seguridad) la curva pasa por el umbral: obtenido 5.00633 vs esperado 5 (tol 5 %)
+  ok    [Z] FW: tasa de la quema limpia = la de la tabla 3 (minimax_plataformas): obtenido 3.16739 vs esperado 3.16739 (tol 1e-07 %)
+  ok    [Z] FW: la quema limpia no sube sobre h0: sube 0.00e+00 m
+  ok    [Z] FW: reactivo igual: la tasa hallada cumple el umbral y 0.1 % menos no lo cumple: 39.651 kg/s para 0.198 m
+  ok    [Z] FW: reactivo igual: el controlador no baja de la quema reactiva ideal: sim 39.65 >= ideal 12.72 kg/s
+  ok    [Z] FW: reactivo ideal / quema limpia = raiz(4 (1+s)^3 D_lim / (s^2 h)) (igual): obtenido 4.01688 vs esperado 4.01688 (tol 0.0001 %)
+  ok    [Z] FW: reactivo precision: la tasa hallada cumple el umbral y 0.1 % menos no lo cumple: 8.982 kg/s para 1.000 m
+  ok    [Z] FW: reactivo precision: el controlador no baja de la quema reactiva ideal: sim 8.98 >= ideal 5.67 kg/s
+  ok    [Z] FW: reactivo ideal / quema limpia = raiz(4 (1+s)^3 D_lim / (s^2 h)) (precision): obtenido 1.7894 vs esperado 1.7894 (tol 0.0001 %)
+  ok    [Z] FW: reactivo seguridad: la tasa hallada cumple el umbral y 0.1 % menos no lo cumple: 2.674 kg/s para 5.000 m
+  ok    [Z] FW: reactivo seguridad: el controlador no baja de la quema reactiva ideal: sim 2.67 >= ideal 2.53 kg/s
+  ok    [Z] FW: reactivo ideal / quema limpia = raiz(4 (1+s)^3 D_lim / (s^2 h)) (seguridad): obtenido 0.800244 vs esperado 0.800244 (tol 0.0001 %)
+  ok    [Z] FW: excursión de la quema limpia, forma cerrada de la ec. (5) = la simulada: obtenido 0.199878 vs esperado 0.198444 (tol 1.5 %)
+  ok    [Z] FW: barrido reactivo: la subida baja con la tasa instalada: 78.1 -> 0.025 m
+  ok    [Z] FW: barrido reactivo: en la tasa del umbral (precision) la curva pasa por el umbral: obtenido 1.00057 vs esperado 1 (tol 5 %)
+  ok    [Z] FW: barrido reactivo: en la tasa del umbral (seguridad) la curva pasa por el umbral: obtenido 5.00131 vs esperado 5 (tol 5 %)
+  ok    [Z] ZR: tasa de la quema limpia = la de la tabla 3 (minimax_plataformas): obtenido 4.68173 vs esperado 4.68173 (tol 1e-07 %)
+  ok    [Z] ZR: la quema limpia no sube sobre h0: sube 0.00e+00 m
+  ok    [Z] ZR: reactivo igual: la tasa hallada cumple el umbral y 0.1 % menos no lo cumple: 60.769 kg/s para 0.199 m
+  ok    [Z] ZR: reactivo igual: el controlador no baja de la quema reactiva ideal: sim 60.77 >= ideal 18.79 kg/s
+  ok    [Z] ZR: reactivo ideal / quema limpia = raiz(4 (1+s)^3 D_lim / (s^2 h)) (igual): obtenido 4.01305 vs esperado 4.01305 (tol 0.0001 %)
+  ok    [Z] ZR: reactivo precision: la tasa hallada cumple el umbral y 0.1 % menos no lo cumple: 13.717 kg/s para 1.000 m
+  ok    [Z] ZR: reactivo precision: el controlador no baja de la quema reactiva ideal: sim 13.72 >= ideal 8.38 kg/s
+  ok    [Z] ZR: reactivo ideal / quema limpia = raiz(4 (1+s)^3 D_lim / (s^2 h)) (precision): obtenido 1.79005 vs esperado 1.79005 (tol 0.0001 %)
+  ok    [Z] ZR: reactivo seguridad: la tasa hallada cumple el umbral y 0.1 % menos no lo cumple: 4.066 kg/s para 5.000 m
+  ok    [Z] ZR: reactivo seguridad: el controlador no baja de la quema reactiva ideal: sim 4.07 >= ideal 3.75 kg/s
+  ok    [Z] ZR: reactivo ideal / quema limpia = raiz(4 (1+s)^3 D_lim / (s^2 h)) (seguridad): obtenido 0.800534 vs esperado 0.800534 (tol 0.0001 %)
+  ok    [Z] ZR: excursión de la quema limpia, forma cerrada de la ec. (5) = la simulada: obtenido 0.199734 vs esperado 0.198967 (tol 1.5 %)
+  ok    [Z] ZR: barrido reactivo: la subida baja con la tasa instalada: 147.7 -> 0.039 m
+  ok    [Z] ZR: barrido reactivo: en la tasa del umbral (precision) la curva pasa por el umbral: obtenido 1.00066 vs esperado 1 (tol 5 %)
+  ok    [Z] ZR: barrido reactivo: en la tasa del umbral (seguridad) la curva pasa por el umbral: obtenido 5.00305 vs esperado 5 (tol 5 %)
+  ok    [Z] ZNT: tasa de la quema limpia = la de la tabla 3 (minimax_plataformas): obtenido 14.749 vs esperado 14.749 (tol 1e-07 %)
+  ok    [Z] ZNT: la quema limpia no sube sobre h0: sube 0.00e+00 m
+  ok    [Z] ZNT: reactivo igual: la tasa hallada cumple el umbral y 0.1 % menos no lo cumple: 197.503 kg/s para 0.199 m
+  ok    [Z] ZNT: reactivo igual: el controlador no baja de la quema reactiva ideal: sim 197.50 >= ideal 59.53 kg/s
+  ok    [Z] ZNT: reactivo ideal / quema limpia = raiz(4 (1+s)^3 D_lim / (s^2 h)) (igual): obtenido 4.03623 vs esperado 4.03623 (tol 0.0001 %)
+  ok    [Z] ZNT: reactivo precision: la tasa hallada cumple el umbral y 0.1 % menos no lo cumple: 44.103 kg/s para 1.000 m
+  ok    [Z] ZNT: reactivo precision: el controlador no baja de la quema reactiva ideal: sim 44.10 >= ideal 26.56 kg/s
+  ok    [Z] ZNT: reactivo ideal / quema limpia = raiz(4 (1+s)^3 D_lim / (s^2 h)) (precision): obtenido 1.80082 vs esperado 1.80082 (tol 0.0001 %)
+  ok    [Z] ZNT: reactivo seguridad: la tasa hallada cumple el umbral y 0.1 % menos no lo cumple: 12.928 kg/s para 5.000 m
+  ok    [Z] ZNT: reactivo seguridad: el controlador no baja de la quema reactiva ideal: sim 12.93 >= ideal 11.88 kg/s
+  ok    [Z] ZNT: reactivo ideal / quema limpia = raiz(4 (1+s)^3 D_lim / (s^2 h)) (seguridad): obtenido 0.80535 vs esperado 0.80535 (tol 0.0001 %)
+  ok    [Z] ZNT: excursión de la quema limpia, forma cerrada de la ec. (5) = la simulada: obtenido 0.197419 vs esperado 0.199062 (tol 1.5 %)
+  ok    [Z] ZNT: barrido reactivo: la subida baja con la tasa instalada: 416.0 -> 0.129 m
+  ok    [Z] ZNT: barrido reactivo: en la tasa del umbral (precision) la curva pasa por el umbral: obtenido 1.00059 vs esperado 1 (tol 5 %)
+  ok    [Z] ZNT: barrido reactivo: en la tasa del umbral (seguridad) la curva pasa por el umbral: obtenido 5.00188 vs esperado 5 (tol 5 %)
+  ok    [Z] hélices, 10 MW, discos 20 m2: energía = P_max t / 2.5 (integración numérica): obtenido 5.0258e+07 vs esperado 5.0258e+07 (tol 0.0001 %)
+  ok    [Z] hélices, 10 MW, discos 20 m2: fracción de la energía química = E / (m/L PCI): obtenido 0.00930736 vs esperado 0.00930736 (tol 1e-10 %)
+  ok    [Z] hélices, 10 MW, discos 100 m2: energía = P_max t / 2.5 (integración numérica): obtenido 2.2476e+07 vs esperado 2.2476e+07 (tol 0.0001 %)
+  ok    [Z] hélices, 10 MW, discos 100 m2: fracción de la energía química = E / (m/L PCI): obtenido 0.00416238 vs esperado 0.00416238 (tol 1e-10 %)
+  ok    [Z] hélices, 2 MW, discos 20 m2: energía = P_max t / 2.5 (integración numérica): obtenido 2.5129e+08 vs esperado 2.5129e+08 (tol 0.0001 %)
+  ok    [Z] hélices, 2 MW, discos 20 m2: fracción de la energía química = E / (m/L PCI): obtenido 0.0465368 vs esperado 0.0465368 (tol 1e-10 %)
+  ok    [Z] hélices, 2 MW, discos 100 m2: energía = P_max t / 2.5 (integración numérica): obtenido 1.1238e+08 vs esperado 1.1238e+08 (tol 0.0001 %)
+  ok    [Z] hélices, 2 MW, discos 100 m2: fracción de la energía química = E / (m/L PCI): obtenido 0.0208119 vs esperado 0.0208119 (tol 1e-10 %)
+  ok    [Z] hélices: la quema de 1 t dura lo mismo que los escalones de VAL-03 (10 MW): obtenido 633.957 vs esperado 633.957 (tol 1e-07 %)
+  ok    [Z] hélices: la duración escala como 1/P_rej: obtenido 6.33957e+09 vs esperado 6.33957e+09 (tol 1e-10 %)
+  ok    [Z] hélices, discos 20 m2: la potencia escala como F^1.5 (escalón grande / 1 t): obtenido 6.26736e+06 vs esperado 6.26736e+06 (tol 1e-10 %)
+  ok    [Z] hélices, discos 100 m2: la potencia escala como F^1.5 (escalón grande / 1 t): obtenido 2.80285e+06 vs esperado 2.80285e+06 (tol 1e-10 %)
+  ok    [Z] hélices, discos 20 m2: con el mismo rechazo la energía escala como m^2.5 (escalón grande / 1 t): obtenido 1.5893e+10 vs esperado 1.5893e+10 (tol 1e-10 %)
+  ok    [Z] hélices, discos 100 m2: con el mismo rechazo la energía escala como m^2.5 (escalón grande / 1 t): obtenido 7.10755e+09 vs esperado 7.10755e+09 (tol 1e-10 %)
+  ok    [Z] freno, FW: M_I del equilibrio = (1 + k) rho V_casco: obtenido 410077 vs esperado 410077 (tol 1e-07 %)
+  ok    [Z] freno, FW: la nave libre sube h_max en el techo de respuesta (integración numérica): obtenido 1 vs esperado 1 (tol 1e-07 %)
+  ok    [Z] freno, ZNT: M_I del equilibrio = (1 + k) rho V_casco: obtenido 19627.6 vs esperado 19627.6 (tol 1e-07 %)
+  ok    [Z] freno, ZNT: la nave libre sube h_max en el techo de respuesta (integración numérica): obtenido 1 vs esperado 1 (tol 1e-07 %)
+  ok    [Z] freno: la nave más chica exige la respuesta más rápida (tau ~ raiz(V/m)): NT 1.95 s < LCA60T 9.13 s
+  ok    [Z] cota todas verticales (0.5 MW, 20 m2): P(m_max g) = P_inst: obtenido 500000 vs esperado 500000 (tol 1e-10 %)
+  ok    [Z] cota todas verticales (0.5 MW, 50 m2): P(m_max g) = P_inst: obtenido 500000 vs esperado 500000 (tol 1e-10 %)
+  ok    [Z] cota todas verticales (0.5 MW, 100 m2): P(m_max g) = P_inst: obtenido 500000 vs esperado 500000 (tol 1e-10 %)
+  ok    [Z] cota todas verticales (0.5 MW, 200 m2): P(m_max g) = P_inst: obtenido 500000 vs esperado 500000 (tol 1e-10 %)
+  ok    [Z] cota todas verticales (1 MW, 20 m2): P(m_max g) = P_inst: obtenido 1e+06 vs esperado 1e+06 (tol 1e-10 %)
+  ok    [Z] cota todas verticales (1 MW, 50 m2): P(m_max g) = P_inst: obtenido 1e+06 vs esperado 1e+06 (tol 1e-10 %)
+  ok    [Z] cota todas verticales (1 MW, 100 m2): P(m_max g) = P_inst: obtenido 1e+06 vs esperado 1e+06 (tol 1e-10 %)
+  ok    [Z] cota todas verticales (1 MW, 200 m2): P(m_max g) = P_inst: obtenido 1e+06 vs esperado 1e+06 (tol 1e-10 %)
+  ok    [Z] cota todas verticales (2 MW, 20 m2): P(m_max g) = P_inst: obtenido 2e+06 vs esperado 2e+06 (tol 1e-10 %)
+  ok    [Z] cota todas verticales (2 MW, 50 m2): P(m_max g) = P_inst: obtenido 2e+06 vs esperado 2e+06 (tol 1e-10 %)
+  ok    [Z] cota todas verticales (2 MW, 100 m2): P(m_max g) = P_inst: obtenido 2e+06 vs esperado 2e+06 (tol 1e-10 %)
+  ok    [Z] cota todas verticales (2 MW, 200 m2): P(m_max g) = P_inst: obtenido 2e+06 vs esperado 2e+06 (tol 1e-10 %)
+  ok    [Z] cota todas verticales (5 MW, 20 m2): P(m_max g) = P_inst: obtenido 5e+06 vs esperado 5e+06 (tol 1e-10 %)
+  ok    [Z] cota todas verticales (5 MW, 50 m2): P(m_max g) = P_inst: obtenido 5e+06 vs esperado 5e+06 (tol 1e-10 %)
+  ok    [Z] cota todas verticales (5 MW, 100 m2): P(m_max g) = P_inst: obtenido 5e+06 vs esperado 5e+06 (tol 1e-10 %)
+  ok    [Z] cota todas verticales (5 MW, 200 m2): P(m_max g) = P_inst: obtenido 5e+06 vs esperado 5e+06 (tol 1e-10 %)
+  ok    [Z] cota todas verticales (10 MW, 20 m2): P(m_max g) = P_inst: obtenido 1e+07 vs esperado 1e+07 (tol 1e-10 %)
+  ok    [Z] cota todas verticales (10 MW, 50 m2): P(m_max g) = P_inst: obtenido 1e+07 vs esperado 1e+07 (tol 1e-10 %)
+  ok    [Z] cota todas verticales (10 MW, 100 m2): P(m_max g) = P_inst: obtenido 1e+07 vs esperado 1e+07 (tol 1e-10 %)
+  ok    [Z] cota todas verticales (10 MW, 200 m2): P(m_max g) = P_inst: obtenido 1e+07 vs esperado 1e+07 (tol 1e-10 %)
+  ok    [Z] freno, FW 1 t, 2 MW: la quema limpia de m_e (ec. 7, s de la liberación completa) pide el rechazo instalado: obtenido 2e+06 vs esperado 2e+06 (tol 1e-07 %)
+  ok    [Z] freno, FW 1 t, 2 MW: rechazo en tiempo real del escalón = ṁ*(m) q (minimax.limpio): obtenido 4.46088e+08 vs esperado 4.46088e+08 (tol 1e-10 %)
+  ok    [Z] freno, FW 1 t, 2 MW: tiempo de recuperación x P = calor del escalón, (m/L) q: obtenido 6.33957e+09 vs esperado 6.33957e+09 (tol 1e-10 %)
+  ok    [Z] freno, FW 1 t, 2 MW, discos 20 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 2.41111e+08 vs esperado 2.41111e+08 (tol 0.0001 %)
+  ok    [Z] freno, FW 1 t, 2 MW, discos 100 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 1.07828e+08 vs esperado 1.07828e+08 (tol 0.0001 %)
+  ok    [Z] freno, FW 1 t, 2 MW: el freno toma lo que el rechazo no compensa en tiempo real (0 < m_e < m): m_e 27.2 kg de 1000
+  ok    [Z] freno, FW 1 t, 10 MW: la quema limpia de m_e (ec. 7, s de la liberación completa) pide el rechazo instalado: obtenido 1e+07 vs esperado 1e+07 (tol 1e-07 %)
+  ok    [Z] freno, FW 1 t, 10 MW: rechazo en tiempo real del escalón = ṁ*(m) q (minimax.limpio): obtenido 4.46088e+08 vs esperado 4.46088e+08 (tol 1e-10 %)
+  ok    [Z] freno, FW 1 t, 10 MW: tiempo de recuperación x P = calor del escalón, (m/L) q: obtenido 6.33957e+09 vs esperado 6.33957e+09 (tol 1e-10 %)
+  ok    [Z] freno, FW 1 t, 10 MW, discos 20 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 4.43852e+07 vs esperado 4.43852e+07 (tol 0.0001 %)
+  ok    [Z] freno, FW 1 t, 10 MW, discos 100 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 1.98497e+07 vs esperado 1.98497e+07 (tol 0.0001 %)
+  ok    [Z] freno, FW 1 t, 10 MW: el freno toma lo que el rechazo no compensa en tiempo real (0 < m_e < m): m_e 79.5 kg de 1000
+  ok    [Z] freno, FW 1 t, 39 MW: la quema limpia de m_e (ec. 7, s de la liberación completa) pide el rechazo instalado: obtenido 3.9151e+07 vs esperado 3.9151e+07 (tol 1e-07 %)
+  ok    [Z] freno, FW 1 t, 39 MW: rechazo en tiempo real del escalón = ṁ*(m) q (minimax.limpio): obtenido 4.46088e+08 vs esperado 4.46088e+08 (tol 1e-10 %)
+  ok    [Z] freno, FW 1 t, 39 MW: tiempo de recuperación x P = calor del escalón, (m/L) q: obtenido 6.33957e+09 vs esperado 6.33957e+09 (tol 1e-10 %)
+  ok    [Z] freno, FW 1 t, 39 MW, discos 20 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 9.22861e+06 vs esperado 9.22861e+06 (tol 0.0001 %)
+  ok    [Z] freno, FW 1 t, 39 MW, discos 100 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 4.12716e+06 vs esperado 4.12716e+06 (tol 0.0001 %)
+  ok    [Z] freno, FW 1 t, 39 MW: el freno toma lo que el rechazo no compensa en tiempo real (0 < m_e < m): m_e 197.5 kg de 1000
+  ok    [Z] freno, FW 10 t, 2 MW: la quema limpia de m_e (ec. 7, s de la liberación completa) pide el rechazo instalado: obtenido 2e+06 vs esperado 2e+06 (tol 1e-07 %)
+  ok    [Z] freno, FW 10 t, 2 MW: rechazo en tiempo real del escalón = ṁ*(m) q (minimax.limpio): obtenido 1.42243e+10 vs esperado 1.42243e+10 (tol 1e-10 %)
+  ok    [Z] freno, FW 10 t, 2 MW: tiempo de recuperación x P = calor del escalón, (m/L) q: obtenido 6.33957e+10 vs esperado 6.33957e+10 (tol 1e-10 %)
+  ok    [Z] freno, FW 10 t, 2 MW, discos 20 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 7.91427e+10 vs esperado 7.91427e+10 (tol 0.0001 %)
+  ok    [Z] freno, FW 10 t, 2 MW, discos 100 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 3.53937e+10 vs esperado 3.53937e+10 (tol 0.0001 %)
+  ok    [Z] freno, FW 10 t, 2 MW: el freno toma lo que el rechazo no compensa en tiempo real (0 < m_e < m): m_e 27.0 kg de 10000
+  ok    [Z] freno, FW 10 t, 10 MW: la quema limpia de m_e (ec. 7, s de la liberación completa) pide el rechazo instalado: obtenido 1e+07 vs esperado 1e+07 (tol 1e-07 %)
+  ok    [Z] freno, FW 10 t, 10 MW: rechazo en tiempo real del escalón = ṁ*(m) q (minimax.limpio): obtenido 1.42243e+10 vs esperado 1.42243e+10 (tol 1e-10 %)
+  ok    [Z] freno, FW 10 t, 10 MW: tiempo de recuperación x P = calor del escalón, (m/L) q: obtenido 6.33957e+10 vs esperado 6.33957e+10 (tol 1e-10 %)
+  ok    [Z] freno, FW 10 t, 10 MW, discos 20 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 1.57048e+10 vs esperado 1.57048e+10 (tol 0.0001 %)
+  ok    [Z] freno, FW 10 t, 10 MW, discos 100 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 7.02342e+09 vs esperado 7.02342e+09 (tol 0.0001 %)
+  ok    [Z] freno, FW 10 t, 10 MW: el freno toma lo que el rechazo no compensa en tiempo real (0 < m_e < m): m_e 79.1 kg de 10000
+  ok    [Z] freno, FW 10 t, 39 MW: la quema limpia de m_e (ec. 7, s de la liberación completa) pide el rechazo instalado: obtenido 3.9151e+07 vs esperado 3.9151e+07 (tol 1e-07 %)
+  ok    [Z] freno, FW 10 t, 39 MW: rechazo en tiempo real del escalón = ṁ*(m) q (minimax.limpio): obtenido 1.42243e+10 vs esperado 1.42243e+10 (tol 1e-10 %)
+  ok    [Z] freno, FW 10 t, 39 MW: tiempo de recuperación x P = calor del escalón, (m/L) q: obtenido 6.33957e+10 vs esperado 6.33957e+10 (tol 1e-10 %)
+  ok    [Z] freno, FW 10 t, 39 MW, discos 20 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 3.9404e+09 vs esperado 3.9404e+09 (tol 0.0001 %)
+  ok    [Z] freno, FW 10 t, 39 MW, discos 100 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 1.7622e+09 vs esperado 1.7622e+09 (tol 0.0001 %)
+  ok    [Z] freno, FW 10 t, 39 MW: el freno toma lo que el rechazo no compensa en tiempo real (0 < m_e < m): m_e 196.4 kg de 10000
+  ok    [Z] freno, FW 30 t, 2 MW: la quema limpia de m_e (ec. 7, s de la liberación completa) pide el rechazo instalado: obtenido 2e+06 vs esperado 2e+06 (tol 1e-07 %)
+  ok    [Z] freno, FW 30 t, 2 MW: rechazo en tiempo real del escalón = ṁ*(m) q (minimax.limpio): obtenido 7.53287e+10 vs esperado 7.53287e+10 (tol 1e-10 %)
+  ok    [Z] freno, FW 30 t, 2 MW: tiempo de recuperación x P = calor del escalón, (m/L) q: obtenido 1.90187e+11 vs esperado 1.90187e+11 (tol 1e-10 %)
+  ok    [Z] freno, FW 30 t, 2 MW, discos 20 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 1.23708e+12 vs esperado 1.23708e+12 (tol 0.0001 %)
+  ok    [Z] freno, FW 30 t, 2 MW, discos 100 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 5.53239e+11 vs esperado 5.53239e+11 (tol 0.0001 %)
+  ok    [Z] freno, FW 30 t, 2 MW: el freno toma lo que el rechazo no compensa en tiempo real (0 < m_e < m): m_e 26.7 kg de 30000
+  ok    [Z] freno, FW 30 t, 10 MW: la quema limpia de m_e (ec. 7, s de la liberación completa) pide el rechazo instalado: obtenido 1e+07 vs esperado 1e+07 (tol 1e-07 %)
+  ok    [Z] freno, FW 30 t, 10 MW: rechazo en tiempo real del escalón = ṁ*(m) q (minimax.limpio): obtenido 7.53287e+10 vs esperado 7.53287e+10 (tol 1e-10 %)
+  ok    [Z] freno, FW 30 t, 10 MW: tiempo de recuperación x P = calor del escalón, (m/L) q: obtenido 1.90187e+11 vs esperado 1.90187e+11 (tol 1e-10 %)
+  ok    [Z] freno, FW 30 t, 10 MW, discos 20 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 2.4678e+11 vs esperado 2.4678e+11 (tol 0.0001 %)
+  ok    [Z] freno, FW 30 t, 10 MW, discos 100 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 1.10364e+11 vs esperado 1.10364e+11 (tol 0.0001 %)
+  ok    [Z] freno, FW 30 t, 10 MW: el freno toma lo que el rechazo no compensa en tiempo real (0 < m_e < m): m_e 78.1 kg de 30000
+  ok    [Z] freno, FW 30 t, 39 MW: la quema limpia de m_e (ec. 7, s de la liberación completa) pide el rechazo instalado: obtenido 3.9151e+07 vs esperado 3.9151e+07 (tol 1e-07 %)
+  ok    [Z] freno, FW 30 t, 39 MW: rechazo en tiempo real del escalón = ṁ*(m) q (minimax.limpio): obtenido 7.53287e+10 vs esperado 7.53287e+10 (tol 1e-10 %)
+  ok    [Z] freno, FW 30 t, 39 MW: tiempo de recuperación x P = calor del escalón, (m/L) q: obtenido 1.90187e+11 vs esperado 1.90187e+11 (tol 1e-10 %)
+  ok    [Z] freno, FW 30 t, 39 MW, discos 20 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 6.26672e+10 vs esperado 6.26672e+10 (tol 0.0001 %)
+  ok    [Z] freno, FW 30 t, 39 MW, discos 100 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 2.80256e+10 vs esperado 2.80256e+10 (tol 0.0001 %)
+  ok    [Z] freno, FW 30 t, 39 MW: el freno toma lo que el rechazo no compensa en tiempo real (0 < m_e < m): m_e 193.9 kg de 30000
+  ok    [Z] freno, ZNT 1 t, 2 MW: la quema limpia de m_e (ec. 7, s de la liberación completa) pide el rechazo instalado: obtenido 2e+06 vs esperado 2e+06 (tol 1e-07 %)
+  ok    [Z] freno, ZNT 1 t, 2 MW: rechazo en tiempo real del escalón = ṁ*(m) q (minimax.limpio): obtenido 2.07722e+09 vs esperado 2.07722e+09 (tol 1e-10 %)
+  ok    [Z] freno, ZNT 1 t, 2 MW: tiempo de recuperación x P = calor del escalón, (m/L) q: obtenido 6.33957e+09 vs esperado 6.33957e+09 (tol 1e-10 %)
+  ok    [Z] freno, ZNT 1 t, 2 MW, discos 20 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 2.47623e+08 vs esperado 2.47623e+08 (tol 0.0001 %)
+  ok    [Z] freno, ZNT 1 t, 2 MW, discos 100 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 1.10741e+08 vs esperado 1.10741e+08 (tol 0.0001 %)
+  ok    [Z] freno, ZNT 1 t, 2 MW: el freno toma lo que el rechazo no compensa en tiempo real (0 < m_e < m): m_e 9.8 kg de 1000
+  ok    [Z] freno, ZNT 1 t, 10 MW: la quema limpia de m_e (ec. 7, s de la liberación completa) pide el rechazo instalado: obtenido 1e+07 vs esperado 1e+07 (tol 1e-07 %)
+  ok    [Z] freno, ZNT 1 t, 10 MW: rechazo en tiempo real del escalón = ṁ*(m) q (minimax.limpio): obtenido 2.07722e+09 vs esperado 2.07722e+09 (tol 1e-10 %)
+  ok    [Z] freno, ZNT 1 t, 10 MW: tiempo de recuperación x P = calor del escalón, (m/L) q: obtenido 6.33957e+09 vs esperado 6.33957e+09 (tol 1e-10 %)
+  ok    [Z] freno, ZNT 1 t, 10 MW, discos 20 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 4.8124e+07 vs esperado 4.8124e+07 (tol 0.0001 %)
+  ok    [Z] freno, ZNT 1 t, 10 MW, discos 100 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 2.15217e+07 vs esperado 2.15217e+07 (tol 0.0001 %)
+  ok    [Z] freno, ZNT 1 t, 10 MW: el freno toma lo que el rechazo no compensa en tiempo real (0 < m_e < m): m_e 28.5 kg de 1000
+  ok    [Z] freno, ZNT 1 t, 39 MW: la quema limpia de m_e (ec. 7, s de la liberación completa) pide el rechazo instalado: obtenido 3.9151e+07 vs esperado 3.9151e+07 (tol 1e-07 %)
+  ok    [Z] freno, ZNT 1 t, 39 MW: rechazo en tiempo real del escalón = ṁ*(m) q (minimax.limpio): obtenido 2.07722e+09 vs esperado 2.07722e+09 (tol 1e-10 %)
+  ok    [Z] freno, ZNT 1 t, 39 MW: tiempo de recuperación x P = calor del escalón, (m/L) q: obtenido 6.33957e+09 vs esperado 6.33957e+09 (tol 1e-10 %)
+  ok    [Z] freno, ZNT 1 t, 39 MW, discos 20 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 1.14977e+07 vs esperado 1.14977e+07 (tol 0.0001 %)
+  ok    [Z] freno, ZNT 1 t, 39 MW, discos 100 m2: energía del freno = P_max t / 2.5 (integración numérica): obtenido 5.14191e+06 vs esperado 5.14191e+06 (tol 0.0001 %)
+  ok    [Z] freno, ZNT 1 t, 39 MW: el freno toma lo que el rechazo no compensa en tiempo real (0 < m_e < m): m_e 70.8 kg de 1000
+  ok    [Z] freno: 1 t con 10 MW dura lo mismo que en helices_vectoriales (discusión): obtenido 633.957 vs esperado 633.957 (tol 1e-07 %)
+  ok    [Z] freno: haces de ACC con 10 MW = los de helices_vectoriales: obtenido 15.3253 vs esperado 15.3253 (tol 1e-10 %)
+  ok    [Z] freno: haces de ACC con 2 MW = los de helices_vectoriales: obtenido 3.06506 vs esperado 3.06506 (tol 1e-10 %)
+  ok    [Z] freno, FW: G(mu) = subida máxima / (a tau^2), integrando la subida: obtenido 1.0068 vs esperado 1.0068 (tol 0.0001 %)
+  ok    [Z] freno, FW: plazo de primer orden = raiz(h_max / (a G)): obtenido 6.43679 vs esperado 6.43679 (tol 1e-07 %)
+  ok    [Z] freno, ZNT: G(mu) = subida máxima / (a tau^2), integrando la subida: obtenido 1.0068 vs esperado 1.0068 (tol 0.0001 %)
+  ok    [Z] freno, ZNT: plazo de primer orden = raiz(h_max / (a G)): obtenido 1.37355 vs esperado 1.37355 (tol 1e-07 %)
+  ok    [Z] freno, simulación FW, 1 t con 10 MW: la subida no pasa de h_max: 0.000 m <= 1.0 m
+  ok    [Z] freno, simulación FW, 1 t con 10 MW: H2 quemado = m/L: obtenido 44.8383 vs esperado 44.8329 (tol 1 %)
+  ok    [Z] freno, simulación FW, 1 t con 10 MW: energía del freno a menos de 10 % de la forma cerrada: simulación / cerrada = 1.018
+  ok    [Z] freno, simulación FW: el freno no satura: False
+  ok    [Z] freno, simulación ZNT, 1 t con 10 MW: la subida no pasa de h_max: 0.666 m <= 1.0 m
+  ok    [Z] freno, simulación ZNT, 1 t con 10 MW: H2 quemado = m/L: obtenido 44.8518 vs esperado 44.8329 (tol 1 %)
+  ok    [Z] freno, simulación ZNT, 1 t con 10 MW: energía del freno a menos de 10 % de la forma cerrada: simulación / cerrada = 1.004
+  ok    [Z] freno, simulación ZNT: el freno no satura: False
+  ok    [Z] freno anticipado, FW: rampa = L g ṁ* (ecuación 7): obtenido 692.827 vs esperado 692.827 (tol 1e-10 %)
+  ok    [Z] freno anticipado, FW: el escalón entero llega en t_nat: obtenido 14.1545 vs esperado 14.1545 (tol 1e-07 %)
+  ok    [Z] freno anticipado, FW: la rampa previa hunde D_lim (integración numérica): obtenido 0.1 vs esperado 0.1 (tol 0.0001 %)
+  ok    [Z] freno anticipado, FW: bajada total (1+s) D_lim y en reposo al llegar al escalón: obtenido 0.199878 vs esperado 0.199878 (tol 0.001 %)
+  ok    [Z] freno anticipado, FW: velocidad nula al llegar al escalón y nunca sube: v final -3.24e-18 m/s
+  ok    [Z] freno anticipado, ZNT: rampa = L g ṁ* (ecuación 7): obtenido 3226.17 vs esperado 3226.17 (tol 1e-10 %)
+  ok    [Z] freno anticipado, ZNT: el escalón entero llega en t_nat: obtenido 3.03972 vs esperado 3.03972 (tol 1e-07 %)
+  ok    [Z] freno anticipado, ZNT: la rampa previa hunde D_lim (integración numérica): obtenido 0.1 vs esperado 0.1 (tol 0.0001 %)
+  ok    [Z] freno anticipado, ZNT: bajada total (1+s) D_lim y en reposo al llegar al escalón: obtenido 0.197419 vs esperado 0.197419 (tol 0.001 %)
+  ok    [Z] freno anticipado, ZNT: velocidad nula al llegar al escalón y nunca sube: v final -1.25e-16 m/s
+  ok    [Z] freno FW 1 t, 2 MW: sin quema previa, potencia x (m/(m - m_e))^1.5: obtenido 1.04222 vs esperado 1.04222 (tol 1e-07 %)
+  ok    [Z] freno FW 1 t, 10 MW: sin quema previa, potencia x (m/(m - m_e))^1.5: obtenido 1.13231 vs esperado 1.13231 (tol 1e-07 %)
+  ok    [Z] freno FW 1 t, 39 MW: sin quema previa, potencia x (m/(m - m_e))^1.5: obtenido 1.39099 vs esperado 1.39099 (tol 1e-07 %)
+  ok    [Z] freno FW 10 t, 2 MW: sin quema previa, potencia x (m/(m - m_e))^1.5: obtenido 1.00407 vs esperado 1.00407 (tol 1e-07 %)
+  ok    [Z] freno FW 10 t, 10 MW: sin quema previa, potencia x (m/(m - m_e))^1.5: obtenido 1.01198 vs esperado 1.01198 (tol 1e-07 %)
+  ok    [Z] freno FW 10 t, 39 MW: sin quema previa, potencia x (m/(m - m_e))^1.5: obtenido 1.0302 vs esperado 1.0302 (tol 1e-07 %)
+  ok    [Z] freno FW 30 t, 2 MW: sin quema previa, potencia x (m/(m - m_e))^1.5: obtenido 1.00134 vs esperado 1.00134 (tol 1e-07 %)
+  ok    [Z] freno FW 30 t, 10 MW: sin quema previa, potencia x (m/(m - m_e))^1.5: obtenido 1.00392 vs esperado 1.00392 (tol 1e-07 %)
+  ok    [Z] freno FW 30 t, 39 MW: sin quema previa, potencia x (m/(m - m_e))^1.5: obtenido 1.00978 vs esperado 1.00978 (tol 1e-07 %)
+  ok    [Z] freno ZNT 1 t, 2 MW: sin quema previa, potencia x (m/(m - m_e))^1.5: obtenido 1.01481 vs esperado 1.01481 (tol 1e-07 %)
+  ok    [Z] freno ZNT 1 t, 10 MW: sin quema previa, potencia x (m/(m - m_e))^1.5: obtenido 1.04434 vs esperado 1.04434 (tol 1e-07 %)
+  ok    [Z] freno ZNT 1 t, 39 MW: sin quema previa, potencia x (m/(m - m_e))^1.5: obtenido 1.11648 vs esperado 1.11648 (tol 1e-07 %)
+  ok    [Z] freno, NT: anticipar admite más retardo que esperar (|dh| <= h_max): 2.30 s > 1.17 s
+  ok    [Z] freno, NT: con ese retardo, esperar pasa h_max y anticipar no: esperando 3.07 m, anticipando 0.99 m
+  ok    [Z] freno, NT: sin quema previa y con el retardo base, |dh| <= h_max: 0.79 m
+  ok    [X] f por caída de presión (200 Pa) = dp / (eta rho cp dT): obtenido 0.00813856 vs esperado 0.00813856 (tol 1e-10 %)
+  ok    [X] f por caída de presión (1000 Pa) = dp / (eta rho cp dT): obtenido 0.0406928 vs esperado 0.0406928 (tol 1e-10 %)
+  ok    [X] requisito con el f por caída de presión entre f = 0 y el f de FlyZero 2035: 7.75 <= 8.14-10.17 <= 63.49 kW/kg
+  ok    [X] aire de enfriamiento = P_rej (quemador) / (cp dT): obtenido 14795.6 vs esperado 14795.6 (tol 1e-07 %)
+  ok    [R] humedad: con HR = 0 el calor es q_rech(0, phi_max): obtenido 1.37862e+08 vs esperado 1.37862e+08 (tol 1e-10 %)
+  ok    [R] humedad: con HR = 0 la pesadez es L(phi_max): obtenido 20.9795 vs esperado 20.9795 (tol 1e-10 %)
+  ok    [R] humedad 50 %: el agua que entra condensa y baja el H2 por tonelada: +0.46 kg/kg, H2/t -1.6 %
+  ok    [R] humedad 90 %: el agua que entra condensa y baja el H2 por tonelada: +0.84 kg/kg, H2/t -2.9 %
+  ok    [Y] elasticidad de ṁ* respecto de m: analítica = diferencias centrales (caso base): obtenido 1.50092 vs esperado 1.50092 (tol 0.0001 %)
+  ok    [Y] elasticidad de ṁ* respecto de M_I: analítica = diferencias centrales (caso base): obtenido -0.500916 vs esperado -0.500916 (tol 0.0001 %)
+  ok    [Y] elasticidad de ṁ* respecto de L: analítica = diferencias centrales (caso base): obtenido -1 vs esperado -1 (tol 0.0001 %)
+  ok    [Y] elasticidad de ṁ* respecto de D: analítica = diferencias centrales (caso base): obtenido -0.5 vs esperado -0.5 (tol 0.0001 %)
+  ok    [Y] Hind: elasticidad de ṁ* respecto de la carga, analítica = numérica: obtenido 1.50074 vs esperado 1.50074 (tol 0.0001 %)
+  ok    [Y] FW: elasticidad de ṁ* respecto de la carga, analítica = numérica: obtenido 1.50092 vs esperado 1.50092 (tol 0.0001 %)
+  ok    [Y] ZR: elasticidad de ṁ* respecto de la carga, analítica = numérica: obtenido 1.502 vs esperado 1.502 (tol 0.0001 %)
+  ok    [Y] ZNT: elasticidad de ṁ* respecto de la carga, analítica = numérica: obtenido 1.51987 vs esperado 1.51987 (tol 0.0001 %)
+  ok    [Y] ṁ* del caso base de CRED-01 = el de la tabla 3 (dlim_flujo): obtenido 3.16739 vs esperado 3.16739 (tol 1e-07 %)
+  ok    [Y] P_rej del caso base de CRED-01 = la de la tabla 6 con eta 0 (balance_masa): obtenido 446.088 vs esperado 446.088 (tol 0.0001 %)
+  ok    [Y] fila de la inercia = rango de VAL-03, cota ideal (dm_star, mínimo): obtenido 2.89097 vs esperado 2.89097 (tol 1e-07 %)
+  ok    [Y] fila de la inercia = rango de VAL-03, cota ideal (dm_star, máximo): obtenido 3.61056 vs esperado 3.61056 (tol 1e-07 %)
+  ok    [Y] fila de la inercia = rango de VAL-03, cota ideal (P_MW, mínimo): obtenido 407.159 vs esperado 407.159 (tol 1e-07 %)
+  ok    [Y] fila de la inercia = rango de VAL-03, cota ideal (P_MW, máximo): obtenido 508.504 vs esperado 508.504 (tol 1e-07 %)
+  ok    [Y] fila del agua retenida = VAL-03, recolección medida extremo 1 (dm_star): obtenido 3.80855 vs esperado 3.80855 (tol 1e-07 %)
+  ok    [Y] fila del agua retenida = VAL-03, recolección medida extremo 1 (P_MW): obtenido 502.773 vs esperado 502.773 (tol 1e-07 %)
+  ok    [Y] fila del agua retenida = VAL-03, recolección medida extremo 1 (H2_t): obtenido 53.9082 vs esperado 53.9082 (tol 1e-07 %)
+  ok    [Y] fila del agua retenida = VAL-03, recolección medida extremo 2 (dm_star): obtenido 3.55578 vs esperado 3.55578 (tol 1e-07 %)
+  ok    [Y] fila del agua retenida = VAL-03, recolección medida extremo 2 (P_MW): obtenido 480.694 vs esperado 480.694 (tol 1e-07 %)
+  ok    [Y] fila del agua retenida = VAL-03, recolección medida extremo 2 (H2_t): obtenido 50.3304 vs esperado 50.3304 (tol 1e-07 %)
+  ok    [Y] fila de D_lim: el flujo escala exactamente como D_lim^(-1/2) (ecuación 7): obtenido 0.447077 vs esperado 0.447077 (tol 1e-10 %)
+  ok    [Y] fila de la carga: P_rej con 20 t = la de la tabla 5: obtenido 40612.6 vs esperado 40612.6 (tol 1e-10 %)
+  ok    [Y] fila del volumen del casco: ṁ* con el volumen alternativo = elasticidad de la inercia integrada: obtenido 0.948596 vs esperado 0.948596 (tol 1e-07 %)
+  ok    [Y] niveles enteros de 0 a 4 en los 11 factores (5 de capacidad, 6 de resultados): 2, 3, 2, 1, 2, 1, 2, 2, 3, 1, 2
+  ok    [Y] criticidad: la matriz del Apéndice D da la zona amarilla (consecuencia II-III, influencia 4): Y/Y
+  ok    [Y] uso: nivel 1 por definición en el primer uso del M&S (tabla 15 de la norma): primer uso
+  ok    [Y] fuentes del paper 1 contadas por pedigrí = registro: obtenido 60 vs esperado 60 (tol 0)
+  ok    [Z] Hind: tabla 3, P_rej = dm* q (q de EXP-06 a phi objetivo): obtenido 400 vs esperado 400.393 (tol 0.51 MW)
+  ok    [Z] Hind: tabla 3, escalón procesado = t_anticip/alpha* = (1+s) t_anticip: obtenido 15.8 vs esperado 15.7699 (tol 0.051 s)
+  ok    [Z] Hind: tabla 3, velocidad al soltar = 3 D_lim/t_anticip: obtenido 0.038 vs esperado 0.0380283 (tol 0.00051 m/s)
+  ok    [Z] FW: tabla 3, P_rej = dm* q (q de EXP-06 a phi objetivo): obtenido 446 vs esperado 446.088 (tol 0.51 MW)
+  ok    [Z] FW: tabla 3, escalón procesado = t_anticip/alpha* = (1+s) t_anticip: obtenido 14.2 vs esperado 14.1545 (tol 0.051 s)
+  ok    [Z] FW: tabla 3, velocidad al soltar = 3 D_lim/t_anticip: obtenido 0.042 vs esperado 0.0423634 (tol 0.00051 m/s)
+  ok    [Z] ZR: tabla 3, P_rej = dm* q (q de EXP-06 a phi objetivo): obtenido 659 vs esperado 659.365 (tol 0.51 MW)
+  ok    [Z] ZR: tabla 3, escalón procesado = t_anticip/alpha* = (1+s) t_anticip: obtenido 9.6 vs esperado 9.57614 (tol 0.051 s)
+  ok    [Z] ZR: tabla 3, velocidad al soltar = 3 D_lim/t_anticip: obtenido 0.063 vs esperado 0.0625723 (tol 0.00051 m/s)
+  ok    [Z] ZNT: tabla 3, P_rej = dm* q (q de EXP-06 a phi objetivo): obtenido 2077 vs esperado 2077.22 (tol 0.51 MW)
+  ok    [Z] ZNT: tabla 3, escalón procesado = t_anticip/alpha* = (1+s) t_anticip: obtenido 3 vs esperado 3.03972 (tol 0.051 s)
+  ok    [Z] ZNT: tabla 3, velocidad al soltar = 3 D_lim/t_anticip: obtenido 0.195 vs esperado 0.19484 (tol 0.00051 m/s)
+  ok    [Z] tabla 3, LCA60T: escalón procesado = el del freno (FrenoTnatFW): obtenido 14.2 vs esperado 14.1545 (tol 0.051 s)
+  ok    [Z] tabla 3 (leyenda), LCA60T: devolución si falla = AbortoS (pesadez / (rho_a/rho_H2) / dm*): obtenido 10.9933 vs esperado 10.9933 (tol 0.051 s)
+  ok    [I] tabla 9, columna 1: potencia de golpe = calor / tiempo de la maniobra limpia: obtenido 446 vs esperado 447.913 (tol 3 %)
+  ok    [I] tabla 9, columna 2: potencia de golpe = calor / tiempo de la maniobra limpia: obtenido 464 vs esperado 464.162 (tol 3 %)
+  ok    [I] tabla 9, columna 3: potencia de golpe = calor / tiempo de la maniobra limpia: obtenido 35 vs esperado 35.3244 (tol 3 %)
+  ok    [I] tabla 9, columna 4: potencia de golpe = calor / tiempo de la maniobra limpia: obtenido 0 vs esperado 0 (tol 3 %)
+  ok    [I] tabla 9, columna 5: potencia de golpe = calor / tiempo de la maniobra limpia: obtenido 31 vs esperado 31.7919 (tol 3 %)
+  ok    [I] tabla 9, columna 6: potencia de golpe = calor / tiempo de la maniobra limpia: obtenido 0 vs esperado 0 (tol 3 %)
+  ok    [I] tabla 9: energía del H2 venteado = kg venteados x energía de electrólisis: obtenido 4 vs esperado 3.95637 (tol 0.051 MWh)
+  ok    [I] recuperación de 1 t con 10 MW a 1 atm: (1 t / L) q / P = calor por tonelada / P: obtenido 657.124 vs esperado 657.124 (tol 0.0001 %)
+  ok    [I] a 1 atm, sin compresor, la recuperación tarda más y se pierde más H2 que con phi = 0.99: 11.0 min a 1 atm
+  ok    [I] con la masa vertical medida (Yamasaki & Goto) el lazo sigue sobreamortiguado: zeta / raiz(f) > 1: zeta = 1.3, f = {'restringido': 0.7713319458896982, 'vuelo_libre': 1.2016129032258065}
+  ok    [I] compresor del escape: trabajo isentrópico cerrado = integral de V dP sobre la isentrópica: obtenido 1.01978e+07 vs esperado 1.01978e+07 (tol 0.0001 %)
+  ok    [I] el trabajo isentrópico de una etapa supera el mínimo isotérmico del modelo (EXP-06): 10.2 > 6.6 MJ/kg
+  ok    [I] compresor del escape a 10 MW con el doble de kg/kW del SGT-800 < haces de ACC de 10 MW: 8.1 t < 15 t
+  ok    [I] el compresor de la cota ideal escalado igual no cabe en la carga útil del caso base: carga útil 60 t
+  ok    [I] freno a 10 MW: la potencia neta del motor (menor) supera el pico de las hélices (mayor), 1 t: 0.5 MW > 0.19 MW
+  ok    [I] EXP-18, LCA60T, 10 MW: la subida = la de exp09 (ventear_10MW), el caso base: obtenido 2.50448 vs esperado 2.50448 (tol 1e-06 m)
+  ok    [I] EXP-18, LCA60T, 100 MW: la subida = la de exp09 (ventear_100MW), el caso base: obtenido 1.6646 vs esperado 1.6646 (tol 1e-06 m)
+  ok    [I] EXP-18, LCA60T, inf MW: la subida = la de exp09 (ventear_infMW), el caso base: obtenido 0.0615883 vs esperado 0.0615883 (tol 1e-06 m)
+  ok    [I] compresor de H2: una unidad de catálogo alcanza para regenerar 1 t en t_regeneracion_h: 1.59 t por unidad
+  ok    [I] compresor de H2: b = b' + una unidad (las fijas de 1 t, tabla 4): obtenido 1.45228 vs esperado 1.45228 (tol 1e-10 %)
+  ok    [I] carta de diseño, Hind: el techo cabe en la carga útil con sus unidades de compresor: 19.046 <= 19.046 t
+  ok    [I] carta de diseño, Hind: el techo es el más grande (llena la carga útil o la capacidad de sus unidades): 8.272 t, 6 unidades
+  ok    [I] carta de diseño, Hind: techo = la suelta única más grande del reparto (EXP-20): obtenido 8.27164 vs esperado 8.27164 (tol 1e-10 %)
+  ok    [I] carta de diseño, Hind: el punto de 1 t = la recuperación de la barra HDM: obtenido 13.3533 vs esperado 13.3533 (tol 1e-07 %)
+  ok    [I] carta de diseño, FW: el techo cabe en la carga útil con sus unidades de compresor: 60.000 <= 60.000 t
+  ok    [I] carta de diseño, FW: el techo es el más grande (llena la carga útil o la capacidad de sus unidades): 26.601 t, 17 unidades
+  ok    [I] carta de diseño, FW: techo = la suelta única más grande del reparto (EXP-20): obtenido 26.6007 vs esperado 26.6007 (tol 1e-10 %)
+  ok    [I] carta de diseño, FW: el punto de 1 t = la recuperación de la barra HDM: obtenido 3.85045 vs esperado 3.85045 (tol 1e-07 %)
+  ok    [I] carta de diseño, ZR: el techo cabe en la carga útil con sus unidades de compresor: 5.000 <= 5.000 t
+  ok    [I] carta de diseño, ZR: el techo es el más grande (llena la carga útil o la capacidad de sus unidades): 2.050 t, 2 unidades
+  ok    [I] carta de diseño, ZR: techo = la suelta única más grande del reparto (EXP-20): obtenido 2.05004 vs esperado 2.05004 (tol 1e-10 %)
+  ok    [I] carta de diseño, ZR: el punto de 1 t = la recuperación de la barra HDM: obtenido 86.9738 vs esperado 86.9738 (tol 1e-07 %)
+  ok    [I] carta de diseño, ZNT: el techo cabe en la carga útil con sus unidades de compresor: 1.000 <= 1.000 t
+  ok    [I] carta de diseño, ZNT: el techo es el más grande (llena la carga útil o la capacidad de sus unidades): 0.239 t, 1 unidades
+  ok    [I] carta de diseño, ZNT: techo = la suelta única más grande del reparto (EXP-20): obtenido 0.238559 vs esperado 0.238559 (tol 1e-10 %)
+  ok    [I] carta de diseño, ZNT: la curva no llega a 1 t, como en el desglose: techo 0.24 t
+  ok    [I] reparto, Hind, sueltas de 0.25 t: las unidades del compresor alcanzan y son las mínimas: 1 unidades
+  ok    [I] reparto, Hind, sueltas de 0.5 t: las unidades del compresor alcanzan y son las mínimas: 1 unidades
+  ok    [I] reparto, Hind, sueltas de 1 t: las unidades del compresor alcanzan y son las mínimas: 1 unidades
+  ok    [I] reparto, Hind, sueltas de 2 t: las unidades del compresor alcanzan y son las mínimas: 2 unidades
+  ok    [I] reparto, Hind, sueltas de 5 t: las unidades del compresor alcanzan y son las mínimas: 4 unidades
+  ok    [I] reparto, Hind: la suelta de 1 t más rápida = el punto de 1 t de la carta de diseño: obtenido 801.196 vs esperado 801.196 (tol 1e-07 %)
+  ok    [I] reparto, FW, sueltas de 0.5 t: las unidades del compresor alcanzan y son las mínimas: 1 unidades
+  ok    [I] reparto, FW, sueltas de 1 t: las unidades del compresor alcanzan y son las mínimas: 1 unidades
+  ok    [I] reparto, FW, sueltas de 2 t: las unidades del compresor alcanzan y son las mínimas: 2 unidades
+  ok    [I] reparto, FW, sueltas de 5 t: las unidades del compresor alcanzan y son las mínimas: 4 unidades
+  ok    [I] reparto, FW, sueltas de 10 t: las unidades del compresor alcanzan y son las mínimas: 7 unidades
+  ok    [I] reparto, FW, sueltas de 20 t: las unidades del compresor alcanzan y son las mínimas: 13 unidades
+  ok    [I] reparto, FW: la suelta de 1 t más rápida = el punto de 1 t de la carta de diseño: obtenido 231.027 vs esperado 231.027 (tol 1e-07 %)
+  ok    [I] reparto, ZR, sueltas de 0.1 t: las unidades del compresor alcanzan y son las mínimas: 1 unidades
+  ok    [I] reparto, ZR, sueltas de 0.25 t: las unidades del compresor alcanzan y son las mínimas: 1 unidades
+  ok    [I] reparto, ZR, sueltas de 0.5 t: las unidades del compresor alcanzan y son las mínimas: 1 unidades
+  ok    [I] reparto, ZR, sueltas de 1 t: las unidades del compresor alcanzan y son las mínimas: 1 unidades
+  ok    [I] reparto, ZR, sueltas de 2 t: las unidades del compresor alcanzan y son las mínimas: 2 unidades
+  ok    [I] reparto, ZR: la suelta de 1 t más rápida = el punto de 1 t de la carta de diseño: obtenido 5218.43 vs esperado 5218.43 (tol 1e-07 %)
+  ok    [I] reparto, ZNT, sueltas de 0.025 t: las unidades del compresor alcanzan y son las mínimas: 1 unidades
+  ok    [I] reparto, ZNT, sueltas de 0.05 t: las unidades del compresor alcanzan y son las mínimas: 1 unidades
+  ok    [I] reparto, ZNT, sueltas de 0.1 t: las unidades del compresor alcanzan y son las mínimas: 1 unidades
+  ok    [I] reparto, ZNT, sueltas de 0.2 t: las unidades del compresor alcanzan y son las mínimas: 1 unidades
+  ok    [I] reparto, LCA60T 1 t: la potencia de las hélices al soltar = k_min Q s / t_max (borde pesimista): obtenido 198191 vs esperado 198191 (tol 1e-10 %)
+  ok    [I] reparto, LCA60T: con sueltas de 1 t de 10 min las hélices alcanzan aun en el caso pesimista: 27 min
+  ok    [I] reparto: neto del motor por tonelada (k_min Q) = EXP-21, trabajo - ventiladores - compresor (pesimista): obtenido 89.1675 vs esperado 89.1675 (tol 0.0001 %)
+  ok    [I] reparto con ACC entero: a - a(haces) = 1/(kW/kg del sistema) - 1/(kW/kg de los haces): obtenido 5.8704 vs esperado 5.8704 (tol 1e-07 %)
+  ok    [I] reparto con ACC entero: a Q = a x calor por tonelada: obtenido 50510.9 vs esperado 50510.9 (tol 1e-10 %)
+  ok    [I] reparto con ACC entero, LCA60T: la ec. 12 en la duración de la entrega = la carga por suelta con t_rec = T / n: obtenido 17.5308 vs esperado 17.5308 (tol 1e-07 %)
+  ok    [I] reparto con ACC entero, LCA60T: sueltas de 1 t de 10 min no caben (la más rápida tarda más): 14.6 min
+  ok    [I] reparto con ACC entero, LZ 129: sueltas de 1 t de 30 min no caben y de 1 h sí: 50.7 min
+  ok    [I] reparto con ACC entero, LCA60T: la suelta de 1 t más rápida = la barra del ACC entero (desglose): obtenido 14.6287 vs esperado 14.6287 (tol 1e-07 %)
+  ok    [I] entrega de referencia: equipo + carga de negocio = carga útil del LCA60T: obtenido 60 vs esperado 60 (tol 1e-10 %)
+  ok    [I] entrega de referencia: H2 quemado = sueltas x H2 por tonelada (EXP-21): obtenido 1620.48 vs esperado 1620.48 (tol 1e-10 %)
+  ok    [I] entrega de referencia: el H2 de los gases baja lo quemado (equilibrio, el agua queda como lastre): obtenido 1620.48 vs esperado 1620.48 (tol 1e-07 %)
+  ok    [I] entrega de referencia: regeneración = sueltas x (electrólisis + compresión) por tonelada (EXP-21): obtenido 89827.4 vs esperado 89827.4 (tol 1e-10 %)
+  ok    [I] entrega de referencia: días con el PEM del equipo = sueltas x t_regeneracion_h: obtenido 864 vs esperado 864 (tol 1e-10 %)
+  ok    [I] entrega de referencia: las hélices al soltar caben en la potencia neta del motor (pesimista): 0.17 < 0.54 MW
+  ok    [I] objeción 1.9: L con phi = 1 (minimax) / L con phi_objetivo (exp12) = la razón con L_ef de EXP-02: obtenido 1.00402 vs esperado 1.00402 (tol 1e-07 %)
+  ok    [I] objeción 1.9: la tasa con phi_objetivo sube menos que la incertidumbre de la inercia (vuelo libre): 0.40 % < 9 %
+  ok    [I] objeción 3.1: compuesto por kg de H2 a 35 MPa, el mismo en el H2 comprimido y en los tanques del ciclo (densidad de Leachman y de NIST): obtenido 0.0105056 vs esperado 0.0105055 (tol 0.01 %)
+  ok    [I] objeción 3.1: comprimir H2 pide más compuesto que todo el equipo del ciclo para la misma entrega: 26.3 t > 23.7 t
+  ok    [I] objeción 3.18, HD, 14 atm, 10 MW: O2 venteado = agua retenida - H2 regenerado = H2 regenerado x r: obtenido 353.683 vs esperado 353.683 (tol 1e-07 %)
+  ok    [I] objeción 3.18, HD, 14 atm, 10 MW: el regenerado y el gas que compensa su O2 no caben juntos en los tanques (en vuelo no se regenera todo con solo los tanques como compensación): 44.6 < 51.8 < 69.2 kg por t
+  ok    [I] objeción 3.18, HD, 1 atm, 10 MW: O2 venteado = agua retenida - H2 regenerado = H2 regenerado x r: obtenido 322.194 vs esperado 322.194 (tol 1e-07 %)
+  ok    [I] objeción 3.18, HD, 1 atm, 10 MW: el regenerado y el gas que compensa su O2 no caben juntos en los tanques (en vuelo no se regenera todo con solo los tanques como compensación): 40.6 < 51.8 < 63.0 kg por t
+  ok    [I] objeción 3.18: con tanques también para el gas que compensa el O2, el piso supera la tonelada que recupera: 1.21 t por t
+  ok    [I] objeción 3.21: el compuesto del He casi no depende de la presión (5-30 MPa, menos de 15 %): 0.610-0.682 t/t
+  ok    [I] regeneración: piso del costo por tonelada = tanque por kg (balance_masa) x H2 regenerado por t: obtenido 0.780625 vs esperado 0.780625 (tol 1e-10 %)
+  ok    [I] regeneración: cuesta menos de 1 t por t recuperada antes de una semana con la red y después con a-Si: red 2.6 d, a-Si 19 d
+  ok    [I] entrega de referencia: aun optimista, el motor en vuelo paga menos de un cuarto de la regeneración: 0.24
+  ok    [I] hélices (EXP-22, 14 atm): con sueltas de 1 t de 10 min alcanzan aun en el caso pesimista: 29 min
+  ok    [I] hélices (EXP-22, 14 atm): con sueltas de 10 t no alcanzan en el pesimista y sí en el optimista: 9 < 60 <= 126 min
+  ok    [I] hélices (EXP-22, 14 atm): con sueltas de 20 t no alcanzan ni en el optimista (amarre): 1.5 < 5.0 h
+  ok    [I] reparto, LCA60T a 1 h: la carga de negocio baja con el tamaño de la suelta: 57.1, 54.8, 49.6, 34.8, 10.2, -39.0
+  ok    [I] reparto universal, sueltas del 1 %: la curva nace sobre la suelta única (ec. 10): obtenido 0.01 vs esperado 0.01 (tol 1e-10 %)
+  ok    [I] reparto universal, sueltas del 2 %: la curva nace sobre la suelta única (ec. 10): obtenido 0.02 vs esperado 0.02 (tol 1e-10 %)
+  ok    [I] reparto universal, sueltas del 5 %: la curva nace sobre la suelta única (ec. 10): obtenido 0.05 vs esperado 0.05 (tol 1e-10 %)
+  ok    [I] reparto universal, sueltas del 10 %: la curva nace sobre la suelta única (ec. 10): obtenido 0.1 vs esperado 0.1 (tol 1e-10 %)
+  ok    [I] reparto universal, sueltas del 20 %: la curva nace sobre la suelta única (ec. 10): obtenido 0.2 vs esperado 0.2 (tol 1e-10 %)
+  ok    [I] reparto Hind, 0.25 t cada 10 min: N (1 + b_w) + equipo = C: obtenido 19.0463 vs esperado 19.0463 (tol 1e-10 %)
+  ok    [I] reparto Hind, 0.25 t cada 30 min: N (1 + b_w) + equipo = C: obtenido 19.0463 vs esperado 19.0463 (tol 1e-10 %)
+  ok    [I] reparto Hind, 0.25 t cada 60 min: N (1 + b_w) + equipo = C: obtenido 19.0463 vs esperado 19.0463 (tol 1e-10 %)
+  ok    [I] reparto Hind, 0.25 t cada 1440 min: N (1 + b_w) + equipo = C: obtenido 19.0463 vs esperado 19.0463 (tol 1e-10 %)
+  ok    [I] reparto Hind, 0.5 t cada 10 min: N (1 + b_w) + equipo = C: obtenido 19.0463 vs esperado 19.0463 (tol 1e-10 %)
+  ok    [I] reparto Hind, 0.5 t cada 30 min: N (1 + b_w) + equipo = C: obtenido 19.0463 vs esperado 19.0463 (tol 1e-10 %)
+  ok    [I] reparto Hind, 0.5 t cada 60 min: N (1 + b_w) + equipo = C: obtenido 19.0463 vs esperado 19.0463 (tol 1e-10 %)
+  ok    [I] reparto Hind, 0.5 t cada 1440 min: N (1 + b_w) + equipo = C: obtenido 19.0463 vs esperado 19.0463 (tol 1e-10 %)
+  ok    [I] reparto Hind, 1 t cada 30 min: N (1 + b_w) + equipo = C: obtenido 19.0463 vs esperado 19.0463 (tol 1e-10 %)
+  ok    [I] reparto Hind, 1 t cada 60 min: N (1 + b_w) + equipo = C: obtenido 19.0463 vs esperado 19.0463 (tol 1e-10 %)
+  ok    [I] reparto Hind, 1 t cada 1440 min: N (1 + b_w) + equipo = C: obtenido 19.0463 vs esperado 19.0463 (tol 1e-10 %)
+  ok    [I] reparto Hind, 2 t cada 60 min: N (1 + b_w) + equipo = C: obtenido 19.0463 vs esperado 19.0463 (tol 1e-10 %)
+  ok    [I] reparto Hind, 2 t cada 1440 min: N (1 + b_w) + equipo = C: obtenido 19.0463 vs esperado 19.0463 (tol 1e-10 %)
+  ok    [I] reparto Hind, 5 t cada 1440 min: N (1 + b_w) + equipo = C: obtenido 19.0463 vs esperado 19.0463 (tol 1e-10 %)
+  ok    [I] reparto FW, 0.5 t cada 10 min: N (1 + b_w) + equipo = C: obtenido 60 vs esperado 60 (tol 1e-10 %)
+  ok    [I] reparto FW, 0.5 t cada 30 min: N (1 + b_w) + equipo = C: obtenido 60 vs esperado 60 (tol 1e-10 %)
+  ok    [I] reparto FW, 0.5 t cada 60 min: N (1 + b_w) + equipo = C: obtenido 60 vs esperado 60 (tol 1e-10 %)
+  ok    [I] reparto FW, 0.5 t cada 1440 min: N (1 + b_w) + equipo = C: obtenido 60 vs esperado 60 (tol 1e-10 %)
+  ok    [I] reparto FW, 1 t cada 10 min: N (1 + b_w) + equipo = C: obtenido 60 vs esperado 60 (tol 1e-10 %)
+  ok    [I] reparto FW, 1 t cada 30 min: N (1 + b_w) + equipo = C: obtenido 60 vs esperado 60 (tol 1e-10 %)
+  ok    [I] reparto FW, 1 t cada 60 min: N (1 + b_w) + equipo = C: obtenido 60 vs esperado 60 (tol 1e-10 %)
+  ok    [I] reparto FW, 1 t cada 1440 min: N (1 + b_w) + equipo = C: obtenido 60 vs esperado 60 (tol 1e-10 %)
+  ok    [I] reparto FW, 2 t cada 10 min: N (1 + b_w) + equipo = C: obtenido 60 vs esperado 60 (tol 1e-10 %)
+  ok    [I] reparto FW, 2 t cada 30 min: N (1 + b_w) + equipo = C: obtenido 60 vs esperado 60 (tol 1e-10 %)
+  ok    [I] reparto FW, 2 t cada 60 min: N (1 + b_w) + equipo = C: obtenido 60 vs esperado 60 (tol 1e-10 %)
+  ok    [I] reparto FW, 2 t cada 1440 min: N (1 + b_w) + equipo = C: obtenido 60 vs esperado 60 (tol 1e-10 %)
+  ok    [I] reparto FW, 5 t cada 30 min: N (1 + b_w) + equipo = C: obtenido 60 vs esperado 60 (tol 1e-10 %)
+  ok    [I] reparto FW, 5 t cada 60 min: N (1 + b_w) + equipo = C: obtenido 60 vs esperado 60 (tol 1e-10 %)
+  ok    [I] reparto FW, 5 t cada 1440 min: N (1 + b_w) + equipo = C: obtenido 60 vs esperado 60 (tol 1e-10 %)
+  ok    [I] reparto FW, 10 t cada 60 min: N (1 + b_w) + equipo = C: obtenido 60 vs esperado 60 (tol 1e-10 %)
+  ok    [I] reparto FW, 10 t cada 1440 min: N (1 + b_w) + equipo = C: obtenido 60 vs esperado 60 (tol 1e-10 %)
+  ok    [I] reparto FW, 20 t cada 1440 min: N (1 + b_w) + equipo = C: obtenido 60 vs esperado 60 (tol 1e-10 %)
+  ok    [I] reparto ZR, 0.1 t cada 10 min: N (1 + b_w) + equipo = C: obtenido 5 vs esperado 5 (tol 1e-10 %)
+  ok    [I] reparto ZR, 0.1 t cada 30 min: N (1 + b_w) + equipo = C: obtenido 5 vs esperado 5 (tol 1e-10 %)
+  ok    [I] reparto ZR, 0.1 t cada 60 min: N (1 + b_w) + equipo = C: obtenido 5 vs esperado 5 (tol 1e-10 %)
+  ok    [I] reparto ZR, 0.1 t cada 1440 min: N (1 + b_w) + equipo = C: obtenido 5 vs esperado 5 (tol 1e-10 %)
+  ok    [I] reparto ZR, 0.25 t cada 30 min: N (1 + b_w) + equipo = C: obtenido 5 vs esperado 5 (tol 1e-10 %)
+  ok    [I] reparto ZR, 0.25 t cada 60 min: N (1 + b_w) + equipo = C: obtenido 5 vs esperado 5 (tol 1e-10 %)
+  ok    [I] reparto ZR, 0.25 t cada 1440 min: N (1 + b_w) + equipo = C: obtenido 5 vs esperado 5 (tol 1e-10 %)
+  ok    [I] reparto ZR, 0.5 t cada 60 min: N (1 + b_w) + equipo = C: obtenido 5 vs esperado 5 (tol 1e-10 %)
+  ok    [I] reparto ZR, 0.5 t cada 1440 min: N (1 + b_w) + equipo = C: obtenido 5 vs esperado 5 (tol 1e-10 %)
+  ok    [I] reparto ZR, 1 t cada 1440 min: N (1 + b_w) + equipo = C: obtenido 5 vs esperado 5 (tol 1e-10 %)
+  ok    [I] reparto ZNT, 0.025 t cada 30 min: N (1 + b_w) + equipo = C: obtenido 1 vs esperado 1 (tol 1e-10 %)
+  ok    [I] reparto ZNT, 0.025 t cada 60 min: N (1 + b_w) + equipo = C: obtenido 1 vs esperado 1 (tol 1e-10 %)
+  ok    [I] reparto ZNT, 0.025 t cada 1440 min: N (1 + b_w) + equipo = C: obtenido 1 vs esperado 1 (tol 1e-10 %)
+  ok    [I] reparto ZNT, 0.05 t cada 60 min: N (1 + b_w) + equipo = C: obtenido 1 vs esperado 1 (tol 1e-10 %)
+  ok    [I] reparto ZNT, 0.05 t cada 1440 min: N (1 + b_w) + equipo = C: obtenido 1 vs esperado 1 (tol 1e-10 %)
+  ok    [I] reparto ZNT, 0.1 t cada 1440 min: N (1 + b_w) + equipo = C: obtenido 1 vs esperado 1 (tol 1e-10 %)
+  ok    [I] reparto ZNT, 0.2 t cada 1440 min: N (1 + b_w) + equipo = C: obtenido 1 vs esperado 1 (tol 1e-10 %)
+  ok    [I] B2, margen (N_t): N (1 + f_m b_w) = C - f_m m_c - s (f_m b' + f_m f_q a Q / t), 1 t de 10 min: obtenido 36.343 vs esperado 36.343 (tol 1e-10 %)
+  ok    [I] B2, margen (N_masa_t): N (1 + f_m b_w) = C - f_m m_c - s (f_m b' + f_m f_q a Q / t), 1 t de 10 min: obtenido 33.9807 vs esperado 33.9807 (tol 1e-10 %)
+  ok    [I] B2, margen (N_calor_t): N (1 + f_m b_w) = C - f_m m_c - s (f_m b' + f_m f_q a Q / t), 1 t de 10 min: obtenido 34.13 vs esperado 34.13 (tol 1e-10 %)
+  ok    [I] B2: con 10 % de margen de masa o de calor, la entrega de 1 t de 10 min sigue llevando carga: 34.0 t (masa), 34.1 t (calor)
+  ok    [I] tanque de agua: el agua que guarda por tonelada = la que retiene cada suelta de la entrega (EXP-22): obtenido 398.246 vs esperado 398.246 (tol 0.0001 %)
+  ok    [I] tanque de agua: b_w de EXP-20 = la clase liviana de balance_masa (tela de 30 oz/yd2): obtenido 1.30931 vs esperado 1.30931 (tol 1e-10 %)
+  ok    [I] tanque de agua: tela de las dos caras de 14 x 14 ft x gramaje / agua a la capacidad (independiente): obtenido 0.00328768 vs esperado 0.00328768 (tol 1e-10 %)
+  ok    [I] tanque de agua: la almohada llena (12.5 x 12.5 x 4 ft, MIL-T-53029C fig. 1) contiene su capacidad: 17.7 m3 de caja > 11.4 m3
+  ok    [L] densidad del agua líquida saturada a 6.96957 °C (Wagner & Pruss) = NIST WebBook (IAPWS-95): obtenido 999.854 vs esperado 999.857 (tol 0.002 %)
+  ok    [L] densidad del agua líquida saturada a 47.6831 °C (Wagner & Pruss) = NIST WebBook (IAPWS-95): obtenido 989.021 vs esperado 989.026 (tol 0.002 %)
+  ok    [L] densidad del agua líquida saturada a 61.1165 °C (Wagner & Pruss) = NIST WebBook (IAPWS-95): obtenido 982.577 vs esperado 982.583 (tol 0.002 %)
+  ok    [L] densidad del agua líquida saturada a 99.8843 °C (Wagner & Pruss) = NIST WebBook (IAPWS-95): obtenido 958.43 vs esperado 958.432 (tol 0.002 %)
+  ok    [I] la mitad de la entrega: a Q / (1 + b_w) redondea igual que a Q (las dos en 0.1 h): obtenido 3.7 vs esperado 3.7 (tol 1e-09 h)
+  ok    [I] desglose, NT con 0.2 t: la barra HDM suma la carga útil: obtenido 1 vs esperado 1 (tol 1e-07 %)
+  ok    [I] desglose, NT con 0.2 t: las fijas = b' x 0.2 t + una unidad del compresor: obtenido 0.726456 vs esperado 0.726456 (tol 1e-10 %)
+  ok    [I] desglose, Hind: la figura usa la misma barra de 1 t que las macros: obtenido 19.0463 vs esperado 19.0463 (tol 1e-10 %)
+  ok    [I] desglose, FW: la figura usa la misma barra de 1 t que las macros: obtenido 60 vs esperado 60 (tol 1e-10 %)
+  ok    [I] desglose, ZR: la figura usa la misma barra de 1 t que las macros: obtenido 5 vs esperado 5 (tol 1e-10 %)
+  ok    [I] presupuesto apilado: el compresor del escape sin freno, LCA60T = el de la cota ideal escalado (macro CompMasaBase): obtenido 168.284 vs esperado 168.284 (tol 1e-07 %)
+  ok    [I] presupuesto apilado: el rechazo con 10 MW = 10 MW / kW/kg de los haces de ACC: obtenido 15.3253 vs esperado 15.3253 (tol 1e-07 %)
+  ok    [I] presupuesto apilado: el motor con 10 MW = t por kg/s del más liviano x la tasa del freno: obtenido 1.87388 vs esperado 1.87388 (tol 0.0001 %)
+  ok    [I] presupuesto apilado, LZ 129: la barra del rechazo más grande que cabe suma la carga útil: obtenido 19.0463 vs esperado 19.0463 (tol 1e-07 %)
+  ok    [I] presupuesto apilado, LCA60T: la barra del rechazo más grande que cabe suma la carga útil: obtenido 60 vs esperado 60 (tol 1e-07 %)
+  ok    [I] presupuesto apilado, ZR-3: la barra del rechazo más grande que cabe suma la carga útil: obtenido 5 vs esperado 5 (tol 1e-07 %)
+  ok    [I] presupuesto apilado, Zeppelin NT: no cabe nada porque las fijas y la tonelada ya superan la carga útil: 2.45 t > 1.00 t
+  ok    [I] presupuesto apilado a 1 atm, LZ 129: la barra suma la carga útil: obtenido 19.0463 vs esperado 19.0463 (tol 1e-07 %)
+  ok    [I] presupuesto apilado a 1 atm, LZ 129: sin compresor del escape: 0.0 t
+  ok    [I] presupuesto apilado a 1 atm, LZ 129: la recuperación = el punto de 1 t de la curva de 1 atm de la carta de diseño: obtenido 11.3781 vs esperado 11.3781 (tol 1e-07 %)
+  ok    [I] presupuesto apilado a 1 atm, LCA60T: la barra suma la carga útil: obtenido 60 vs esperado 60 (tol 1e-07 %)
+  ok    [I] presupuesto apilado a 1 atm, LCA60T: sin compresor del escape: 0.0 t
+  ok    [I] presupuesto apilado a 1 atm, LCA60T: la recuperación = el punto de 1 t de la curva de 1 atm de la carta de diseño: obtenido 3.28092 vs esperado 3.28092 (tol 1e-07 %)
+  ok    [I] presupuesto apilado a 1 atm, ZR-3: la barra suma la carga útil: obtenido 5 vs esperado 5 (tol 1e-07 %)
+  ok    [I] presupuesto apilado a 1 atm, ZR-3: sin compresor del escape: 0.0 t
+  ok    [I] presupuesto apilado a 1 atm, ZR-3: la recuperación = el punto de 1 t de la curva de 1 atm de la carta de diseño: obtenido 74.1092 vs esperado 74.1092 (tol 1e-07 %)
+  ok    [I] presupuesto apilado a 1 atm, Zeppelin NT: tampoco cabe nada (el techo no depende de la presión): sin barra HDM a 14 atm ni a 1 atm
+  ok    [I] carta de diseño a 1 atm: Q / 10 MW = la recuperación de 1 t a 1 atm de la sección 5.2 (ruta de 1 atm de la tabla 7): obtenido 657.124 vs esperado 657.124 (tol 1e-07 %)
+  ok    [I] carta de diseño a 1 atm: a = los haces por MW y el motor de la barra de 10 MW (sin el compresor), el motor a la tasa de q(0, phi_max): obtenido 1.72396 vs esperado 1.72396 (tol 1e-07 %)
+  ok    [I] carta de diseño a 1 atm, Hind: en su punto de 1 t cabe justo 1 t: obtenido 1 vs esperado 1 (tol 1e-10 %)
+  ok    [I] carta de diseño a 1 atm, Hind: t(1 atm) / t(14 atm) = a Q (1 atm) / a Q (14 atm), igual en toda nave: obtenido 0.852086 vs esperado 0.852086 (tol 1e-10 %)
+  ok    [I] carta de diseño a 1 atm, FW: en su punto de 1 t cabe justo 1 t: obtenido 1 vs esperado 1 (tol 1e-10 %)
+  ok    [I] carta de diseño a 1 atm, FW: t(1 atm) / t(14 atm) = a Q (1 atm) / a Q (14 atm), igual en toda nave: obtenido 0.852086 vs esperado 0.852086 (tol 1e-10 %)
+  ok    [I] carta de diseño a 1 atm, ZR: en su punto de 1 t cabe justo 1 t: obtenido 1 vs esperado 1 (tol 1e-10 %)
+  ok    [I] carta de diseño a 1 atm, ZR: t(1 atm) / t(14 atm) = a Q (1 atm) / a Q (14 atm), igual en toda nave: obtenido 0.852086 vs esperado 0.852086 (tol 1e-10 %)
+  ok    [I] carta de diseño a 1 atm, ZNT: tampoco llega a 1 t (el techo no depende de la presión): techo 0.24 t
+  ok    [I] entrega a 1 atm: a Q de EXP-20 = la de la carta de diseño a 1 atm (EXP-18): obtenido 11328.6 vs esperado 11328.6 (tol 1e-10 %)
+  ok    [I] entrega a 1 atm: a Q menor que a 14 atm, así que en el mismo tiempo entrega más: 3.15 h < 3.69 h
+  ok    [W] Hind: figura, volumen del esferoide = pi l D^2 / 6: obtenido 220608 vs esperado 220608 (tol 1e-10 %)
+  ok    [W] Hind: figura, k del punto = k de la tabla 2 (Lamb en su esbeltez): obtenido 0.917513 vs esperado 0.917513 (tol 0.0005)
+  ok    [W] FW: figura, volumen del esferoide = pi l D^2 / 6: obtenido 261799 vs esperado 261799 (tol 1e-10 %)
+  ok    [W] FW: figura, k del punto = k de la tabla 2 (Lamb en su esbeltez): obtenido 0.859761 vs esperado 0.859761 (tol 0.0005)
+  ok    [W] ZR: figura, volumen del esferoide = pi l D^2 / 6: obtenido 80501.1 vs esperado 80501.1 (tol 1e-10 %)
+  ok    [W] ZR: figura, k del punto = k de la tabla 2 (Lamb en su esbeltez): obtenido 0.936675 vs esperado 0.936675 (tol 0.0005)
+  ok    [W] ZNT: figura, volumen del esferoide = pi l D^2 / 6: obtenido 7928.94 vs esperado 7928.94 (tol 1e-10 %)
+  ok    [W] ZNT: figura, k del punto = k de la tabla 2 (Lamb en su esbeltez): obtenido 0.901787 vs esperado 0.901787 (tol 0.0005)
+  ok    [W] figura: el esferoide discontinuo del LCA60T encierra su V_casco: obtenido 180000 vs esperado 180000 (tol 1e-07 %)
+
+1122/1122 chequeos ok (330 condiciones, 663 de diferencia nula, 129 con tolerancia; PDF sin comprobar: 0)

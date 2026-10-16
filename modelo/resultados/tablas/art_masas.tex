@@ -1,0 +1,19 @@
+% GENERADO por modelo/req_masa_rechazo.py. NO EDITAR A MANO.
+\begin{tabular}{@{} l l r l @{}}
+\toprule
+\textbf{Black box} & \textbf{Representative class} & \textbf{Mass} & \textbf{Source} \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Scale with the burn rate (t per kg/s of hydrogen)}} \\
+Energy conversion unit & H\textsubscript{2} reciprocating engine, $\lambda = 1$ & 26--126 & \cite{Rotax2023, DEUTZ2024} \\
+Energy buffer & Li-ion pack (power-sized) & 16--42 & \cite{Pattanayak2025} \\
+Heat-rejection unit & Not chosen (budget remainder) & $\le$ 1.5 & -- \\
+\addlinespace
+\multicolumn{4}{@{}l}{\textit{Fixed, per tonne released (t)}} \\
+Regeneration unit & Aviation PEM stack & 0.04--0.18 & \cite{Zhang2025PEMFC} \\
+H\textsubscript{2} tanks & Type IV vessels & 0.87--0.91 & \cite{DOE_H2storage} \\
+H\textsubscript{2} compressor & Electric industrial unit & 0.55 & \cite{HydroPac2011} \\
+Water tank & Collapsible fabric tank & 0.001--0.003 & \cite{MILT53029C} \\
+\midrule
+\multicolumn{2}{@{}l}{Budget for the boxes that scale: (60~t $-$ 1~t $-$ 1.45~t) / 3.37~kg/s} & 17.1 & \\
+\bottomrule
+\end{tabular}
