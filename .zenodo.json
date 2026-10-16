@@ -2,7 +2,7 @@
   "title": "A regenerative hydrogen cycle for post-release buoyancy compensation in heavy-lift airships: real-time condensation limits and hold-down operation",
   "upload_type": "publication",
   "publication_type": "preprint",
-  "description": "<p>Submitted version (preprint) of a manuscript under submission (Elsevier). It has not been peer reviewed.</p><p>This record contains the manuscript, its supplementary material (credibility assessment with NASA-STD-7009B and details of the results) and the Python model that generates every number, table and figure of the article, with its verification checks and the register of the sources used. It contains only the model of this article; other studies of the authors are not included.</p>",
+  "description": "<p>Submitted version (preprint) of a manuscript under submission (Elsevier). It has not been peer reviewed.</p><p>This record contains the manuscript, its supplementary material (credibility assessment with NASA-STD-7009B and details of the results) and the Python model that generates every number, table and figure of the article, with its verification checks and the register of the sources used. It contains only the model of this article; other studies of the authors are not included.</p><p>Licenses: the code is under the MIT License; the manuscript and the supplementary material are under CC BY 4.0; the NIST data excerpts in modelo/datos_fuente keep the terms of NIST (see LICENSE).</p>",
   "creators": [
     {
       "name": "Espinoza Leon, Antony Elthon",
